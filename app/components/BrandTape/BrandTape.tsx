@@ -59,16 +59,17 @@ const brands = [
     circle: false,
   },
   {
+    name: "",
+    image: "/brands/Vizio.png",
+    circle: false,
+  },
+  {
     name: "National Geographic",
     image: "/brands/natGeoV2.png",
     circle: true,
   },
 
-  {
-    name: "",
-    image: "/brands/Vizio.png",
-    circle: false,
-  },
+  
   {
     name: "Dhar Mann Studios",
     image: "/brands/DharV2.png",
