@@ -49,7 +49,7 @@ const Footer = () => {
           <Link href="/">
             <img className="cursor-pointer w-20" src="./logo.svg" alt="logo" />
           </Link>
-          &copy; CREATOR ENGINE 2024
+          &copy; CREATOR ENGINE 2025
         </div>
       </div>
     </footer>

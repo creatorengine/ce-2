@@ -1,4 +1,4 @@
-// // ==================================================================
+
 "use client";
 import { useEffect, useState } from "react";
 import Video1 from "./components/Video1";
@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/text-generate-effect";
 import YoutubeThumbnails from "./components/YoutubeThumbnails";
 import ScrollAnimationWrapper from "./components/ScrollAnimationWrapper";
-// app/your-page-name/page.tsx or app/your-page-name/layout.tsx
+
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
