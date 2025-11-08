@@ -5,31 +5,31 @@ import AutoCarousel from "./Carousel/NewCarousel";
 const thumbnails = [
   "/thumbnail/v2/1.png",
   "/thumbnail/v2/2.png",
-  "/thumbnail/v2/3.png",
+  "/thumbnail/v3/3.jpg",
   "/thumbnail/v2/4.png",
   "/thumbnail/v2/5.png",
   "/thumbnail/v2/6.png",
   "/thumbnail/v2/7.png",
   "/thumbnail/v2/8.png",
-  "/thumbnail/v2/9.png",
+  "/thumbnail/v3/9.jpg",
   "/thumbnail/v2/10.png",
-  "/thumbnail/v2/11.png",
-  "/thumbnail/v2/12.png",
+  "/thumbnail/v3/11.jpg",
+  "/thumbnail/v3/12.jpg",
 ];
 
 const links = [
   "https://www.youtube.com/watch?v=IMxIXkeE61s",
   "https://www.youtube.com/watch?v=MY3Qy6vAbZQ",
-  "https://www.youtube.com/watch?v=XfQ5mSaIW1I",
+  "https://www.youtube.com/watch?v=q_4r1KbT8Xc",
   "https://www.youtube.com/watch?v=tKlWUsLLCow",
   "https://www.youtube.com/watch?v=NFw-WizIt50",
   "https://www.youtube.com/watch?v=Zq5AEc7WJf4",
   "https://www.youtube.com/watch?v=SCIOOlT3KJI",
   "https://www.youtube.com/watch?v=VZIc5jXss-g",
-  "https://www.youtube.com/watch?v=ctrJIelm7T0",
+  "https://www.youtube.com/watch?v=awRH4mR3kwQ",
   "https://www.youtube.com/watch?v=6kvFxnoKCs8",
-  "https://www.youtube.com/watch?v=yu6QSO37m9c",
-  "https://www.youtube.com/watch?v=NHput00wFIw"
+  "https://www.youtube.com/watch?v=IB1ysAbrOhU",
+  "https://www.youtube.com/watch?v=HqCvTI5WvUI"
 ]
  
 
