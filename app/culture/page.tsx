@@ -235,6 +235,30 @@ const Page = () => {
           </ul>
         </section>
 
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold gradient-text mb-4">
+            Over & Above
+          </h2>
+          <p className="mb-2">
+            At Creator Engine, “Over & Above” is more than a work ethic; it’s a mindset that we lean on every day. It’s the drive to look beyond instructions, own every outcome, and elevate every project with care. We don’t just meet expectations; we rise beyond them. It’s the spirit that transforms good work into great impact and individual effort into collective excellence.
+          </p>
+          <p className="mb-4">We go Over & Above when we:</p>
+          <ul className="list-disc list-inside space-y-2 ml-4">
+            <li>
+              Think beyond “my tasks” and connect our work to the bigger picture.
+            </li>
+            <li>
+              Find smarter, more efficient, innovative ways to deliver outstanding quality.
+            </li>
+            <li>
+              Take ownership of outcomes, not just deliverables.
+            </li>
+            <li>
+              Elevate teammates by sharing knowledge, feedback, and solutions.
+            </li>
+          </ul>
+        </section>
+
         <section className="mt-12">
           <p className="mb-8">
             As we continue to grow and evolve, our commitment to these values

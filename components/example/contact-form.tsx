@@ -72,6 +72,7 @@ export default function ContactForm() {
 
       // Optionally reset the form
       form.current.reset();
+      
     } catch (error) {
       console.error("EmailJS error:", error);
       toast({

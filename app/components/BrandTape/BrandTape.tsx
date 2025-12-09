@@ -13,6 +13,11 @@ const brands = [
     circle: true,
   },
   {
+    name: "The Chosen Adventures",
+    image: "/brands/chosenAdventures.png",
+    circle: true,
+  },
+  {
     name: "Strange Parts",
     image: "/brands/brands3.png",
     circle: true,
@@ -47,7 +52,6 @@ const brands = [
     image: "/brands/bunglowV2.png",
     circle: false,
   },
-
   {
     name: "",
     image: "/brands/roundlast.png",
@@ -68,12 +72,16 @@ const brands = [
     image: "/brands/natGeoV2.png",
     circle: true,
   },
-
-  
   {
     name: "Dhar Mann Studios",
     image: "/brands/DharV2.png",
     circle: true,
+  },
+  {
+    name: "Les Frenchies",
+    image: "/brands/LesFrenchies.png",
+    circle: true,
+    whiteBg: true,
   },
 ];
 
