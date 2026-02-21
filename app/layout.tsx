@@ -11,16 +11,16 @@ const inter = Inter({ subsets: ["latin"] });
 
 
 export const metadata: Metadata = {
-  title: "Creator Engine",
-  description: "Creator engine",
+  title: "Creator Engine | Scalable, End-to-End Post Production for YouTube, Shows, Trailers, Micro-dramas, Non-fiction TV & Social Media.",
+  description: "Creator Engine | Scalable, End-to-End Post Production for YouTube, Shows, Trailers, Micro-dramas, Non-fiction TV & Social Media.",
   openGraph: {
-    title: "Professional Post-Production Services | Creator Engine",
+    title: "Creator Engine | Scalable, End-to-End Post Production for YouTube, Shows, Trailers, Micro-dramas, Non-fiction TV & Social Media.",
     description:
-      "We provide end-to-end post-production services for digital creators, television, streaming, and more. Check out our work with industry giants like Netflix, Amazon Prime, and Disney+ Hotstar.",
+      "Creator Engine | Scalable, End-to-End Post Production for YouTube, Shows, Trailers, Micro-dramas, Non-fiction TV & Social Media.",
     images: [
       {
-        url: "/banner/linkpreview.jpg", // Assuming this image is in the public/images folder
-        alt: "Post-production services",
+        url: "/banner/linkpreview.jpg",
+        alt: "Creator Engine",
       },
     ],
     url: "https://www.creatorengine.studio",

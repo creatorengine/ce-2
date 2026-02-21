@@ -82,7 +82,7 @@ export default function Home() {
               </p>
             </ScrollAnimationWrapper>
           </div>
-          
+
           <div>
             <div className="flex flex-wrap px-6 lg:px-16 mt-4 lg:mt-10">
               <ScrollAnimationWrapper className="w-full">
@@ -97,7 +97,7 @@ export default function Home() {
                 className="  flex flex-row gap-1 my-3 items-center justify-center lg:justify-evenly
                  h-full
                w-full"
-              >                
+              >
                 <ScrollAnimationWrapper className="w-full flex flex-row justify-center items-center">
                   <img
                     src="/illustrations/ottlogos.png"
