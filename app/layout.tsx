@@ -9,6 +9,7 @@ import { FloatingNavbar } from "./components/Navbar/CustomNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
+
 export const metadata: Metadata = {
   title: "Creator Engine",
   description: "Creator engine",
