@@ -9,14 +9,14 @@ import { FloatingNavbar } from "./components/Navbar/CustomNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
-
 export const metadata: Metadata = {
-  title: "Creator Engine | Scalable, End-to-End Post Production for YouTube, Shows, Trailers, Micro-dramas, Non-fiction TV & Social Media.",
-  description: "Creator Engine | Scalable, End-to-End Post Production for YouTube, Shows, Trailers, Micro-dramas, Non-fiction TV & Social Media.",
+  title: "Creator Engine",
+  description:
+    "Scalable, End-to-End Post Production for YouTube, Shows, Trailers, Micro-dramas, Non-fiction TV & Social Media.",
   openGraph: {
-    title: "Creator Engine | Scalable, End-to-End Post Production for YouTube, Shows, Trailers, Micro-dramas, Non-fiction TV & Social Media.",
+    title: "Creator Engine",
     description:
-      "Creator Engine | Scalable, End-to-End Post Production for YouTube, Shows, Trailers, Micro-dramas, Non-fiction TV & Social Media.",
+      "Scalable, End-to-End Post Production for YouTube, Shows, Trailers, Micro-dramas, Non-fiction TV & Social Media.",
     images: [
       {
         url: "/banner/linkpreview.jpg",
