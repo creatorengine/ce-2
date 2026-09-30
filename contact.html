@@ -22,7 +22,7 @@
     "sameAs": ["https://www.linkedin.com/company/creatorengine/"]
   }
   </script>
-  <!-- VERSION 9.116 — 9 SEPTEMBER 2026 | removed em-dashes site-wide (visible copy; comments untouched); section-label sizes bumped (.s-tag 10->12px, .vlabel 9->11px). Prior note: contact: removed the static 'Goes to info@creatorengine.studio' note under the Send button (the .cf-note is now an empty aria-live status the JS fills on submit). The DEPLOY contact.html was stale (older than live — it still had that note AND was missing the Netlify form wiring), so it was resynced to this live version (asset paths -> assets/): the deployed form now carries data-netlify + honeypot + hidden form-name and no 'Goes to' line. Prior note: Global type scale reduced for a calmer, Instagram-like UI: large display type down ~12-20% (hero/section titles, giant numbers), body ~16px->14px, subheads trimmed; small UI labels (<15px: nav/tags/buttons) unchanged for legibility. Site-wide (all pages + media queries). Prior note: Mobile menu link font reduced ~10% (site-wide consistency). Prior note: NEW contact.html — a contact page with a form (Name, Email, Company/Project, Message + Send Message button). On submit it composes an email to the company address (info@creatorengine.studio) and opens the visitor's mail app (static site, mailto). All 'Work with Us' + 'Let's Talk' CTA buttons site-wide now link here instead of a raw mailto. Prior note: MOBILE QA FIXES (rendered all pages at 390px via headless Chromium): (1) hero SCROLL cue was overlapping the disciplines line on phones -> hidden <=600. (2) team + Explore pages had ~20px horizontal overflow because the side-glow leaks sat at left/right -5% (outside the viewport) -> pulled to 0 so they hug the edges with no overflow (glow still bleeds inward via blur). Prior note: SITE-WIDE MOBILE PASS: added a phone-refinement media block — tighter marquee (smaller gap + 19px logos <=600), Explore work-gallery + team/culture mosaic gutters, full-width Explore CTA, and 18px page gutters <=480 — refining the existing responsive layout for the newest v9.x components. Prior note: site version sync to v9.4 (new Explore vertical work pages added elsewhere). No careers.html content change this release. Prior note: Careers job listings are now DATA-DRIVEN + categorised: a JOBS array (grouped by category, e.g. Creative / Post-Production / Operations) renders the list, each posting links to its LinkedIn post ("View on LinkedIn"). Auto-sync hook: the page fetches careers-jobs.json if present (for a LinkedIn->JSON pipeline) and falls back to the inline seed. Empty state -> CV prompt. (NOTE: true automatic LinkedIn sync needs a backend/integration — a static site can't pull LinkedIn directly.) Prior note: Consistency pass across all pages: Culture link now in the TOP NAV + mobile menu on every page (was only on index — subpages showed it only in the footer); footer Contact everywhere = info@ on one line, career@ removed (kept only on the careers page's CV line). Prior note: Added a CV line above Open Positions: "Don't see a role that fits your profile? Send us your CV at career@creatorengine.studio". careers.html only. Prior note: Site version sync to v9.18 (no careers.html content change). Prior note: Careers is now a standalone page carrying the Open Positions role list (ported from the old team.html careers section) plus a LinkedIn CTA; footer Careers link repointed here. Prior note: Reverted the v9.15 blue cursor tint — removed the custom SVG arrow cursor so the plain default OS pointer (white) is used site-wide. Prior note: Removed the custom teal dot/ring cursor site-wide (all pages) and restored the default mouse pointer, tinted the CE-logo blue (#0090C0) via an inline SVG arrow cursor on html; interactive elements keep the OS hand. Prior note: Full-site integration release: whole site unified to v9.10 to fold in
+  <!-- VERSION 9.125 — 24 SEPTEMBER 2026 | Contact form REWIRED to Web3Forms (host-agnostic; works on Netlify/Vercel/anywhere). Removed the dormant Netlify Forms attributes (data-netlify/form-name/bot-field); form now AJAX-POSTs JSON to api.web3forms.com/submit with the access key registered to info@creatorengine.studio (key 4b0a7c33-0808-4b1d-b5b0-95c37e3d4c78), keeps inline validation + on-page success message, honeypot _honey, mailto fallback on error. NOTE: could not live-test from the build sandbox (no outbound to api.web3forms.com; file:// origin blocks CORS) - must be verified on the deployed https site. Prior note: Careers Open Positions now DATA-DRIVEN from a Google Sheet (semi-automation). The careers page reads a published Google Sheet (id 1qsa6_IOCzXM783ed2X15Z-lv7JClPRuYuY-pH254Yb4) via its gviz JSON endpoint on load (tqx=out:json&headers=1), renders rows whose Live column is yes/blank, each role links to its per-row LinkedIn URL (falls back to the company jobs page if blank). Guarded by #jobsRoot so ONLY careers.html fetches; if the sheet is unreachable or not shared publicly it falls back to the built-in JOBS list. REQUIRES the sheet shared 'Anyone with the link -> Viewer'. Replaced the old fetch('careers-jobs.json') hook on all pages that carried it. Prior note: Footer Contact: added the career email (career@creatorengine.studio) beneath info@creatorengine.studio on every page (matches the doc footer; career@ was previously footer-absent). Prior note: removed em-dashes site-wide (visible copy; comments untouched); section-label sizes bumped (.s-tag 10->12px, .vlabel 9->11px) so eyebrows read clearer. Prior note: contact: removed the static 'Goes to info@creatorengine.studio' note under the Send button (the .cf-note is now an empty aria-live status the JS fills on submit). The DEPLOY contact.html was stale (older than live — it still had that note AND was missing the Netlify form wiring), so it was resynced to this live version (asset paths -> assets/): the deployed form now carries data-netlify + honeypot + hidden form-name and no 'Goes to' line. Prior note: Global type scale reduced for a calmer, Instagram-like UI: large display type down ~12-20% (hero/section titles, giant numbers), body ~16px->14px, subheads trimmed; small UI labels (<15px: nav/tags/buttons) unchanged for legibility. Site-wide (all pages + media queries). Prior note: Mobile menu link font reduced ~10% (site-wide consistency). Prior note: NEW contact.html — a contact page with a form (Name, Email, Company/Project, Message + Send Message button). On submit it composes an email to the company address (info@creatorengine.studio) and opens the visitor's mail app (static site, mailto). All 'Work with Us' + 'Let's Talk' CTA buttons site-wide now link here instead of a raw mailto. Prior note: MOBILE QA FIXES (rendered all pages at 390px via headless Chromium): (1) hero SCROLL cue was overlapping the disciplines line on phones -> hidden <=600. (2) team + Explore pages had ~20px horizontal overflow because the side-glow leaks sat at left/right -5% (outside the viewport) -> pulled to 0 so they hug the edges with no overflow (glow still bleeds inward via blur). Prior note: SITE-WIDE MOBILE PASS: added a phone-refinement media block — tighter marquee (smaller gap + 19px logos <=600), Explore work-gallery + team/culture mosaic gutters, full-width Explore CTA, and 18px page gutters <=480 — refining the existing responsive layout for the newest v9.x components. Prior note: site version sync to v9.4 (new Explore vertical work pages added elsewhere). No careers.html content change this release. Prior note: Careers job listings are now DATA-DRIVEN + categorised: a JOBS array (grouped by category, e.g. Creative / Post-Production / Operations) renders the list, each posting links to its LinkedIn post ("View on LinkedIn"). Auto-sync hook: the page fetches careers-jobs.json if present (for a LinkedIn->JSON pipeline) and falls back to the inline seed. Empty state -> CV prompt. (NOTE: true automatic LinkedIn sync needs a backend/integration — a static site can't pull LinkedIn directly.) Prior note: Consistency pass across all pages: Culture link now in the TOP NAV + mobile menu on every page (was only on index — subpages showed it only in the footer); footer Contact everywhere = info@ on one line, career@ removed (kept only on the careers page's CV line). Prior note: Added a CV line above Open Positions: "Don't see a role that fits your profile? Send us your CV at career@creatorengine.studio". careers.html only. Prior note: Site version sync to v9.18 (no careers.html content change). Prior note: Careers is now a standalone page carrying the Open Positions role list (ported from the old team.html careers section) plus a LinkedIn CTA; footer Careers link repointed here. Prior note: Reverted the v9.15 blue cursor tint — removed the custom SVG arrow cursor so the plain default OS pointer (white) is used site-wide. Prior note: Removed the custom teal dot/ring cursor site-wide (all pages) and restored the default mouse pointer, tinted the CE-logo blue (#0090C0) via an inline SVG arrow cursor on html; interactive elements keep the OS hand. Prior note: Full-site integration release: whole site unified to v9.10 to fold in
        the finished Culture page. No content change this release. History below from v9.1: Site-wide version bump (no careers.html content change;
        tagged to keep the whole site on one version). Carries forward everything from v4 (flat frosted glass with no
        embossed/3D edges, fixed nav, feathered B&W video verticals, momentum bg/copy parallax, per-tile
@@ -833,9 +833,8 @@
     <p class="s-body reveal" style="transition-delay:.16s; margin-top: 4px;">
       Tell us what you&rsquo;re making and we&rsquo;ll get back to you. Prefer email? Write to <a href="mailto:info@creatorengine.studio" class="careers-email">info@creatorengine.studio</a>.
     </p>
-    <form class="cform reveal" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="transition-delay:.22s; margin-top: 44px;" novalidate>
-      <input type="hidden" name="form-name" value="contact" />
-      <p class="cf-hp" hidden aria-hidden="true"><label>Don&rsquo;t fill this out if you&rsquo;re human: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+    <form class="cform reveal" id="contactForm" style="transition-delay:.22s; margin-top: 44px;" novalidate>
+      <p class="cf-hp" hidden aria-hidden="true"><label>Don&rsquo;t fill this out if you&rsquo;re human: <input name="_honey" tabindex="-1" autocomplete="off" /></label></p>
       <div class="cf-row">
         <label class="cf-field"><span>Name</span><input type="text" name="name" autocomplete="name" required placeholder="Your name" /></label>
         <label class="cf-field"><span>Email</span><input type="email" name="email" autocomplete="email" required placeholder="you@company.com" /></label>
@@ -856,7 +855,7 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a class="nav-logo" href="index.html#hero"><img src="assets/CE_mark.png" alt="Creator Engine mark" /><span class="nav-logo-word">Creator Engine</span></a>
-          <p class="footer-blurb">Dedicated post-production teams for creators, studio execs, agencies and entertainment companies.</p>
+          <p class="footer-blurb">Dedicated post-production teams for creators, studios, agencies and entertainment companies.</p>
         </div>
         <div class="footer-col">
           <h4>Work</h4>
@@ -886,6 +885,7 @@
           <h4>Contact</h4>
           <ul>
             <li><a href="mailto:info@creatorengine.studio" style="white-space:nowrap; font-size:12.5px;">info@creatorengine.studio</a></li>
+            <li><a href="mailto:career@creatorengine.studio" style="white-space:nowrap; font-size:12.5px;">career@creatorengine.studio</a></li>
           </ul>
         </div>
       </div>
@@ -1194,29 +1194,69 @@
         root.appendChild(list);
       });
     }
-    fetch('careers-jobs.json', { cache: 'no-store' })
-      .then(r => { if (!r.ok) throw 0; return r.json(); })
-      .then(data => renderJobs(Array.isArray(data) ? data : (data.jobs || [])))
-      .catch(() => renderJobs(JOBS));
+    (function(){
+      var root = document.getElementById('jobsRoot'); if (!root) return;        // only the Careers page renders roles
+      var SHEET_ID = '1qsa6_IOCzXM783ed2X15Z-lv7JClPRuYuY-pH254Yb4';
+      var SHEET_URL = 'https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?tqx=out:json&headers=1&cb=' + Date.now();
+      function parseGviz(text){
+        var s = text.indexOf('{'), e = text.lastIndexOf('}');
+        var obj = JSON.parse(text.substring(s, e + 1));
+        var cols = (obj.table.cols || []).map(function(c){ return String(c.label || '').trim().toLowerCase(); });
+        function idx(n){ return cols.indexOf(n); }
+        var ci = idx('category'), ti = idx('title'), li = idx('location'), ui = idx('linkedin url'), vi = idx('live');
+        var out = [];
+        (obj.table.rows || []).forEach(function(r){
+          function cell(i){ return (i >= 0 && r.c && r.c[i] && r.c[i].v != null) ? String(r.c[i].v).trim() : ''; }
+          var title = cell(ti); if (!title) return;
+          var live = cell(vi).toLowerCase();
+          if (live && ['yes','y','true','1','live','open'].indexOf(live) === -1) return;   // hide rows not marked live
+          out.push({ category: cell(ci) || 'Open Positions', title: title, meta: cell(li), url: cell(ui) || 'https://www.linkedin.com/company/creatorengine/jobs/' });
+        });
+        return out;
+      }
+      fetch(SHEET_URL, { cache: 'no-store' })
+        .then(function(r){ if (!r.ok) throw 0; return r.text(); })
+        .then(function(t){ renderJobs(parseGviz(t)); })          // sheet wins (empty sheet -> empty state)
+        .catch(function(){ renderJobs(JOBS); });                 // sheet unreachable/not public -> built-in fallback
+    })();
 
     /* ─── PAGE LOAD FADE ─── */
     document.body.style.opacity = '0';
     window.addEventListener('DOMContentLoaded', () => { document.body.style.transition = 'opacity .6s'; document.body.style.opacity = '1'; });
   </script>
 <script>
-    /* Contact form -> composes an email to the company address (static site: opens the visitor's mail app). */
+    /* Contact form -> posts to Web3Forms (works on any static host, incl. Vercel); submissions are emailed to
+       the inbox the access key is registered to (info@creatorengine.studio). Keeps the on-page success message. */
     (function(){
       var f = document.getElementById('contactForm'); if (!f) return;
       var note = f.querySelector('.cf-note');
+      var btn  = f.querySelector('button[type="submit"]');
+      var ACCESS_KEY = '4b0a7c33-0808-4b1d-b5b0-95c37e3d4c78';    /* Web3Forms key (registered to info@creatorengine.studio) */
       f.addEventListener('submit', function(e){
         e.preventDefault();
         if (!f.reportValidity()) return;
         var g = function(n){ var el=f.elements[n]; return (el && el.value ? el.value : '').trim(); };
-        var name=g('name'), email=g('email'), company=g('company'), message=g('message');
-        var subject = encodeURIComponent('New enquiry from ' + (name || 'the website'));
-        var body = encodeURIComponent('Name: '+name+'\nEmail: '+email + (company ? ('\nCompany / Project: '+company) : '') + '\n\n' + message);
-        window.location.href = 'mailto:info@creatorengine.studio?subject=' + subject + '&body=' + body;
-        if (note) note.innerHTML = 'Opening your email app to send to <a href="mailto:info@creatorengine.studio">info@creatorengine.studio</a>…';
+        if (g('_honey')) return;                                  /* honeypot: silently drop bots */
+        var name=g('name');
+        var payload = {
+          access_key: ACCESS_KEY,
+          subject: 'New enquiry from ' + (name || 'the website') + ' - Creator Engine',
+          from_name: 'Creator Engine website',
+          name: name, email: g('email'), company: g('company'), message: g('message')
+        };
+        if (note) note.textContent = 'Sending…';
+        if (btn) btn.disabled = true;
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
+        })
+        .then(function(r){ return r.json(); })
+        .then(function(d){ if (btn) btn.disabled = false;
+          if (d && d.success){ f.reset(); if (note) note.textContent = 'Thanks, your message has been sent. We will be in touch shortly.'; }
+          else { if (note) note.innerHTML = 'Something went wrong sending your message. Please email <a href="mailto:info@creatorengine.studio">info@creatorengine.studio</a> directly.'; } })
+        .catch(function(){ if (btn) btn.disabled = false;
+          if (note) note.innerHTML = 'Something went wrong sending your message. Please email <a href="mailto:info@creatorengine.studio">info@creatorengine.studio</a> directly.'; });
       });
     })();
   </script>

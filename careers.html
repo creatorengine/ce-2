@@ -22,7 +22,7 @@
     "sameAs": ["https://www.linkedin.com/company/creatorengine/"]
   }
   </script>
-  <!-- VERSION 9.116 — 9 SEPTEMBER 2026 | removed em-dashes site-wide (visible copy; comments untouched); section-label sizes bumped (.s-tag 10->12px, .vlabel 9->11px). Prior note: Global type scale reduced for a calmer, Instagram-like UI: large display type down ~12-20% (hero/section titles, giant numbers), body ~16px->14px, subheads trimmed; small UI labels (<15px: nav/tags/buttons) unchanged for legibility. Site-wide (all pages + media queries). Prior note: Mobile menu link font reduced ~10% (site-wide consistency). Prior note: 'Work with Us' + 'Let's Talk' CTA buttons now link to the new contact.html (contact form that emails info@creatorengine.studio on submit) instead of a raw mailto. Prior note: MOBILE QA FIXES (rendered all pages at 390px via headless Chromium): (1) hero SCROLL cue was overlapping the disciplines line on phones -> hidden <=600. (2) team + Explore pages had ~20px horizontal overflow because the side-glow leaks sat at left/right -5% (outside the viewport) -> pulled to 0 so they hug the edges with no overflow (glow still bleeds inward via blur). Prior note: SITE-WIDE MOBILE PASS: added a phone-refinement media block — tighter marquee (smaller gap + 19px logos <=600), Explore work-gallery + team/culture mosaic gutters, full-width Explore CTA, and 18px page gutters <=480 — refining the existing responsive layout for the newest v9.x components. Prior note: site version sync to v9.4 (new Explore vertical work pages added elsewhere). No careers.html content change this release. Prior note: Careers job listings are now DATA-DRIVEN + categorised: a JOBS array (grouped by category, e.g. Creative / Post-Production / Operations) renders the list, each posting links to its LinkedIn post ("View on LinkedIn"). Auto-sync hook: the page fetches careers-jobs.json if present (for a LinkedIn->JSON pipeline) and falls back to the inline seed. Empty state -> CV prompt. (NOTE: true automatic LinkedIn sync needs a backend/integration — a static site can't pull LinkedIn directly.) Prior note: Consistency pass across all pages: Culture link now in the TOP NAV + mobile menu on every page (was only on index — subpages showed it only in the footer); footer Contact everywhere = info@ on one line, career@ removed (kept only on the careers page's CV line). Prior note: Added a CV line above Open Positions: "Don't see a role that fits your profile? Send us your CV at career@creatorengine.studio". careers.html only. Prior note: Site version sync to v9.18 (no careers.html content change). Prior note: Careers is now a standalone page carrying the Open Positions role list (ported from the old team.html careers section) plus a LinkedIn CTA; footer Careers link repointed here. Prior note: Reverted the v9.15 blue cursor tint — removed the custom SVG arrow cursor so the plain default OS pointer (white) is used site-wide. Prior note: Removed the custom teal dot/ring cursor site-wide (all pages) and restored the default mouse pointer, tinted the CE-logo blue (#0090C0) via an inline SVG arrow cursor on html; interactive elements keep the OS hand. Prior note: Full-site integration release: whole site unified to v9.10 to fold in
+  <!-- VERSION 9.124 — 24 SEPTEMBER 2026 | Careers Open Positions now DATA-DRIVEN from a Google Sheet (semi-automation). The careers page reads a published Google Sheet (id 1qsa6_IOCzXM783ed2X15Z-lv7JClPRuYuY-pH254Yb4) via its gviz JSON endpoint on load (tqx=out:json&headers=1), renders rows whose Live column is yes/blank, each role links to its per-row LinkedIn URL (falls back to the company jobs page if blank). Guarded by #jobsRoot so ONLY careers.html fetches; if the sheet is unreachable or not shared publicly it falls back to the built-in JOBS list. REQUIRES the sheet shared 'Anyone with the link -> Viewer'. Replaced the old fetch('careers-jobs.json') hook on all pages that carried it. Prior note: Footer Contact: added the career email (career@creatorengine.studio) beneath info@creatorengine.studio on every page (matches the doc footer; career@ was previously footer-absent). Prior note: removed em-dashes site-wide (visible copy; comments untouched); section-label sizes bumped (.s-tag 10->12px, .vlabel 9->11px) so eyebrows read clearer. Prior note: Global type scale reduced for a calmer, Instagram-like UI: large display type down ~12-20% (hero/section titles, giant numbers), body ~16px->14px, subheads trimmed; small UI labels (<15px: nav/tags/buttons) unchanged for legibility. Site-wide (all pages + media queries). Prior note: Mobile menu link font reduced ~10% (site-wide consistency). Prior note: 'Work with Us' + 'Let's Talk' CTA buttons now link to the new contact.html (contact form that emails info@creatorengine.studio on submit) instead of a raw mailto. Prior note: MOBILE QA FIXES (rendered all pages at 390px via headless Chromium): (1) hero SCROLL cue was overlapping the disciplines line on phones -> hidden <=600. (2) team + Explore pages had ~20px horizontal overflow because the side-glow leaks sat at left/right -5% (outside the viewport) -> pulled to 0 so they hug the edges with no overflow (glow still bleeds inward via blur). Prior note: SITE-WIDE MOBILE PASS: added a phone-refinement media block — tighter marquee (smaller gap + 19px logos <=600), Explore work-gallery + team/culture mosaic gutters, full-width Explore CTA, and 18px page gutters <=480 — refining the existing responsive layout for the newest v9.x components. Prior note: site version sync to v9.4 (new Explore vertical work pages added elsewhere). No careers.html content change this release. Prior note: Careers job listings are now DATA-DRIVEN + categorised: a JOBS array (grouped by category, e.g. Creative / Post-Production / Operations) renders the list, each posting links to its LinkedIn post ("View on LinkedIn"). Auto-sync hook: the page fetches careers-jobs.json if present (for a LinkedIn->JSON pipeline) and falls back to the inline seed. Empty state -> CV prompt. (NOTE: true automatic LinkedIn sync needs a backend/integration — a static site can't pull LinkedIn directly.) Prior note: Consistency pass across all pages: Culture link now in the TOP NAV + mobile menu on every page (was only on index — subpages showed it only in the footer); footer Contact everywhere = info@ on one line, career@ removed (kept only on the careers page's CV line). Prior note: Added a CV line above Open Positions: "Don't see a role that fits your profile? Send us your CV at career@creatorengine.studio". careers.html only. Prior note: Site version sync to v9.18 (no careers.html content change). Prior note: Careers is now a standalone page carrying the Open Positions role list (ported from the old team.html careers section) plus a LinkedIn CTA; footer Careers link repointed here. Prior note: Reverted the v9.15 blue cursor tint — removed the custom SVG arrow cursor so the plain default OS pointer (white) is used site-wide. Prior note: Removed the custom teal dot/ring cursor site-wide (all pages) and restored the default mouse pointer, tinted the CE-logo blue (#0090C0) via an inline SVG arrow cursor on html; interactive elements keep the OS hand. Prior note: Full-site integration release: whole site unified to v9.10 to fold in
        the finished Culture page. No content change this release. History below from v9.1: Site-wide version bump (no careers.html content change;
        tagged to keep the whole site on one version). Carries forward everything from v4 (flat frosted glass with no
        embossed/3D edges, fixed nav, feathered B&W video verticals, momentum bg/copy parallax, per-tile
@@ -840,7 +840,7 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a class="nav-logo" href="index.html#hero"><img src="assets/CE_mark.png" alt="Creator Engine mark" /><span class="nav-logo-word">Creator Engine</span></a>
-          <p class="footer-blurb">Dedicated post-production teams for creators, studio execs, agencies and entertainment companies.</p>
+          <p class="footer-blurb">Dedicated post-production teams for creators, studios, agencies and entertainment companies.</p>
         </div>
         <div class="footer-col">
           <h4>Work</h4>
@@ -870,6 +870,7 @@
           <h4>Contact</h4>
           <ul>
             <li><a href="mailto:info@creatorengine.studio" style="white-space:nowrap; font-size:12.5px;">info@creatorengine.studio</a></li>
+            <li><a href="mailto:career@creatorengine.studio" style="white-space:nowrap; font-size:12.5px;">career@creatorengine.studio</a></li>
           </ul>
         </div>
       </div>
@@ -1178,10 +1179,31 @@
         root.appendChild(list);
       });
     }
-    fetch('careers-jobs.json', { cache: 'no-store' })
-      .then(r => { if (!r.ok) throw 0; return r.json(); })
-      .then(data => renderJobs(Array.isArray(data) ? data : (data.jobs || [])))
-      .catch(() => renderJobs(JOBS));
+    (function(){
+      var root = document.getElementById('jobsRoot'); if (!root) return;        // only the Careers page renders roles
+      var SHEET_ID = '1qsa6_IOCzXM783ed2X15Z-lv7JClPRuYuY-pH254Yb4';
+      var SHEET_URL = 'https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?tqx=out:json&headers=1&cb=' + Date.now();
+      function parseGviz(text){
+        var s = text.indexOf('{'), e = text.lastIndexOf('}');
+        var obj = JSON.parse(text.substring(s, e + 1));
+        var cols = (obj.table.cols || []).map(function(c){ return String(c.label || '').trim().toLowerCase(); });
+        function idx(n){ return cols.indexOf(n); }
+        var ci = idx('category'), ti = idx('title'), li = idx('location'), ui = idx('linkedin url'), vi = idx('live');
+        var out = [];
+        (obj.table.rows || []).forEach(function(r){
+          function cell(i){ return (i >= 0 && r.c && r.c[i] && r.c[i].v != null) ? String(r.c[i].v).trim() : ''; }
+          var title = cell(ti); if (!title) return;
+          var live = cell(vi).toLowerCase();
+          if (live && ['yes','y','true','1','live','open'].indexOf(live) === -1) return;   // hide rows not marked live
+          out.push({ category: cell(ci) || 'Open Positions', title: title, meta: cell(li), url: cell(ui) || 'https://www.linkedin.com/company/creatorengine/jobs/' });
+        });
+        return out;
+      }
+      fetch(SHEET_URL, { cache: 'no-store' })
+        .then(function(r){ if (!r.ok) throw 0; return r.text(); })
+        .then(function(t){ renderJobs(parseGviz(t)); })          // sheet wins (empty sheet -> empty state)
+        .catch(function(){ renderJobs(JOBS); });                 // sheet unreachable/not public -> built-in fallback
+    })();
 
     /* ─── PAGE LOAD FADE ─── */
     document.body.style.opacity = '0';

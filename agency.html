@@ -22,7 +22,7 @@
     "sameAs": ["https://www.linkedin.com/company/creatorengine/"]
   }
   </script>
-  <!-- VERSION 9.116 — 9 SEPTEMBER 2026 | removed em-dashes site-wide (visible copy; comments untouched); section-label sizes bumped (.s-tag 10->12px, .vlabel 9->11px). Prior note: Explore/vertical pages: removed the teal .s-tag section eyebrow (kept only the grey ← exp-back link, hover→teal). Agency showreel caption reduced to a single green line 'Brand Creative Showreel' (removed white title, LG·HSAD·Surgère client line, 'Open in a new tab' link). Creator Growth: removed the 'Also supported: Dhar Mann · Creepy & Cozy' line. Founder photos Gavin+Sam → V02 (grayscale). Prior note: Brand showreel (agency.html) Drive link updated to file id 1W9zJob9NmRp_YKC6TRnToiFX-Lr97M7H (iframe /preview embed + 'Open in a new tab' /view link). Prior note: Global type scale reduced for a calmer, Instagram-like UI: large display type down ~12-20% (hero/section titles, giant numbers), body ~16px->14px, subheads trimmed; small UI labels (<15px: nav/tags/buttons) unchanged for legibility. Site-wide (all pages + media queries). Prior note: Mobile menu link font reduced ~10% (site-wide consistency). Prior note: 'Work with Us' + 'Let's Talk' CTA buttons now link to the new contact.html (contact form that emails info@creatorengine.studio on submit) instead of a raw mailto. Prior note: Brand showreel embed swapped to the new Google Drive file (id 10PiT3ed1i7GMw3CMFEgC1NDrtRwHX2g-) — /preview iframe + /view fallback both updated. (Drive file must be shared 'Anyone with the link' to play.) Prior note: Brand showreel is now EMBEDDED (was a click-out card): a responsive 16:9 iframe player using the Google Drive preview URL (file id 13LHibKhGFAYWnSf0JKWkAkNu8BN-vepq → /preview), with a caption + an 'Open in a new tab' fallback to the /view URL. NOTE: the Drive file must be shared 'Anyone with the link' for the embed to play. Prior note: Agency Creative Services Explore page is now LIVE (was a coming-soon placeholder): added the brand showreel as a featured card linking to https://f.io/RnRAe37l (user-supplied brand-vertical reel; f.io share link, so a branded placeholder tile + play glyph — no thumbnail). Copy updated to LG/HSAD/Surgere brand work. Prior note: MOBILE QA FIXES (rendered all pages at 390px via headless Chromium): (1) hero SCROLL cue was overlapping the disciplines line on phones -> hidden <=600. (2) team + Explore pages had ~20px horizontal overflow because the side-glow leaks sat at left/right -5% (outside the viewport) -> pulled to 0 so they hug the edges with no overflow (glow still bleeds inward via blur). Prior note: SITE-WIDE MOBILE PASS: added a phone-refinement media block — tighter marquee (smaller gap + 19px logos <=600), Explore work-gallery + team/culture mosaic gutters, full-width Explore CTA, and 18px page gutters <=480 — refining the existing responsive layout for the newest v9.x components. Prior note: NEW: "Explore [vertical]" work pages, populated from the Operational-dashboard sheet (Asset tracker tab). Each showcased title is a 16:9 card linking out to the actual work (target _blank); YouTube items use the video thumbnail (img.youtube.com), Instagram / MyDrama items use a branded placeholder tile with a play glyph. Verticals: Microdramas (FOX/MyDrama), Creator Growth, Podcast, Show Marketing. Agency Creative Services intentionally deferred to a coming-soon page (separate showreel later). Pages reuse the shared shell (nav/footer/scripts) + a subtle top/side blue ambient bleed. -->
+  <!-- VERSION 9.124 — 24 SEPTEMBER 2026 | Careers Open Positions now DATA-DRIVEN from a Google Sheet (semi-automation). The careers page reads a published Google Sheet (id 1qsa6_IOCzXM783ed2X15Z-lv7JClPRuYuY-pH254Yb4) via its gviz JSON endpoint on load (tqx=out:json&headers=1), renders rows whose Live column is yes/blank, each role links to its per-row LinkedIn URL (falls back to the company jobs page if blank). Guarded by #jobsRoot so ONLY careers.html fetches; if the sheet is unreachable or not shared publicly it falls back to the built-in JOBS list. REQUIRES the sheet shared 'Anyone with the link -> Viewer'. Replaced the old fetch('careers-jobs.json') hook on all pages that carried it. Prior note: Footer Contact: added the career email (career@creatorengine.studio) beneath info@creatorengine.studio on every page (matches the doc footer; career@ was previously footer-absent). Prior note: COPY SYNC to the latest Website Copy doc (HOMEPAGE FINAL + Explore/Team/Culture tabs). index: hero trimmed to doc (removed 'You have the production. We run the post.' hook + 'One accountable structure...' sentence; Fox Entertainment -> FOX Entertainment Studios); microdramas/creator-growth/show-marketing/agency homepage section bodies reworded; founders intro reworded; founder sub-lines 'Formerly ...' -> 'Former ...' (Gavin now 'Post Production Head, APAC - Netflix · SVP - SIM Digital'); Vijay bio 'across'->'spanning'. Explore pages: all 5 intro bodies reworded to doc (microdramas now 'released on My Drama'). team: Our Team intro + Sreenjoy + Vikas bios reworded. culture: intro p2 reworded + p3 added. All hyphens, no em-dashes. Prior note: removed em-dashes site-wide (visible copy; comments untouched); section-label sizes bumped (.s-tag 10->12px, .vlabel 9->11px) so eyebrows read clearer. Prior note: Explore/vertical pages: removed the teal .s-tag section eyebrow (kept only the grey ← exp-back link, hover→teal). Agency showreel caption reduced to a single green line 'Brand Creative Showreel' (removed white title, LG·HSAD·Surgère client line, 'Open in a new tab' link). Creator Growth: removed the 'Also supported: Dhar Mann · Creepy & Cozy' line. Founder photos Gavin+Sam → V02 (grayscale). Prior note: Brand showreel (agency.html) Drive link updated to file id 1W9zJob9NmRp_YKC6TRnToiFX-Lr97M7H (iframe /preview embed + 'Open in a new tab' /view link). Prior note: Global type scale reduced for a calmer, Instagram-like UI: large display type down ~12-20% (hero/section titles, giant numbers), body ~16px->14px, subheads trimmed; small UI labels (<15px: nav/tags/buttons) unchanged for legibility. Site-wide (all pages + media queries). Prior note: Mobile menu link font reduced ~10% (site-wide consistency). Prior note: 'Work with Us' + 'Let's Talk' CTA buttons now link to the new contact.html (contact form that emails info@creatorengine.studio on submit) instead of a raw mailto. Prior note: Brand showreel embed swapped to the new Google Drive file (id 10PiT3ed1i7GMw3CMFEgC1NDrtRwHX2g-) — /preview iframe + /view fallback both updated. (Drive file must be shared 'Anyone with the link' to play.) Prior note: Brand showreel is now EMBEDDED (was a click-out card): a responsive 16:9 iframe player using the Google Drive preview URL (file id 13LHibKhGFAYWnSf0JKWkAkNu8BN-vepq → /preview), with a caption + an 'Open in a new tab' fallback to the /view URL. NOTE: the Drive file must be shared 'Anyone with the link' for the embed to play. Prior note: Agency Creative Services Explore page is now LIVE (was a coming-soon placeholder): added the brand showreel as a featured card linking to https://f.io/RnRAe37l (user-supplied brand-vertical reel; f.io share link, so a branded placeholder tile + play glyph — no thumbnail). Copy updated to LG/HSAD/Surgere brand work. Prior note: MOBILE QA FIXES (rendered all pages at 390px via headless Chromium): (1) hero SCROLL cue was overlapping the disciplines line on phones -> hidden <=600. (2) team + Explore pages had ~20px horizontal overflow because the side-glow leaks sat at left/right -5% (outside the viewport) -> pulled to 0 so they hug the edges with no overflow (glow still bleeds inward via blur). Prior note: SITE-WIDE MOBILE PASS: added a phone-refinement media block — tighter marquee (smaller gap + 19px logos <=600), Explore work-gallery + team/culture mosaic gutters, full-width Explore CTA, and 18px page gutters <=480 — refining the existing responsive layout for the newest v9.x components. Prior note: NEW: "Explore [vertical]" work pages, populated from the Operational-dashboard sheet (Asset tracker tab). Each showcased title is a 16:9 card linking out to the actual work (target _blank); YouTube items use the video thumbnail (img.youtube.com), Instagram / MyDrama items use a branded placeholder tile with a play glyph. Verticals: Microdramas (FOX/MyDrama), Creator Growth, Podcast, Show Marketing. Agency Creative Services intentionally deferred to a coming-soon page (separate showreel later). Pages reuse the shared shell (nav/footer/scripts) + a subtle top/side blue ambient bleed. -->
   <!-- Prior snapshots preserved as index-v4.5 … v8.5 (18-jul … 14-aug).html -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -683,7 +683,7 @@
     <div class="exp-sideleak right" aria-hidden="true"></div>
     <a class="exp-back reveal" href="index.html#agency"><span class="a">&larr;</span> Agency Creative Services</a>
     <h2 class="s-title reveal" style="transition-delay:.1s"><span class="thin">Brand &amp; agency work,</span><br />built for reuse.</h2>
-    <p class="s-body reveal" style="transition-delay:.16s; margin-top:4px;">We bring production discipline, creative consistency and reliable delivery to brand campaigns and ongoing content, including work for <strong>LG</strong>, <strong>HSAD</strong> and <strong>Surg&egrave;re</strong>. Watch the brand showreel:</p>
+    <p class="s-body reveal" style="transition-delay:.16s; margin-top:4px;">We work on campaigns and ongoing brand content, keeping the creative standard consistent through different formats and deliverables. Recent work includes <strong>LG</strong>, <strong>HSAD</strong> and <strong>Surg&egrave;re</strong>. Watch the brand showreel:</p>
     <div class="showreel reveal" style="transition-delay:0.06s">
       <iframe src="https://drive.google.com/file/d/1W9zJob9NmRp_YKC6TRnToiFX-Lr97M7H/preview" allow="autoplay; fullscreen; encrypted-media" allowfullscreen loading="lazy" title="Brand Creative Showreel"></iframe>
     </div>
@@ -702,7 +702,7 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a class="nav-logo" href="index.html#hero"><img src="assets/CE_mark.png" alt="Creator Engine mark" /><span class="nav-logo-word">Creator Engine</span></a>
-          <p class="footer-blurb">Dedicated post-production teams for creators, studio execs, agencies and entertainment companies.</p>
+          <p class="footer-blurb">Dedicated post-production teams for creators, studios, agencies and entertainment companies.</p>
         </div>
         <div class="footer-col">
           <h4>Work</h4>
@@ -732,6 +732,7 @@
           <h4>Contact</h4>
           <ul>
             <li><a href="mailto:info@creatorengine.studio" style="white-space:nowrap; font-size:12.5px;">info@creatorengine.studio</a></li>
+            <li><a href="mailto:career@creatorengine.studio" style="white-space:nowrap; font-size:12.5px;">career@creatorengine.studio</a></li>
           </ul>
         </div>
       </div>
@@ -1040,10 +1041,31 @@
         root.appendChild(list);
       });
     }
-    fetch('careers-jobs.json', { cache: 'no-store' })
-      .then(r => { if (!r.ok) throw 0; return r.json(); })
-      .then(data => renderJobs(Array.isArray(data) ? data : (data.jobs || [])))
-      .catch(() => renderJobs(JOBS));
+    (function(){
+      var root = document.getElementById('jobsRoot'); if (!root) return;        // only the Careers page renders roles
+      var SHEET_ID = '1qsa6_IOCzXM783ed2X15Z-lv7JClPRuYuY-pH254Yb4';
+      var SHEET_URL = 'https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?tqx=out:json&headers=1&cb=' + Date.now();
+      function parseGviz(text){
+        var s = text.indexOf('{'), e = text.lastIndexOf('}');
+        var obj = JSON.parse(text.substring(s, e + 1));
+        var cols = (obj.table.cols || []).map(function(c){ return String(c.label || '').trim().toLowerCase(); });
+        function idx(n){ return cols.indexOf(n); }
+        var ci = idx('category'), ti = idx('title'), li = idx('location'), ui = idx('linkedin url'), vi = idx('live');
+        var out = [];
+        (obj.table.rows || []).forEach(function(r){
+          function cell(i){ return (i >= 0 && r.c && r.c[i] && r.c[i].v != null) ? String(r.c[i].v).trim() : ''; }
+          var title = cell(ti); if (!title) return;
+          var live = cell(vi).toLowerCase();
+          if (live && ['yes','y','true','1','live','open'].indexOf(live) === -1) return;   // hide rows not marked live
+          out.push({ category: cell(ci) || 'Open Positions', title: title, meta: cell(li), url: cell(ui) || 'https://www.linkedin.com/company/creatorengine/jobs/' });
+        });
+        return out;
+      }
+      fetch(SHEET_URL, { cache: 'no-store' })
+        .then(function(r){ if (!r.ok) throw 0; return r.text(); })
+        .then(function(t){ renderJobs(parseGviz(t)); })          // sheet wins (empty sheet -> empty state)
+        .catch(function(){ renderJobs(JOBS); });                 // sheet unreachable/not public -> built-in fallback
+    })();
 
     /* ─── PAGE LOAD FADE ─── */
     document.body.style.opacity = '0';
