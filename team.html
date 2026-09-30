@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- viewport-fit=cover lets the page paint into the notch / dynamic-island region,
+       while env(safe-area-inset-*) below keeps every actual element clear of it -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#060607" />
+  <title>Team - Creator Engine</title>
+  <meta name="description" content="Broadcast-grade post production across five verticals: Microdramas, Creator Growth, Podcast, Show Marketing, and Agency Creative Services. Built for scale." />
+  <link rel="icon" type="image/png" href="assets/CE_mark.png" />
+  <link rel="apple-touch-icon" href="assets/CE_mark.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Creator Engine",
+    "url": "https://www.creatorengine.studio",
+    "logo": "https://www.creatorengine.studio/logo.svg",
+    "description": "Broadcast-grade post production across five verticals: Microdramas, Creator Growth, Podcast, Show Marketing, and Agency Creative Services.",
+    "email": "info@creatorengine.studio",
+    "sameAs": ["https://www.linkedin.com/company/creatorengine/"]
+  }
+  </script>
+  <!-- VERSION 9.121 — 18 SEPTEMBER 2026 | Life at Creator Engine collage: refreshed 2 pool tiles from the user's re-edited sources - Adolf-Rohan.jpg + Gemini_Generated_Image_l73a1cl73a1cl73a.jpg (now .jpg sources) reprocessed to grayscale + teal (long-edge 1500). Same pool filenames, so no markup/array change - pixels only. Prior note: Life at Creator Engine collage OVERHAUL: pool rebuilt from the FULL Enhanced Images folder (56 landscape candids, bw+teal each), skipping any file with 'Ignore' in the name and the lead-source portraits (Yash sinha/Shibasish/asad); new shots added (Adolf Rohan, DSC07356, Gemini l73a1c, Joy Heer Shivam, Vivek Nabil, nami); old Ignore_Nabnil dropped. Collage now RE-RANDOMISES on every page load (randomizeInitial shuffles poolBw/poolTeal/poolLeads and fills every tile with a unique random shot; `used` set keeps all 24 visible tiles distinct), maximising variety; the 3 team-lead tiles still draw solo lead portraits. Prior note: Life at Creator Engine collage: REPLACED the Gemini_Generated_Image_tnmbbbtnmbbbtnmb tile (coffee-machine scene) with the user's CLEANED version (desk clutter/bottles removed). The folder source PNG still held the un-cleaned image; overwrote Enhanced Images/Gemini_Generated_Image_tnmbbbtnmbbbtnmb.png with the clean upload (3.5% border trim) and regenerated pool/Gemini_Generated_Image_tnmbbbtnmbbbtnmb.jpg (grayscale, long-edge 1500). Same pool filename so no array change. Prior note: Life at Creator Engine collage images REFRESHED: reprocessed all 50 bw + 13 teal pool tiles from the current Enhanced Images sources (grayscale + teal duotone colorize black(4,20,22)/mid(18,104,104)/white(150,226,214), long-edge 1500). Added Nabnil Vivek Heer as a new candid (landscape) - Nabnil-Vivek-Heer.jpg + -teal.jpg in the pool, appended to poolBw (now 51) and poolTeal (now 14). Prior note: Life at Creator Engine collage: added Yash Sinha (Post Production Coordinator) + Shibasish Banerjee (Music Supervisor) to poolLeads (now 10 rotating lead portraits, was 8). Their lead tiles lead-yashsinha.jpg + lead-shibasish.jpg reprocessed to 480x640 grayscale from the Team leads source PNGs with the baked-in name banner cropped off (bottom 20%), matching the other lead tiles. Prior note: 'Vertical Heads' -> 'Leadership'; 'Life at CE' -> 'Life at Creator Engine'; Life-at-CE photo rotation sped up ~35% (tick 2800+2600 -> 1800+1800ms, leadTick 3400+2600 -> 2200+1800ms). removed em-dashes site-wide (visible copy; comments untouched); section-label sizes bumped (.s-tag 10->12px, .vlabel 9->11px) so eyebrows read clearer. Prior note: Collage pool now pulls ALL image extensions from Enhanced Images (was DSC*.jpeg/jpg only) — added the landscape Gemini image (Gemini_Generated_Image_tnmbbbtnmbbbtnmb) + 7 IMG_* shots + 8.png to poolBw/poolTeal (50 bw / 13 teal). Portrait files (other Gemini, asad) still excluded (crop badly in landscape tiles). ONLY the JS pool arrays changed; grid ARRANGEMENT (team-mosaic) + team leads untouched, so new images cycle in via rotation. Prior note: Reverted the 'Life at CE' collage (team-mosaic markup + poolBw/poolTeal/poolLeads) to the PREVIOUS v9.107 version (per feedback: don't change the grid arrangement) — so the grid layout + leads are as before (8 leads incl asad; Yash Sinha/Shibasish are NOT collage leads here). KEPT the v9.109 vertical-heads change: 3 heads in one row (Sreenjoy, Vikas, Rupesh). Prior note: Vertical Heads reduced to 3 in ONE row (Sreenjoy, Vikas, Rupesh) — .vheads grid 6-col→3-col, removed the 5-card nth-child placement; removed the Yash Sinha & Shibasish vhead cards. They MOVE to team leads (collage rotating lead tiles): Yash Sinha + Shibasish added to poolLeads (from Team leads folder), Asad REMOVED from leads (moved to Enhanced; he's a portrait so not in the landscape pool). Enhanced pool refreshed (41 bw + 11 teal, deduped). Collage rebuilt (24 distinct tiles, 3 rotating leads from the 9). Prior note: Added the two pending vertical-head bios from the Website Copy doc — Yash Sinha (Post Production Manager; 3D Animation @ Vancouver Film School, 3D/VFX: lighting/compositing/rigging/CGI, key part of the post pipeline) and Shibasish Banerjee (Music Supervisor; music director/composer 15+ yrs across advertising/TV/film, oversees music supervision for international digital productions). Both cards now hover/tap-expand. All 5 vertical heads now have bios. Prior note: Added Sreenjoy Dey's vertical-head bio (from the Website Copy doc) — his card now expands on hover/tap like Vikas & Rupesh. Bio: unscripted TV direction/story/production/show-running; Reality Head on The Remix, Fear Factor, MTV Ace of Space, Dance Deewane; production in Spain & Argentina; now leads non-fiction producers/content teams at CE. Prior note: Global type scale reduced for a calmer, Instagram-like UI: large display type down ~12-20% (hero/section titles, giant numbers), body ~16px->14px, subheads trimmed; small UI labels (<15px: nav/tags/buttons) unchanged for legibility. Site-wide (all pages + media queries). Prior note: Team-lead vertical tiles shortened ~15%: `.tmx-lead` grid-row span 9 -> 8 (they read a bit less tall). Everything else unchanged; 24 distinct tiles, no repeats. Prior note: 'Life at CE' images refreshed (more added — Enhanced pool now 43 bw + 12 teal after de-duping .jpeg/.jpg twins). Grid re-randomised to 24 boxes (3 retained rotating LEAD tiles + 21 landscapes: 16 bw + 5 teal), random positions/dirs/selection (seed 4). Every on-screen tile is a DISTINCT base photo (teal tiles drawn from non-shown-twin bases) so no image shows in two boxes at once; the cycler keeps it repeat-free while rotating (21 landscape tiles vs 43 bw bases = big headroom). Leads unchanged. Prior note: 'Life at CE' collage: reduced from 24 to 18 boxes and guaranteed NO on-screen repeats. Every tile now shows a DISTINCT base photo — the 4 teal tiles use photos whose bw twin is NOT shown (bw tiles drawn only from the 24 no-teal-twin photos), fixing the bw/teal same-photo duplication. 3 rotating lead tiles + 15 landscapes (11 bw + 4 teal); leads at positions 1/6/11 so the masonry closes flat. Cycler's used/baseOf keeps it repeat-free while rotating. Prior note: Refreshed the collage pools AGAIN from the updated Team leads + Enhanced Images folders (re-processed grayscale/teal; same filenames so arrays/markup unchanged — verified all 50 referenced pool files exist). Prior note: 'Life at CE' collage reworked: team leads are NO LONGER static — now 3 tall '.tmx-lead' tiles that ROTATE through the 8 solo lead portraits (poolLeads) via a dedicated leadTick cycler (independent of the bw/teal flip; leads excluded from that via data-tint='lead'). Rest = 21 cycling landscape tiles from the refreshed Enhanced pool. All pools re-processed from the updated folders. Prior note: 'Life at CE' collage rebuilt to PROMINENTLY feature the 8 TEAM LEADS (Team leads folder: aarnav, asad, gauri, newel, nilaj, pranav, sunil, yash mishra) as the large static portrait tiles; the 16 surrounding cycling tiles use the Enhanced Images landscapes. Grid = 8 portraits + 16 photo tiles (pattern P,L,L x8). Desktop rebuilt this pass (shared markup also drives mobile 2-col — mobile tuning deferred per request). Prior note: 'Life at CE' collage rebuilt with the new ENHANCED photos (CE Assets/SHORTLISTED Photoshoot/Enhanced Images). 40 landscape shots grayscaled (10 also teal-duotone) + 4 portraits (DSC07772, DSC07971, port30, port_img) written to CE Assets/Team/pool + deploy; poolBw/poolTeal arrays + all 28 tile srcs rewired (desktop + mobile, same responsive block). Prior note: MOBILE tweaks (team): (1) Vertical-head boxes narrower + centred on phones (max-width min(290px,82vw)) for a proper edge margin. (2) Expanded vhead bar capped (max-height 68% + scroll) so the headshot's face stays visible. (3) Mobile menu link font reduced ~10%. Prior note: MOBILE pass (team): (1) bios now TAP-to-expand on touch devices (hover:none) while desktop keeps hover — Vikas+Rupesh vhead cards; tapping the band toggles, one-open-at-a-time, tap-outside closes. (2) 'Life at CE' collage no longer an endless 1-col on phones: <=640 now 2-col (grid-auto-rows 9vw, spans kept) so it packs like the tablet view. Prior note: Vikas bio tweak: 'He has worked across' -> 'He has since worked across' (kept the trailing period for consistency). team.html only. Prior note: Updated Vikas's bio: added 'over 17 years ago' ('...began his career as a VFX artist over 17 years ago at a leading boutique...'). team.html only. Prior note: Sreenjoy's head photo updated to V03 (Sreenjoy Dey_v03.jpeg) AND both Sreenjoy + Vikas re-cropped LOWER with more headroom (heads were touching the top edge). Zoomed out to match the other heads' size (eye-to-hairtop gap ~21%) and set hair-top ~6% headroom, eyeline ~27% (a touch lower than the 26% others). Sreenjoy centred (face 50%), Vikas kept at 42% width. head-sreenjoy.jpg + head-vikas.jpg overwritten in CE Assets + deploy. Prior note: Vikas's head photo updated to the V04 edit (cleaner retouch of the same pose; pendant lamp removed). SAME crop geometry kept exactly as v9.84 (crop box 275,642,1407,2057 of the 1684x2528 png; face ~42% width, eyeline 26%, grayscale) — image swapped only, no reframing. head-vikas.jpg overwritten in CE Assets + deploy. Prior note: Replaced Vikas's vertical-head bio with an updated THIRD-PERSON version ('Vikas began his career... He has worked... He now brings...'), was first-person. team.html only. Prior note: Vikas's head photo nudged left in the box (was centred at 50%; now face at ~42% width) so his head reads left-of-centre with his body filling the right — eyeline still 26%, head-size unchanged, grayscale. Re-cropped from V03 png (crop left shifted right in source: left~264). head-vikas.jpg overwritten in CE Assets + deploy. Prior note: Re-centred Sreenjoy's + Vikas's vertical-head photos horizontally — both faces were right-of-centre vs the other heads. Re-cropped from source (Sreenjoy from the V02 ARW 1080x1920 embedded preview, face_cx~635; Vikas from V03 png, face_cx~751) so each face sits at 50% width, eyeline still 26%, head-size matched, grayscale. head-sreenjoy.jpg + head-vikas.jpg overwritten in CE Assets + deploy. Prior note: Vikas's vertical-head photo swapped again to the V03 shot (Vikas Acharya Creative Director Brands V03.png, 1684x2528): cropped 640x800 (4:5), eyeline at 26%, head-size matched to the other heads, grayscale. head-vikas.jpg overwritten in CE Assets + deploy (supersedes v9.81's V02). Prior note: Vikas's vertical-head photo replaced with the V02 shot (Vikas Acharya Creative Director Brands V02.jpeg): cropped to 640x800 (4:5) with the eyeline at 26% and head-size matched to the other 4 heads, grayscale. head-vikas.jpg overwritten in CE Assets + deploy (filename unchanged, no markup change). Prior note: Fixed the band staying 'stuck' open: the collapse (mouseleave) was bound to the aston band itself, which balloons to cover most of the card when open, so the leave boundary was unreliable. Moved the close handler onto the CARD (.vhead-x / .founder-x) — a fixed-size box that never resizes — so the band now slides back down the instant the cursor leaves the card. Open still triggers on band mouseenter. Prior note: Profile bio copy now fades in SOONER — reduced the copy's transition-delay from 1s to .3s on team (.vhead-bio p) + index founders (.founder-bio p), so the text starts rising/fading in shortly after the band begins sliding (less pause). Prior note: Profile treatment now HOVER-driven: the 'Know more' button removed; the aston band slides up when the cursor moves over it (mouseenter) and collapses on mouseleave — team vertical heads (Vikas, Rupesh) + all 3 index founders. Band slide slowed + smoothed further (max-height 2.8s / margin+bg+img 2.4s, ease cubic-bezier(.22,1,.36,1)); copy fade delayed to 1s. Vertical-head band darkness matched to the founders (rgba(8,8,10,.5), blur 20px). Prior note: Team page — rolled the Vikas slide-up profile treatment to ALL 5 vertical heads (overlaid frosted band, uniform 4/5 portraits, founders-matched name/role: teal accent line + display-800 name + teal uppercase role). Band bg DARKENED (.34->.55 collapsed, .7 open) so name/role pop; aston band now slides up 2x SLOWER (panel/img 1.8s, bio max-height 2s), copy fade delayed .6s to follow. Rupesh has Know More + bio; Vikas has Know More + bio; Sreenjoy/Yash/Shibasish show name/role only (Know More withheld — awaiting their bios). Generic JS wires every .vhead-x with a button, one-open-at-a-time. Prior note: Team page — Vikas card polish: slide-up now slower/smoother (panel/img .9s, bio max-height 1s), bio copy now fades + rises like the site reveal (translateY 28px->0, opacity, 1.15s site easing, .15s delay so it follows the slide), and the name/designation now MATCH the founders block: 32px teal accent line above the name, name display 800, role in TEAL uppercase letter-spaced. Prior note: Team page — NEW profile treatment on Vikas's vertical-head card (prototype; speech-bubble idea canceled). Founders-style frosted name/role band overlaid on the photo (backdrop-blur see-through), with a 'Know more' button beside the role. Click -> the band slides UP to cover most of the image, the photo blurs behind it, and Vikas's bio shows (focus on copy); Close/Esc/click-out collapses. Photo enlarged (flex-fill) to spill into the band. Other 4 heads unchanged. Prior note: 'Work with Us' + 'Let's Talk' CTA buttons now link to the new contact.html (contact form that emails info@creatorengine.studio on submit) instead of a raw mailto. Prior note: Life at CE rebuilt as a 3-column GRID (bigger images) that MIXES vertical + horizontal and ENDS FLAT/neat: landscape tiles are 16:9 (grid-row span 3), the 4 portrait shots are tall 9:16 tiles (span 9) placed in the upper third so the bottom rows are all-landscape and the grid ends level. grid-auto-rows fixed (5.1vw / 8vw / 15vw) so spans tessellate perfectly (1 portrait = 3 stacked landscapes tall) with no gaps; object-fit:cover fills every box (no padding, ~5% crop max on portraits). 24 landscape (cycling) + 4 portrait (static) = 28 tiles. Culture already image-free (v9.56). Prior note: Life at CE: now a 3-column masonry (bigger images) mixing VERTICAL and horizontal shots — the 4 portrait photos get tall 9:16 tiles, the rest 16:9, all object-fit:cover filling edge-to-edge (no padding, no crop). column-count 3 / 2 (<=1024) / 1 (<=640). 14 landscape (cycling) + 4 portrait (static) = 18 tiles. Prior note: Life at CE per feedback: boxes had too much blurred padding — switched to a uniform 4-col grid of equal 16:9 boxes that MATCH the (16:9) image aspect, object-fit:cover so each photo fills its box edge-to-edge (no padding, no crop, equal value, none shrinking at the bottom). Removed the blurred backdrop. Excluded the 4 portrait shots (only aspect that can't fill 16:9 without cropping); 24 tiles. Prior note: Life at CE collage: RESTORED the varied vertical/horizontal masonry boxes (re-added the 25 grid spans, 6-col dense grid) AND kept images uncropped — object-fit:contain shows each photo whole, with a blurred ambient backdrop of the same image (::before, --bg set by the cycler) filling the box so there are no black gaps. Best of both: varied boxes + no cropping. Prior note: Life at CE collage NO LONGER CROPS images: switched from the varied masonry (which required object-fit:cover) to a uniform 16:9 grid (4-col desktop / 3 / 2) with object-fit:CONTAIN, so every photo shows whole as shot. 16:9 shots fill exactly; the few 4:3 / portrait shots letterbox on a dark tile (full image, no crop). Stripped the 25 inline grid-span styles. Prior note: Sreenjoy's vertical-head photo replaced with the V02 shot (Sreenjoy Dey_v02.ARW): extracted the embedded 1920x1080 preview, rotated 90 CCW to upright, cropped full-width to 640x800 (4:5) with eyes at 26% to match the other 4 heads' eyeline, grayscale. Verified all 5 eyelines align on a 26% gridline. Image file only (head-sreenjoy.jpg overwritten in CE Assets + deploy). Prior note: MOBILE QA FIXES (rendered all pages at 390px via headless Chromium): (1) hero SCROLL cue was overlapping the disciplines line on phones -> hidden <=600. (2) team + Explore pages had ~20px horizontal overflow because the side-glow leaks sat at left/right -5% (outside the viewport) -> pulled to 0 so they hug the edges with no overflow (glow still bleeds inward via blur). Prior note: SITE-WIDE MOBILE PASS: added a phone-refinement media block — tighter marquee (smaller gap + 19px logos <=600), Explore work-gallery + team/culture mosaic gutters, full-width Explore CTA, and 18px page gutters <=480 — refining the existing responsive layout for the newest v9.x components. Prior note: orientation fix: 4 single-person portrait shots in the Life at CE pool were stored sideways (head at right) — rotated DSC07772/07881/07889/07970 90 CCW to upright (now 562x1000), in both CE Assets and deploy. Image files only. Prior note: LIFE AT CE expanded: mosaic grown from 12 to 25 tiles (skyline-packed 6-col grid, varied 2/4-wide x 2-4-tall). Pools now load ALL folder photos — poolBw=all 67 b/w + poolTeal=all 16 teal (was 48+16). NO-REPEAT hardening: the cycler now tracks images by BASE ID (filename minus -teal) in one global `used` set, so a shot is never visible in two tiles at once EVEN across its b/w and teal versions; the paired teal<->bw swap also excludes the just-picked base from the other tint. ~25% tiles stay teal. Prior note: team gradient bleed: added a subtle blue ambient at the TOP of the Our Team page plus soft left/right side gradients (same teal->blue family as the homepage verticals' light-leaks, but softer) so the page no longer reads as flat black. Prior note: Sreenjoy's head-shot re-cropped tighter so his eyeline matches the other 4 vertical heads (~26% from top; assets/Team/head-sreenjoy.jpg replaced). Prior note: Consistency pass across all pages: Culture link now in the TOP NAV + mobile menu on every page (was only on index — subpages showed it only in the footer); footer Contact everywhere = info@ on one line, career@ removed (kept only on the careers page's CV line). Prior note: Team: (1) the 5 head cards shrunk ~15% (.vheads max-width 85%, centred). (2) 'Inside the Studio' -> 'Life at CE'. (3) Mosaic pool massively widened to the whole photoshoot (embedded previews from all non-heads .ARW): 64 photos in CE Assets/Team/pool/ (48 bw + 16 teal = 25%); the no-repeat flip-tint cycler now draws from these -> far more random, no image shown twice. (Rotated frames 7881/7889/7970 dropped.) team.html only. Prior note: Vertical Heads now REAL people (from the Heads and founders folder), grayscale 4:5 headshots in CE Assets/Team/head-*.jpg: 1 Sreenjoy Dey — Creative Head, Non-Fiction; 2 Vikas Acharya — Creative Director, Brands; 3 Rupesh Shinde — Head of Creative Operations; 4 Yash Sinha — Post Production Manager; 5 Shibasish Banerjee — Music Supervisor. Sreenjoy/Vikas extracted from .ARW embedded preview + rotated upright; Rupesh/Yash/Shibasish PNGs with their baked-in name banners cropped off. .vhead-photo now holds an <img> (was SVG placeholder), grayscale w/ subtle scale+brightness on hover. team.html only. Prior note: Vertical Heads all EQUAL size (equal importance): every card spans 2 of
+       6 cols; explicit placement keeps 2-up / 3-down with the top two centred (nth-child 1→col2, 2→col4 on row1;
+       3/4/5 → cols 1/3/5 on row2). Was top-2 wider (span 3). team.html only. Prior note: Vertical Heads: now 5 cards laid out 2-up / 3-down (.vheads is a 6-col
+       grid; cards 1-2 span 3 = top row, cards 3-5 span 2 = bottom row; ≤760px → 2-col, ≤640 → 1-col). Added
+       placeholder cards Vertical Head 4 & 5. team.html only. Prior note: Team photo cycler now FLIPS tint on every change: a teal tile and a bw tile transition together (teal→B/W and B/W→green), so consecutive images in a tile alternate tint while the on-screen teal count stays exactly 3/12 (25%). Uniqueness (no image on two tiles at once) still guaranteed via per-tint used sets; `data-now` tracks each tile's live tint. team.html only. Prior note: Added ~2 more rows to the team mosaic: 8 -> 12 tiles, pool widened 11 -> 15 photos (5 teal + 10 bw). Still exactly 3 of 12 tiles teal (25%) and the per-tint cycler still guarantees no image is shown by two tiles at once (spares now 2 teal + 1 bw). Pool now also includes two studio-interior shots (07515/07150) to reach the extra bw needed. team.html only. Prior note: Team mosaic: NO image is shown by two tiles at once + teal share cut to 25%. Now 8 larger varied tiles from a pool of 11 people photos (3 teal + 8 bw). Exactly 2 teal tiles are on screen at any time (25%); the cycler keeps per-tint "used" sets and only slides in an image not currently displayed (claims it before the slide, releases the old after) -> every visible image is unique, always. Two <img> layers per tile; images preloaded. team.html only. Prior note: Team mosaic is now PEOPLE-ONLY: removed the discipline label boxes ("supers") entirely so it focuses on the team/human side; relabelled the band "Inside the Studio". Every tile is a photo CAROUSEL — holds 3 people photos and slides (up/down/left/right, direction + timing varied per tile, staggered) to introduce the next image (JS #team-members .tmx-photo, `.ph`/`.ph.cur`, transform 1.05s; respects reduced-motion). Photos from the photoshoot (CE Assets/Culture/*.jpg). Disc CSS now unused. team.html only. Prior note: Team mosaic now has VARIED tile sizes/shapes (explicit 6-col grid tiling, tiles span 2-6 cols x 2-4 rows -> squares, wide + tall rectangles, big blocks; grid-auto-flow dense; mobile resets to a uniform square grid). Photo tiles populated with the group/people photos from the photoshoot (CE Assets/Culture/*.jpg, object-fit cover, subtle brightness+scale on hover). Discipline boxes interleaved. team.html only. Prior note: REDESIGNED the Our Team page in the new design language (home + culture): added 3 "Vertical Head" placeholder feature cards up top, and rebuilt the roster as a culture-style MOSAIC — six numbered discipline boxes (2 teal) interleaved diagonally with the team headshots (grayscale→colour bloom on hover, discipline hover-blurbs), plus a blue base glow (.team-endglow). team.html only. Prior note: Site version sync to v9.18 (no team.html content change). Prior note: Removed the Culture teaser + Careers sections from team.html — Team page is now Our Team only; Culture and Careers live solely as their own pages (culture.html / careers.html). Footer Careers link now points to careers.html. Prior note: Reverted the v9.15 blue cursor tint — removed the custom SVG arrow cursor so the plain default OS pointer (white) is used site-wide. Prior note: Removed the custom teal dot/ring cursor site-wide (all pages) and restored the default mouse pointer, tinted the CE-logo blue (#0090C0) via an inline SVG arrow cursor on html; interactive elements keep the OS hand. Prior note: Full-site integration release: whole site unified to v9.10 to fold in
+       the finished Culture page. team.html links to it via the "Explore Our Culture" teaser + footer. No
+       content change this release. History below from v9.1: Site-wide version bump (no team.html content change;
+       tagged to keep the whole site on one version). Carries forward everything from v4 (flat frosted glass with no
+       embossed/3D edges, fixed nav, feathered B&W video verticals, momentum bg/copy parallax, per-tile
+       hero hover with no cursor drift, light-leak section hand-offs, staggered reveals, trimmed
+       three-founder Team). New in 4.5: full mobile hardening — viewport-fit=cover + safe-area insets so
+       the logo, "Work With Us" and all copy stay clear of the dynamic island / notch and screen edges;
+       a frosted-glass hamburger menu for phones (the five verticals were previously unreachable on
+       mobile); a closing "Work With Us" CTA block and a full footer; fluid type and tap-target polish
+       across every element.
+       18 Jul (rev b) homepage tweaks: (1) the frosted-glass nav is now present from first paint
+       instead of fading in on scroll; (2) the four hero tiles now show real vertical imagery
+       (Microdramas, Creator Growth, Podcast, Show Marketing); (3) the teal/blue light leak has been
+       removed from the hero/splash — it now lives only on the vertical sections, so the leftmost
+       hero image stays fully visible.
+       18 Jul (rev c): reverted the hero tiles from vertical imagery back to the "characters"
+       concept, but with a fresh set of portraits (each with an onerror fallback so a tile can
+       never break). Added a teal→blue light leak rising from the bottom of the Founders section
+       — same bloom as the verticals — to give that previously all-black area depth.
+       18 Jul (rev d): hero tiles switched to face-aware crops (fit=facearea) so all four share a
+       consistent eyeline, subject scale and composition; the founders light leak rebuilt as a
+       full-width band rising from the entire base of the section (no centre bloom, no side crops).
+       VERSION 4.6 (18 Jul): (1) the founders light leak now breaks OUT to the full viewport width
+       (it was still being clipped to the section's max-width box, leaving side gutters). (2) Buttons
+       no longer have any magnetic/parallax drift toward the cursor — hover shows only a subtle glow,
+       and a click gives a small press-in (:active); no passive movement.
+       VERSION 5 (18 Jul): (1) removed the duplicate vertical list — the in-hero strip is gone, so the
+       verticals live only in the top nav and the running logo ticker now sits directly below the four
+       hero image slices. (2) Added two new sections after the Founders, built from the real Creator
+       Engine site copy: CULTURE (the six "Creative Ownership" values + the Shaw quote) and CAREERS
+       (Join Our Team — specialisms, career@creatorengine.studio, LinkedIn open-positions link). Both
+       added to the mobile menu (07/08) and footer.
+       VERSION 5.1 (18 Jul): (1) added a full TEAM roster section (#team-members) after the Founders,
+       using the original site's 24 non-founder team card images (each carries the person's photo +
+       name + role, shown uncropped via object-fit:contain). (2) Added "Culture" to the desktop top
+       nav alongside Our Team; the inline nav now collapses to the hamburger below 1200px (was 1024)
+       and uses a tighter gap so the seven links never overflow.
+       VERSION 5.2 (18 Jul): the team roster cards now reveal with a staggered slide-up — as each row
+       scrolls into view its members cascade up one after another (same reveal motion as the rest of
+       the page), driven by a dedicated observer so hover stays instant.
+       VERSION 5.3 (18 Jul): softened that team motion — the cards no longer slide up (the 64px
+       travel read as jarring). They now fade in slowly on the same easing + pace as the light leaks
+       (opacity over 2s), with only a gentle per-column stagger so a row settles in smoothly.
+       VERSION 5.4 (18 Jul): matched the team motion to the founders — the cards slide up + fade on
+       the same easing again, but slower (2.2s vs the founders' 1.15s) and more delayed (per-column
+       stagger 220ms) so it reads soft and smooth. Hover only scales the image now (like the
+       founders) so the reveal slide and hover never conflict.
+       VERSION 5.5 (18 Jul): version rename only — identical to v5.4, no functional changes.
+       VERSION 5.6 (20 Jul): quick-win polish pass — (1) the five dead "Learn More" links no longer
+       point at non-existent pages; they're now inactive placeholders tagged "Coming soon". (2) Added
+       a favicon (CE mark) + Organization JSON-LD structured data. (3) Added visible keyboard focus
+       rings (:focus-visible) since the custom cursor hides the pointer. (4) prefers-reduced-motion now
+       also stops the logo marquee, podcast waveform and scroll-pulse, and disables smooth scroll.
+       VERSION 5.7 (24 Jul): full copy overhaul from client-supplied deck. New hero label/headline/sub
+       (Built for Recurring Productions · Post-Production at Scale · dedicated teams…) and buttons
+       (See the work / Let's talk). Client band updated to the real client list. Added three sections
+       before the verticals: When Production Scales, How We Work (with a disciplines pipeline), Areas
+       of Work intro. All five verticals rewritten (new For-line, body, Work Includes, Featured work;
+       CTAs relabelled "Explore <vertical>", still Coming-soon until pages exist). Founders reordered
+       (Gavin, Samya, Vijay) with full titles + bios + a credits line + "Meet the Team" link. Closing
+       CTA copy updated → "Let's Talk". Footer rebuilt into Work / Company / Connect / Contact. Nav
+       collapses Our Team+Culture into a single "Company" link; CTA → "Work with Us".
+       VERSION 5.8 (24 Jul): removed the floating play-button badges (.vbadge) from all five verticals;
+       converted the five "Explore <vertical>" CTAs from inactive "Coming soon" placeholders into real
+       hyperlinks (→ microdramas.html / creator-growth.html / podcast.html / show-marketing.html /
+       agency.html — those detail pages still need to be built). Featured-work lists remain plain text.
+       VERSION 5.9 (24 Jul): made the hero masthead a little bolder — .hero-h1 weight 300 → 400 (the
+       "Scale." accent stays 800).
+       VERSION 6.0 (24 Jul): reverted the v5.9 masthead change (.hero-h1 back to 300). Instead made the
+       top menu bar bolder — .nav-links weight 500 → 700.
+       VERSION 6.1 (25 Jul): copy refresh for the Company-area sections (everything else unchanged).
+       Our Team eyebrow "The Team"→"Our Team" + new two-paragraph body (team grid kept). Culture eyebrow
+       "Our Culture"→"Culture", new intro + six values reworded (Shaw quote kept). Careers retitled
+       "Build your craft…" with shorter copy and a single "View Open Positions" button (role tags +
+       Send-Showreel button removed). Footer: added "Contact" under Company; Contact emails reordered
+       (info@ first).
+       VERSION 6.2 (25 Jul): full homepage copy pass from the client deck. New hero sub (FOX vertical
+       drama / The Chosen companion / YouTube creators). Client band expanded to the full 19-name list
+       (images where available, text otherwise; new names as text). Merged the old three intro sections
+       into ONE "When Production Scales — One accountable team, customized around the work" (with real
+       cadence stats + updated disciplines pipeline: Post Producing, no Post Supervision); removed the
+       separate How We Work and Areas of Work sections. All five verticals rewritten with the delivered-
+       work copy (Microdramas FOX/HOLYWATER/MyDrama; Creator Growth 12/mo + new Work-Includes; Podcast
+       Shaftesbury/CBC + Hizzouse; Show Marketing + "360° creative support for shows" sub-head; Agency
+       brands/agency, no white-label framing on LG). Founders: Samya bio Disney+ Hotstar → Hotstar.
+       Closing CTA gained a "Work With Us" eyebrow + new body. Nav "Company" → "Team". Footer: blurb
+       updated, "Company" column → "Team" (Contact link removed).
+       VERSION 6.3 (29 Jul): re-save / version bump only — identical to v6.2, no content changes.
+       VERSION 6.4 (29 Jul): split the Company sections into their own pages. Our Team, Culture and
+       Careers are REMOVED from the homepage (now team.html, culture.html, careers.html). "Meet the
+       Team" links to team.html; the footer Team column links to the three pages. Homepage now ends
+       Founders -> Closing CTA. Founders headline scaled down so "Built by the people who have led"
+       holds one line; the credits line enlarged for prominence.
+       VERSION 6.5 (10 Aug): the CREATOR GROWTH vertical now plays its final master
+       "../VERTICALS VIDEOS/CREATOR GROWTH.mp4" (H.264, muted/loop). The other four verticals keep
+       their placeholder reference clips. Same treatment (grayscale, feathered mask, momentum parallax,
+       plays only when on screen). VERTICALS VIDEOS/ is the client's drop folder for final per-vertical
+       masters — as more arrive, map each vertical's <source> to its file.
+       VERSION 6.6 (10 Aug): copy refresh from client deck. Hero now carries the opening pitch (3 paras
+       + disciplines strip); the separate "When Production Scales" section is removed. Verticals reworded
+       (Microdramas, Creator Growth, Show Marketing). Vertical layout redesigned: background video is now
+       FULL-WIDTH and UNCROPPED (object-fit:contain, no parallax zoom) and the copy is centred + wider.
+       Footer: Instagram removed; copyright is "© Creator Engine <span id=ceYear>" auto-set via JS to the
+       current year (rolls to 2027 at New Year). Creator Growth video (CREATOR GROWTH.mp4) unchanged.
+       VERSION 6.7 (10 Aug): vertical copy moved back to the SIDE (alternating left/right via .flip),
+       inset from the edge, left-aligned — reverting v6.6's centred copy. Scrim is directional again
+       (darkest on the copy side) so the full-width video no longer overpowers the text. Video stays
+       full-width & uncropped.
+       VERSION 6.8 (10 Aug): brought the vertical copy ~12% further in from the edge (padding-inset
+       side now calc(var(--sa*) + 64px + 12vw)) so it sits more inboard over the video.
+       VERSION 6.9 (10 Aug): fixed v6.8 (that padding change had narrowed the text). Restored v6.7's
+       exact copy box and instead shifted the WHOLE block ~10% inward via margin (base margin-left:10vw,
+       flip margin-right:10vw) — width unchanged. Dimmed vertical videos ~35% (.vsec-bg opacity .92 → .6)
+       so they no longer overpower the copy.
+       VERSION 7.0 (10 Aug): widened the vertical copy so paragraphs breathe (.vcopy max-width 600→760,
+       .vcopy .s-body 540→680; block position/margin unchanged). Dimmed the vertical video BG a further
+       ~30% (.vsec-bg opacity .6 → .42). Numbered 7.0 (not 6.10) so it sorts after 6.9.
+       VERSION 7.1 (10 Aug): per annotated screenshot, spread the vertical paragraphs much wider —
+       .vcopy max-width now clamp(560px, 56vw, 1080px) with .vcopy .s-body max-width 100% (fills the
+       column), and the side inset reduced 10vw → 5vw so the copy reaches out toward the edge.
+       VERSION 7.2 (10 Aug): shifted the vertical copy column further toward its outer edge — side
+       inset reduced 5vw → 2.5vw (flip copy moves right into the right-hand gap; base copy mirrors).
+       VERSION 7.3 (14 Aug): TEST — replaced the four placeholder hero portraits with the two real
+       Splash Page collage images (CE Assets/Splash Page images/mewes-collage-440x10802x.png + _1.png),
+       alternated A·B·A·B across the four tiles.
+       VERSION 7.4 (14 Aug): (1) hero scrim made horizontally EVEN (vertical-only gradient) so all four
+       splash images read at equal visibility — the leftmost is no longer darkened by the old
+       left-heavy scrim. (2) Cursor-reveal on the hero text: the label/H1/paragraphs are wrapped in
+       #heroFade with a radial mask that follows the pointer (JS sets --mx/--my), so letters under the
+       cursor fade out (soft ~34→150px ring) to reveal the image behind. Desktop/fine-pointer only.
+       VERSION 7.5 (14 Aug): (1) dimmed the splash images ~20% more (hero-tile brightness .62 → .5),
+       kept equal across all four. (2) Reworked the cursor-reveal to be crisp & blocky — replaced the
+       soft radial gradient with a hard-edged SQUARE hole (two linear-gradient bands, ~156px, binary
+       on/off, no grey falloff) so letter blocks snap off/on under the cursor. (Future: on hover the
+       image brightens + swaps to the other image — noted, not yet built.)
+       VERSION 7.6 (14 Aug): reworked the cursor-reveal to be true PER-LETTER — every character is
+       wrapped in span.ltr and its opacity is driven by distance to the cursor (fully off ≤20px, back
+       to full by 50px), so individual letters blink off/on with a slight radial fade — no geometric
+       mask/block in the frame. (Gradient "Scale." toggles as one unit to keep its fill intact.)
+       VERSION 7.7 (14 Aug): (1) doubled the per-letter reveal radius (OFF 20→40, FADE 50→100) so it's
+       more evident. (2) Reset the hero eyebrow "Built for Recurring Productions" to a normal sentence
+       — body font, default kerning (letter-spacing normal), sentence case (no uppercase), lead dash
+       removed.
+       VERSION 7.8 (14 Aug): (1) hero eyebrow now BOLD (weight 700). (2) Headline reveal radius
+       increased (OFF 40→60, FADE 100→150) and "Scale." now fades PER-LETTER (each letter is a
+       .scale-ltr gradient span) instead of the whole word. (3) Paragraph reveal is now
+       COMPARTMENTALISED — words grouped into 4-word blocks that snap off/on when the cursor is over
+       any word in the block (hard toggle), replacing the soft radial fade.
+       VERSION 7.9 (14 Aug): (1) FIXED "Scale." not fading — its parent .scale span kept a
+       background-clip:text gradient that re-painted the glyphs over the faded per-letter spans; JS now
+       adds .scale-split to the parent to strip that gradient, so the per-letter .scale-ltr spans fade
+       properly. (2) Doubled the headline reveal radius (OFF 60→120, FADE 150→300). (3) Paragraph
+       reveal is now SOFT again (distance-based per 4-word block, not a hard box hit) with a wide
+       radius (C_OFF 40, C_FADE 220) so several blocks ease off together.
+       VERSION 8.0 (14 Aug): hero eyebrow "Built for Recurring Productions" — undid the bold (weight
+       700 → 400) and set it to ALL CAPS (text-transform: uppercase). Kept body font, default kerning.
+       Numbered 8.0 (not 7.10) so it sorts after 7.9.
+       VERSION 8.1 (14 Aug): Podcast and Show Marketing verticals now play their final masters
+       (../VERTICALS VIDEOS/PODCAST.mp4 and SHOW MARKETING.mp4, H.264). Microdramas + Agency still use
+       placeholder References clips; Creator Growth unchanged. Same treatment.
+       VERSION 8.2 (14 Aug): (1) vertical copy narrower + more left (max-width clamp 56vw→46vw, cap
+       1080→780; left inset padding 80→64, margin 2.5vw→2vw) so it's not so centred. (2) Hero
+       disciplines split evenly into two lines (4 + 4) — break after "Motion Graphics" — so "Delivery"
+       is no longer orphaned on its own line.
+       VERSION 8.3 (14 Aug): rebuilt team.html into the consolidated Team page — Our Team (roster) +
+       Culture teaser (→ culture.html via "Explore Our Culture") + Careers with a reusable OPEN
+       POSITIONS role list (.roles/.role; title + meta line + external JD link; empty-state message).
+       Added the .roles component CSS to the shared stylesheet; footer "Careers" now → team.html#careers.
+       culture.html stays as the full culture page; careers.html left in place but unlinked.
+       VERSION 8.4 (14 Aug): rebuilt culture.html into the full long-form Culture manifesto — intro,
+       six values (each with body paragraphs + a "What it looks like in practice" list), a closing
+       "The Culture We Are Building" section and the George Bernard Shaw quote. Added long-form culture
+       CSS (.culture-intro/.culture-value/.practice/.culture-closing) to the shared stylesheet.
+       VERSION 8.5 (14 Aug): removed the "Featured work" / "Selected work" lines (.vfeatured) from all
+       five verticals — those were internal notes, not visible copy. (.vfeatured CSS left unused.)
+       VERSION 8.6 (14 Aug): the Our Team section (#team-members on team.html) now carries the same
+       edge-to-edge teal→blue light-leak (.tm-leak) as the founders/careers sections, fading in on
+       entry (leakObs now also observes #team-members). -->
+  <!-- Prior snapshots preserved as index-v4.5 … v8.5 (18-jul … 14-aug).html -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:  #060607;
+      --black2: #0b0b0d;
+      --white:  #ffffff;
+      --teal:   #2EC4B6;
+      --blue:   #0079C2;
+      --grad:   linear-gradient(120deg, #2EC4B6 0%, #0079C2 100%);
+      --gray:   #141416;
+      --border: rgba(255,255,255,0.07);
+      --muted:  rgba(255,255,255,0.36);
+      --mid:    rgba(255,255,255,0.62);
+      --display: 'Archivo Expanded', sans-serif;
+      --body: 'Inter', sans-serif;
+      /* safe-area insets, resolved to 0 on devices/browsers without them */
+      --sat: env(safe-area-inset-top, 0px);
+      --sar: env(safe-area-inset-right, 0px);
+      --sab: env(safe-area-inset-bottom, 0px);
+      --sal: env(safe-area-inset-left, 0px);
+      /* horizontal page padding that always clears a landscape notch */
+      --pad: 60px;
+    }
+
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    /* Default OS pointer (white arrow) - no custom cursor (v9.16). */
+
+    body {
+      background: var(--black); color: var(--white);
+      font-family: var(--body); font-size: 14.1px;
+      overflow-x: hidden; -webkit-font-smoothing: antialiased;
+    }
+
+    /* Custom cursor removed (v9.15) - using the default pointer, tinted the CE-logo blue via the html cursor rule above. */
+
+    /* ─── REVEAL ─── */
+    /* momentum-driven entrance: larger travel distance + a slower, springier ease so each
+       line reads as sliding up into place rather than a static fade */
+    .reveal { opacity: 0; transform: translateY(64px); transition: opacity 1.15s cubic-bezier(.16,1,.3,1), transform 1.15s cubic-bezier(.16,1,.3,1); }
+    .reveal.right { transform: translateX(56px); }
+    .reveal.visible { opacity: 1; transform: translate(0,0); }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    }
+
+    /* ─── NAV ─── */
+    /* padding-top carries the top safe-area inset so the logo + CTA never sit under the
+       dynamic island; height grows by the same inset so the bar's own background covers it.
+       nav keeps position:fixed at all times (do not override that). */
+    /* flat frosted glass is present from the first paint - the blur + saturation on whatever
+       scrolls behind the bar is what reads as "glass", visible immediately over the hero, not
+       only after the user scrolls. No embossed/3D edge treatment (no inner highlights/shadows). */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+      display: flex; align-items: center; justify-content: space-between;
+      padding-left: max(48px, var(--sal)); padding-right: max(48px, var(--sar));
+      padding-top: var(--sat);
+      height: calc(72px + var(--sat));
+      background: rgba(255,255,255,.04);
+      backdrop-filter: blur(34px) saturate(220%);
+      -webkit-backdrop-filter: blur(34px) saturate(220%);
+      border-bottom: 1px solid rgba(255,255,255,.10);
+      transition: background .5s, border-color .5s, height .4s, box-shadow .5s;
+    }
+    /* once scrolling, the bar simply tightens: a touch denser, a soft drop shadow, less height */
+    nav.scrolled {
+      background: rgba(255,255,255,.06);
+      border-bottom-color: rgba(255,255,255,.12);
+      box-shadow: 0 8px 30px -12px rgba(0,0,0,.5);
+      height: calc(62px + var(--sat));
+    }
+    .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; flex-shrink: 0; }
+    .nav-logo img { height: 26px; width: auto; display: block; }
+    /* wordmark set in the brand's tracked-out geometric caps, matching the styleframe lockup */
+    .nav-logo-word { font-family: var(--display); font-size: 13.2px; font-weight: 500; letter-spacing: .34em; text-transform: uppercase; color: var(--white); white-space: nowrap; }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--mid); font-family: var(--display); font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; text-decoration: none; position: relative; transition: color .25s; padding: 6px 0; }
+    .nav-links a::after { content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background: var(--grad); transform: scaleX(0); transform-origin: left; transition: transform .3s cubic-bezier(.16,1,.3,1); }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-right { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+    .nav-cta a { font-family: var(--display); font-size: 10px; font-weight: 600; letter-spacing: .14em; }
+
+    /* hamburger toggle - hidden on desktop, shown when the inline links collapse */
+    .nav-toggle {
+      display: none; width: 44px; height: 44px; border: none; background: transparent;
+      cursor: pointer; position: relative; flex-shrink: 0; padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .nav-toggle span { position: absolute; left: 10px; right: 10px; height: 1.5px; background: var(--white); border-radius: 2px; transition: transform .4s cubic-bezier(.16,1,.3,1), opacity .3s; }
+    .nav-toggle span:nth-child(1) { top: 16px; }
+    .nav-toggle span:nth-child(2) { top: 22px; }
+    .nav-toggle span:nth-child(3) { top: 28px; }
+    body.menu-open .nav-toggle span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    body.menu-open .nav-toggle span:nth-child(2) { opacity: 0; }
+    body.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    /* ─── MOBILE MENU OVERLAY ─── */
+    .mobile-menu {
+      position: fixed; inset: 0; z-index: 800; display: flex; flex-direction: column;
+      justify-content: center; overflow-y: auto;
+      padding: calc(var(--sat) + 90px) max(30px, var(--sal)) calc(var(--sab) + 32px) max(30px, var(--sal));
+      background: rgba(6,6,7,.72);
+      backdrop-filter: blur(40px) saturate(200%); -webkit-backdrop-filter: blur(40px) saturate(200%);
+      opacity: 0; visibility: hidden; transition: opacity .5s cubic-bezier(.16,1,.3,1), visibility .5s;
+    }
+    /* with eight items the list can be taller than a short phone - start from the top and let it
+       scroll rather than centre-clip on devices like the iPhone SE */
+    @media (max-height: 760px) { .mobile-menu { justify-content: flex-start; } }
+    body.menu-open .mobile-menu { opacity: 1; visibility: visible; }
+    .mobile-menu a.mm-link {
+      font-family: var(--display); font-size: clamp(18.5px, 5vw, 28.6px); font-weight: 700;
+      text-transform: uppercase; letter-spacing: .01em; color: var(--white); text-decoration: none;
+      padding: 8px 0; line-height: 1.08; display: flex; align-items: baseline; gap: 14px;
+      opacity: 0; transform: translateY(24px); transition: opacity .5s cubic-bezier(.16,1,.3,1), transform .5s cubic-bezier(.16,1,.3,1), color .25s;
+    }
+    body.menu-open .mobile-menu a.mm-link { opacity: 1; transform: translateY(0); }
+    .mobile-menu a.mm-link .mm-i { font-family: var(--display); font-size: 12px; font-weight: 600; color: var(--teal); letter-spacing: .1em; }
+    .mobile-menu a.mm-link:active { color: var(--teal); }
+    .mm-cta { margin-top: 34px; opacity: 0; transform: translateY(24px); transition: opacity .5s cubic-bezier(.16,1,.3,1) .1s, transform .5s cubic-bezier(.16,1,.3,1) .1s; }
+    body.menu-open .mm-cta { opacity: 1; transform: translateY(0); }
+    .mm-contact { margin-top: 28px; font-family: var(--body); font-size: 13px; color: var(--muted); }
+    .mm-contact a { color: var(--teal); text-decoration: none; }
+
+    /* ─── BUTTONS + MAGNETIC ─── */
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 13px 30px; min-height: 44px; font-family: var(--display); font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: transform .2s cubic-bezier(.16,1,.3,1), box-shadow .3s, background .3s, color .3s, border-color .3s; position: relative; overflow: hidden; will-change: transform; -webkit-tap-highlight-color: transparent; }
+    .btn span { position: relative; z-index: 2; display: inline-flex; align-items: center; gap: 9px; }
+    .btn-primary { color: var(--white); border: none; background: var(--grad); background-size: 160% 160%; }
+    .btn-primary::before { content: ''; position: absolute; inset: 0; background: linear-gradient(120deg,#38d8c8,#0a8ad6); opacity: 0; transition: opacity .35s; z-index: 1; }
+    .btn-primary:hover::before { opacity: 1; }
+    .btn-primary:hover { box-shadow: 0 12px 40px -12px rgba(46,196,182,.6); }
+    .btn-ghost { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,.22); }
+    .btn-ghost::before { content: ''; position: absolute; inset: 0; background: var(--grad); transform: translateY(101%); transition: transform .4s cubic-bezier(.16,1,.3,1); z-index: 1; }
+    .btn-ghost:hover::before { transform: translateY(0); }
+    .btn-ghost:hover { border-color: transparent; }
+    .btn-lg { padding: 16px 40px; font-size: 12px; }
+    .btn-block { display: flex; width: 100%; }
+    /* click press-in - the ONLY motion a button makes, and only while actively pressed.
+       No magnetic / parallax drift toward the cursor (that JS has been removed). */
+    .btn:active { transform: scale(.97); }
+    @media (prefers-reduced-motion: reduce) { .btn:active { transform: none; } }
+
+    /* ─── HERO ─── */
+    #hero { position: relative; min-height: 100vh; min-height: 100svh; display: flex; align-items: center; overflow: hidden; background: var(--black); }
+    .hero-tiles { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(4, 1fr); z-index: 0; }
+    .hero-tile { position: relative; overflow: hidden; border-right: 1px solid rgba(255,255,255,.05); }
+    .hero-tile:last-child { border-right: none; }
+    /* object-position holds the (face-cropped) subject's eyeline at a consistent height across
+       all four tiles; combined with fit=facearea on the source this keeps the composition balanced */
+    .hero-tile img { position: absolute; inset: -8% -8% -8% -8%; width: 116%; height: 116%; object-fit: cover; object-position: 50% 40%; filter: grayscale(100%) contrast(1.05) brightness(.5); transition: filter .6s, transform .6s cubic-bezier(.16,1,.3,1); will-change: transform; }
+    .hero-tile::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,6,7,.35) 0%, rgba(6,6,7,.15) 40%, rgba(6,6,7,.55) 100%); transition: opacity .5s; }
+    .hero-tile .tile-tag { position: absolute; left: 0; right: 0; bottom: 26px; text-align: center; font-family: var(--display); font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.0); z-index: 3; transition: color .4s, transform .4s cubic-bezier(.16,1,.3,1); transform: translateY(8px); }
+    .hero-tile:hover img { filter: grayscale(0%) contrast(1.02) brightness(.8); }
+    .hero-tile:hover .tile-tag { color: var(--teal); transform: translateY(0); }
+    /* Even scrim - only a vertical gradient (darker top for nav, darker bottom for the scroll cue),
+       but HORIZONTALLY uniform so all four splash images read at equal visibility (no side is darker). */
+    .hero-scrim { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(6,6,7,.58) 0%, rgba(6,6,7,.46) 42%, rgba(6,6,7,.64) 100%); pointer-events: none; }
+
+    /* NOTE: the teal/blue light-leak bloom is intentionally NOT used on the hero/splash - it
+       washed over the leftmost image and hurt its visibility. The light leak now lives only on
+       the vertical sections (.vsec-leak), where it's part of the section hand-off effect. */
+
+    /* hero content clears the nav (top) and the bottom strip; top padding also clears the notch */
+    .hero-inner { position: relative; z-index: 3; max-width: 1320px; width: 100%; margin: 0 auto; padding: calc(96px + var(--sat)) max(60px, var(--sal)) 96px max(60px, var(--sal)); pointer-events: none; }
+    .hero-inner a, .hero-inner button { pointer-events: auto; }
+    /* normal sentence - body font, default kerning, sentence case (no tracked-out caps, no lead dash) */
+    .hero-label { display: block; font-family: var(--body); font-size: 13.2px; font-weight: 400; letter-spacing: normal; text-transform: uppercase; color: var(--teal); margin-bottom: 22px; }
+    .hero-label::before { display: none; }
+    .hero-h1 { font-family: var(--display); font-weight: 300; font-size: clamp(35.2px, 5.8vw, 94.4px); line-height: .96; letter-spacing: .01em; text-transform: uppercase; margin-bottom: 30px; }
+    .hero-h1 .l2, .hero-h1 .l3 { display: block; }
+    .hero-h1 .scale { font-weight: 800; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .grad-text { background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-sub { font-family: var(--body); font-size: clamp(13.2px, 3.5vw, 14.1px); color: var(--mid); max-width: 540px; line-height: 1.75; font-weight: 300; margin-bottom: 0; }
+    .hero-sub strong { color: rgba(255,255,255,.9); font-weight: 500; }
+    .hero-sub:first-of-type { margin-top: 0; }
+    .hero-disciplines { font-family: var(--display); font-size: clamp(9px, 2.4vw, 11px); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); max-width: 560px; line-height: 2.1; margin-top: 30px; }
+
+    /* Cursor reveal is per-LETTER (handled in JS): every letter is wrapped in a span.ltr and its
+       opacity is toggled by how close the cursor is - the letter under the pointer goes fully off,
+       with a slight fade on the letters immediately around it. No geometric mask/shape in the frame. */
+    .hero-maskable .ltr, .hero-maskable .word { transition: opacity .09s linear; will-change: opacity; }
+    /* per-letter gradient for the "Scale." word so each letter can fade individually while keeping the teal→blue fill */
+    .hero-h1 .scale-ltr { font-weight: 800; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    /* once JS has split "Scale." into per-letter gradient spans, strip the gradient from the PARENT
+       span - otherwise its background-clip:text keeps re-painting those glyphs and the letters can
+       never fade out under the cursor. (Non-JS / touch keeps the parent gradient, no split.) */
+    .hero-h1 .scale.scale-split { background: none; -webkit-background-clip: border-box; background-clip: border-box; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 36px; }
+
+    /* (v5) The in-hero vertical strip was removed - the verticals live in the top nav, and the
+       running logo ticker now sits directly below the four hero image slices instead. */
+
+    .hero-scroll { position: absolute; bottom: calc(74px + var(--sab)); left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; font-family: var(--display); font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); z-index: 3; }
+    .hero-scroll-line { width: 1px; height: 38px; background: linear-gradient(180deg, var(--teal), transparent); animation: scrollpulse 2s ease-in-out infinite; }
+    @keyframes scrollpulse { 0%,100% { opacity: .3; } 50% { opacity: 1; } }
+
+    /* ─── LOGO STRIP ─── */
+    .logo-strip { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 26px 0; overflow: hidden; background: rgba(255,255,255,.012); position: relative; z-index: 2; }
+    .logos-row { display: flex; gap: 54px; align-items: center; animation: marquee 34s linear infinite; width: max-content; }
+    .logos-row img { height: 22px; width: auto; filter: brightness(0) invert(1); opacity: .32; flex-shrink: 0; transition: opacity .25s; object-fit: contain; }
+    .logos-row img:hover { opacity: .7; }
+    .logo-text { font-family: var(--display); font-size: 12px; font-weight: 700; letter-spacing: .1em; color: rgba(255,255,255,.3); white-space: nowrap; flex-shrink: 0; }
+    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+    /* ─── SECTION SHELL ─── */
+    .s { max-width: 1320px; margin: 0 auto; padding: 150px max(60px, var(--sal)); position: relative; }
+    .s-tag { display: inline-flex; align-items: center; gap: 12px; font-family: var(--display); font-size: 12px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--teal); margin-bottom: 22px; }
+    .s-tag::before { content: ''; width: 30px; height: 1px; background: var(--teal); flex-shrink: 0; }
+    .s-title { font-family: var(--display); font-weight: 700; font-size: clamp(25.6px, 3.5vw, 52.8px); line-height: 1; letter-spacing: .005em; text-transform: uppercase; margin-bottom: 26px; }
+    .s-title .thin { font-weight: 300; }
+    .s-body { font-family: var(--body); font-size: 14.1px; color: var(--mid); line-height: 1.85; max-width: 540px; font-weight: 300; }
+    .s-body strong { color: rgba(255,255,255,.85); font-weight: 500; }
+    .s-num { font-family: var(--display); font-size: clamp(72px, 11.2vw, 144px); font-weight: 800; line-height: 1; color: rgba(255,255,255,.028); letter-spacing: -.02em; pointer-events: none; user-select: none; position: absolute; top: 90px; right: 60px; }
+
+    /* ═══════════════════════════════════════════════
+       VERTICAL SECTIONS - full-bleed cinematic template
+       (matches Styleframe "Page 02 - Microdramas")
+       ═══════════════════════════════════════════════ */
+    .vsec {
+      position: relative; overflow: hidden;
+      min-height: 100vh; display: flex; align-items: center;
+      border-top: 1px solid var(--border);
+      background: var(--black);
+    }
+    /* (v6.6) The background video spans the FULL width of the section and is shown uncropped
+       (object-fit: contain) - fit to width, nothing cut off. The copy sits centred over it. */
+    .vsec-bg {
+      position: absolute; inset: 0; width: 100%; z-index: 0; background: var(--black); overflow: hidden;
+      opacity: .42; /* dimmed further (~30% below the previous .6) so the copy clearly leads */
+    }
+    .vsec.flip .vsec-bg { left: 0; right: 0; }
+    .vsec-bg video, .vsec-bg img {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain;
+      filter: grayscale(100%) contrast(1.05) brightness(.7) saturate(0);
+      will-change: transform; transition: filter 1.1s ease, transform .6s cubic-bezier(.16,1,.3,1);
+    }
+    .vsec:hover .vsec-bg video, .vsec:hover .vsec-bg img { filter: grayscale(100%) contrast(1.03) brightness(.82) saturate(0); }
+    .vsec-ceiling { position: absolute; left: 0; right: 0; top: 0; height: 26%; z-index: 1; background: linear-gradient(180deg, var(--black) 0%, transparent 100%); pointer-events: none; }
+
+    /* directional scrim: darkest on the copy side so the side-set copy stays legible and the
+       full-width video never overpowers it; lighter toward the far side so the video still reads */
+    .vsec-scrim {
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(100deg, rgba(6,6,7,.96) 0%, rgba(6,6,7,.9) 30%, rgba(6,6,7,.6) 58%, rgba(6,6,7,.32) 82%, rgba(6,6,7,.22) 100%);
+    }
+    .vsec.flip .vsec-scrim {
+      background: linear-gradient(260deg, rgba(6,6,7,.96) 0%, rgba(6,6,7,.9) 30%, rgba(6,6,7,.6) 58%, rgba(6,6,7,.32) 82%, rgba(6,6,7,.22) 100%);
+    }
+    .vsec-floor { position: absolute; left: 0; right: 0; bottom: 0; height: 34%; z-index: 1; background: linear-gradient(0deg, var(--black) 0%, transparent 100%); pointer-events: none; }
+
+    /* light-leak: teal→blue bloom that sweeps in from the trailing edge as the section enters view */
+    .vsec-leak {
+      position: absolute; z-index: 2; top: -25%; left: -12%; width: 68%; height: 150%;
+      background: radial-gradient(ellipse at top left, rgba(46,196,182,.5), rgba(0,121,194,.22) 42%, transparent 72%);
+      filter: blur(65px); mix-blend-mode: screen; opacity: 0; pointer-events: none;
+      transform: translate(-50px,-40px) scale(.88);
+      transition: opacity 2.4s cubic-bezier(.16,1,.3,1) .3s, transform 2.4s cubic-bezier(.16,1,.3,1) .3s;
+    }
+    .vsec.flip .vsec-leak {
+      left: auto; right: -12%;
+      background: radial-gradient(ellipse at top right, rgba(46,196,182,.5), rgba(0,121,194,.22) 42%, transparent 72%);
+      transform: translate(50px,-40px) scale(.88);
+    }
+    .vsec.leak-in .vsec-leak { opacity: 1; transform: translate(0,0) scale(1); }
+
+    /* the side accent rule is retired in the centred layout */
+    .vrule { display: none; }
+
+    /* (v6.7) copy sits toward the side again (alternating with .flip), but pulled in from the edge
+       so it reads clearly against the full-width video rather than hugging the margin */
+    .vcopy { position: relative; z-index: 3; max-width: clamp(480px, 46vw, 780px); text-align: left; padding: 0 40px 0 max(64px, calc(var(--sal) + 40px)); margin-left: 2vw; }
+    .vsec.flip .vcopy { margin-left: auto; margin-right: 2vw; text-align: left; padding: 0 max(64px, calc(var(--sar) + 40px)) 0 40px; }
+    .vcopy .s-body { max-width: 100%; }
+    .vcopy .vtags { justify-content: flex-start; }
+
+    .vfor { display: inline-flex; align-items: center; gap: 8px; font-family: var(--body); font-size: 12px; color: var(--muted); letter-spacing: .04em; margin-top: 4px; margin-bottom: 22px; }
+    .vfor b { color: var(--teal); font-weight: 500; }
+    .vtags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+    .vtag { font-family: var(--body); font-size: 11px; font-weight: 400; padding: 7px 14px; border: 1px solid rgba(255,255,255,.18); border-radius: 30px; color: var(--muted); letter-spacing: .03em; transition: border-color .25s, color .25s, transform .25s; backdrop-filter: blur(6px); }
+    .vtag:hover { border-color: var(--teal); color: var(--teal); transform: translateY(-2px); }
+
+    /* "Learn More" - placeholder link for each vertical, to be pointed at a dedicated
+       page with bespoke shot video once that's produced */
+    .vlearn { display: inline-flex; align-items: center; gap: 8px; margin-top: 32px; min-height: 44px; font-family: var(--display); font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--teal); text-decoration: none; padding-bottom: 5px; border-bottom: 1px solid rgba(46,196,182,.35); transition: color .25s, border-color .25s, gap .25s; }
+    .vlearn:hover { color: var(--white); border-color: var(--white); gap: 13px; }
+    .vlearn-arrow { display: inline-block; transition: transform .3s cubic-bezier(.16,1,.3,1); }
+    .vlearn:hover .vlearn-arrow { transform: translateX(4px); }
+
+    .vstats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,.14); margin-top: 40px; border-radius: 4px; overflow: hidden; max-width: 420px; backdrop-filter: blur(10px); }
+    .vstat { background: rgba(6,6,7,.55); padding: 22px 22px; }
+    .vstat-n { font-family: var(--display); font-size: 25.2px; font-weight: 700; line-height: 1; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .vstat-l { font-family: var(--body); font-size: 12px; color: var(--muted); margin-top: 7px; line-height: 1.4; }
+
+    /* floating clip/reel badge - echoes the play-button + slate detail from the styleframe */
+    .vbadge {
+      position: absolute; z-index: 3; display: flex; align-items: center; gap: 12px; padding: 14px 20px 14px 14px;
+      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.14); border-radius: 40px;
+      backdrop-filter: blur(26px) saturate(220%); -webkit-backdrop-filter: blur(26px) saturate(220%);
+      right: 70px; bottom: 64px;
+    }
+    .vsec.flip .vbadge { right: auto; left: 70px; }
+    .vbadge-play { width: 34px; height: 34px; border-radius: 50%; background: rgba(46,196,182,.18); border: 1px solid rgba(46,196,182,.7); display: flex; align-items: center; justify-content: center; font-size: 12px; color: var(--teal); flex-shrink: 0; transition: transform .3s, background .3s; }
+    .vbadge:hover .vbadge-play { transform: scale(1.12); background: rgba(46,196,182,.34); }
+    .vbadge-txt .k { font-family: var(--display); font-size: 9px; letter-spacing: .16em; text-transform: uppercase; color: var(--teal); margin-bottom: 3px; }
+    .vbadge-txt .t { font-family: var(--display); font-size: 13px; font-weight: 700; white-space: nowrap; }
+
+    /* podcast waveform accent */
+    .wave { display: flex; align-items: flex-end; gap: 4px; height: 40px; margin-top: 6px; }
+    .wave span { width: 4px; background: var(--grad); border-radius: 2px; animation: wavepulse 1.4s ease-in-out infinite; }
+    @keyframes wavepulse { 0%,100% { height: 22%; } 50% { height: 100%; } }
+
+    /* ─── TEAM / FOUNDERS ─── */
+    /* NOTE: no overflow:hidden here - it previously clipped the leak to the section's max-width
+       (1320px) box, which left black gutters on either side on wide screens. The leak now breaks
+       out to the full viewport width instead (see .team-leak). */
+    #team { position: relative; border-top: 1px solid var(--border); }
+    /* keep all founder content above the ambient bloom */
+    #team > *:not(.team-leak) { position: relative; z-index: 1; }
+    /* light leak rising from the ENTIRE base of the section, edge to edge. #team is max-width
+       capped and centred, so the leak breaks OUT to the full viewport width via
+       left:50% + translateX(-50%) + width:100vw - guaranteeing it reaches both screen edges with
+       no side crop (body has overflow-x:hidden, so the 100vw never adds a scrollbar). A top-fading
+       mask makes it rise from the bottom edge and dissolve upward; screen blend + blur give the
+       organic light-leak diffusion. Fades in on entry, mirroring the vertical treatment. */
+    .team-leak {
+      position: absolute; z-index: 0;
+      left: 50%; transform: translateX(-50%);
+      bottom: -6%; width: 100vw; height: 72%;
+      background: linear-gradient(115deg, rgba(46,196,182,.34) 0%, rgba(0,121,194,.24) 100%);
+      -webkit-mask-image: linear-gradient(to top, #000 0%, #000 6%, transparent 92%);
+      mask-image: linear-gradient(to top, #000 0%, #000 6%, transparent 92%);
+      filter: blur(48px); mix-blend-mode: screen; opacity: 0; pointer-events: none;
+      transition: opacity 3s cubic-bezier(.16,1,.3,1);
+    }
+    #team.leak-in .team-leak { opacity: 1; }
+    .founders-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-top: 40px; }
+    .founder { position: relative; aspect-ratio: 3/4; border-radius: 4px; overflow: hidden; background: var(--gray); }
+    .founder img { width: 100%; height: 100%; object-fit: cover; object-position: top; filter: grayscale(100%) brightness(.78); transition: transform .6s cubic-bezier(.16,1,.3,1), filter .6s; display: block; }
+    .founder:hover img { transform: scale(1.05); filter: grayscale(0%) brightness(1); }
+    .founder-info {
+      position: absolute; left: 0; right: 0; bottom: 0; padding: 20px 22px;
+      background: rgba(255,255,255,.05);
+      backdrop-filter: blur(24px) saturate(220%); -webkit-backdrop-filter: blur(24px) saturate(220%);
+      border-top: 1px solid rgba(255,255,255,.12);
+    }
+    .founder-line { width: 32px; height: 1px; background: var(--teal); margin-bottom: 10px; }
+    .founder-name { font-family: var(--display); font-size: 15px; font-weight: 800; line-height: 1.1; margin-bottom: 5px; }
+    .founder-role { font-family: var(--body); font-size: 11px; color: var(--teal); font-weight: 500; letter-spacing: .06em; text-transform: uppercase; line-height: 1.35; }
+    .founder-bio { font-family: var(--body); font-size: 11.5px; color: var(--mid); line-height: 1.55; font-weight: 300; margin-top: 10px; }
+    .founders-note { font-family: var(--body); font-size: clamp(12.3px, 1.3vw, 14.1px); color: var(--mid); line-height: 1.85; font-weight: 300; max-width: 760px; margin-top: 42px; }
+    .founders-note strong { color: rgba(255,255,255,.7); font-weight: 500; }
+
+    /* ─── TEAM MEMBERS (full roster) ───
+       The wider team from the original site. Each person is one of the studio's own card images
+       (photo + name + role baked into the graphic), shown in full via object-fit:contain so the
+       name/role are never cropped. Grayscale at rest, full colour + a slight lift on hover, matching
+       the founders treatment above.
+       Reveal matches the founders - a slide-up + fade on the same easing - but slower and more
+       delayed for a softer settle. The slide lives on .tm itself; hover only scales the image (as it
+       does for the founders), so the reveal transform and the hover transform never fight. */
+    /* Our Team (#team-members, on team.html) - same edge-to-edge blue light-leak as the founders/
+       careers sections; no overflow:hidden so the 100vw bloom reaches both screen edges. */
+    #team-members { border-top: 1px solid var(--border); position: relative; }
+    #team-members > *:not(.tm-leak):not(.tm-topleak):not(.tm-sideleak) { position: relative; z-index: 1; }
+    .tm-leak {
+      position: absolute; z-index: 0;
+      left: 50%; transform: translateX(-50%);
+      bottom: -6%; width: 100vw; height: 72%;
+      background: linear-gradient(115deg, rgba(46,196,182,.34) 0%, rgba(0,121,194,.24) 100%);
+      -webkit-mask-image: linear-gradient(to top, #000 0%, #000 6%, transparent 92%);
+      mask-image: linear-gradient(to top, #000 0%, #000 6%, transparent 92%);
+      filter: blur(48px); mix-blend-mode: screen; opacity: 0; pointer-events: none;
+      transition: opacity 3s cubic-bezier(.16,1,.3,1);
+    }
+    #team-members.leak-in .tm-leak { opacity: 1; }
+    /* Ambient blue at the TOP + SIDES of team.html so the page isn't flat black.
+       Same teal→blue family as the homepage verticals' light-leaks, but softer/more subtle. */
+    .tm-topleak {
+      position: absolute; z-index: 0; pointer-events: none;
+      top: 0; left: 50%; transform: translateX(-50%);
+      width: 100vw; height: clamp(340px, 42vw, 560px);
+      background: radial-gradient(58% 100% at 50% 0%, rgba(0,121,194,.20) 0%, rgba(46,196,182,.10) 42%, transparent 74%);
+      -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 6%, transparent 100%);
+      mask-image: linear-gradient(to bottom, #000 0%, #000 6%, transparent 100%);
+      filter: blur(54px); mix-blend-mode: screen;
+      opacity: 0; transition: opacity 2.6s cubic-bezier(.16,1,.3,1);
+    }
+    .tm-sideleak {
+      position: absolute; z-index: 0; pointer-events: none; top: 0; bottom: 0;
+      width: clamp(150px, 22vw, 320px);
+      filter: blur(64px); mix-blend-mode: screen;
+      opacity: 0; transition: opacity 3s cubic-bezier(.16,1,.3,1);
+    }
+    .tm-sideleak.left  { left: 0;  background: linear-gradient(90deg, rgba(46,196,182,.11) 0%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, #000, transparent); mask-image: linear-gradient(to right, #000, transparent); }
+    .tm-sideleak.right { right: 0; background: linear-gradient(270deg, rgba(0,121,194,.11) 0%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to left, #000, transparent); mask-image: linear-gradient(to left, #000, transparent); }
+    #team-members.leak-in .tm-topleak,
+    #team-members.leak-in .tm-sideleak { opacity: 1; }
+    .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 46px; }
+    .tm { position: relative; aspect-ratio: 3/4; border-radius: 5px; overflow: hidden; background: var(--gray); border: 1px solid var(--border); opacity: 0; transform: translateY(64px); transition: opacity 2.2s cubic-bezier(.16,1,.3,1), transform 2.2s cubic-bezier(.16,1,.3,1), border-color .3s; }
+    .tm.visible { opacity: 1; transform: translateY(0); }
+    .tm img { width: 100%; height: 100%; object-fit: contain; display: block; filter: grayscale(100%) brightness(.94); transition: transform .6s cubic-bezier(.16,1,.3,1), filter .6s; }
+    .tm:hover { border-color: rgba(46,196,182,.4); }
+    .tm:hover img { transform: scale(1.05); filter: grayscale(0%) brightness(1); }
+    @media (prefers-reduced-motion: reduce) { .tm { opacity: 1; transform: none; transition: border-color .3s; } }
+
+    /* ═══ OUR TEAM - REDESIGN (v9.19): vertical-head cards + culture-style discipline mosaic ═══ */
+    /* Vertical Heads - 3 feature cards (placeholders for now) */
+    /* 5 equal-size cards: top row of 2 (centred), bottom row of 3 - every card spans 2 of 6 columns */
+    .vheads { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 26px auto 0; max-width: 78%; }   /* 3 vertical heads in one row */
+    .vhead { background: rgba(255,255,255,.03); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; transition: border-color .35s, transform .55s cubic-bezier(.16,1,.3,1), background .35s; }
+    .vhead:hover { border-color: rgba(46,196,182,.42); transform: translateY(-4px); background: rgba(46,196,182,.05); }
+    .vhead-photo { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: #0d0d10; }
+    .vhead-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(.95) contrast(1.02); transition: transform .55s cubic-bezier(.16,1,.3,1), filter .5s; }
+    .vhead:hover .vhead-photo img { transform: scale(1.045); filter: brightness(1.06) contrast(1.02); }
+    .vhead-body { padding: 18px 20px 22px; }
+    .vhead-name { font-family: var(--display); font-size: clamp(13.4px, 1.3vw, 17.6px); font-weight: 700; letter-spacing: .01em; color: var(--white); }
+    .vhead-role { font-family: var(--body); font-size: 13px; font-weight: 300; color: var(--muted); margin-top: 7px; }
+    /* (v9.74) Vikas vertical-head - frosted slide-up profile panel (prototype; other heads unchanged) */
+    .vhead-x { display: flex; flex-direction: column; }
+    .vhead-x .vhead-photo { aspect-ratio: 4 / 5; }
+    .vhead-x .vhead-photo img { object-position: center top; transform: scale(1.03); transition: transform 2.4s cubic-bezier(.16,1,.3,1), filter 2.4s ease; }
+    .vhead-x:hover .vhead-photo img { transform: scale(1.06); }
+    .vhead-panel { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding: 16px 18px 18px; background: rgba(8,8,10,.5); -webkit-backdrop-filter: blur(20px) saturate(150%); backdrop-filter: blur(20px) saturate(150%); border-top: 1px solid rgba(255,255,255,.14); transition: background 2.4s ease; }
+    .vhead-panel-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
+    .vhead-x .vhead-line { width: 32px; height: 1px; background: var(--teal); margin-bottom: 10px; }
+    .vhead-x .vhead-name { font-family: var(--display); font-size: clamp(14.3px, 1.3vw, 16.8px); font-weight: 800; line-height: 1.1; color: var(--white); margin-bottom: 6px; }
+    .vhead-x .vhead-role { font-family: var(--body); font-size: 12px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--teal); line-height: 1.35; }
+    .vhead-more { flex-shrink: 0; font-family: var(--display); font-size: 9.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--teal); background: rgba(46,196,182,.12); border: 1px solid rgba(46,196,182,.45); border-radius: 100px; padding: 7px 13px; cursor: pointer; white-space: nowrap; transition: background .25s, color .25s; }
+    .vhead-more:hover { background: var(--teal); color: #05201d; }
+    .vhead-bio { max-height: 0; overflow: hidden; transition: max-height 2.8s cubic-bezier(.22,1,.36,1), margin-top 2.4s cubic-bezier(.22,1,.36,1); }
+    .vhead-bio p { font-family: var(--body); font-size: 13px; line-height: 1.62; color: rgba(255,255,255,.9); font-weight: 300; opacity: 0; transform: translateY(28px); transition: opacity 1.15s cubic-bezier(.16,1,.3,1), transform 1.15s cubic-bezier(.16,1,.3,1); transition-delay: .3s; }
+    .vhead-x.open .vhead-panel { background: rgba(8,8,10,.7); }
+    .vhead-x.open .vhead-bio { max-height: 65vh; margin-top: 16px; }
+    .vhead-x.open .vhead-bio p { opacity: 1; transform: translateY(0); }
+    .vhead-x.open .vhead-photo img { filter: blur(5px) brightness(.5); transform: scale(1.08); }
+
+    /* Discipline mosaic - numbered teal/dark boxes interleaved with the team roster */
+    .team-mosaic { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 5.1vw; gap: 8px; grid-auto-flow: row dense; margin-top: 26px; }
+    .tmx { position: relative; border-radius: 5px; overflow: hidden; border: 1px solid var(--border); background: #0c0c0f; opacity: 0; transform: translateY(36px); transition: opacity 1.3s cubic-bezier(.16,1,.3,1), transform 1.3s cubic-bezier(.16,1,.3,1), border-color .3s; }
+    .tmx-photo { grid-row: span 3; }
+    .tmx-portrait { grid-row: span 9; }
+    .tmx-lead { grid-row: span 8; }   /* team-lead solo portraits - ~15% shorter than the old span 9 */
+    .tmx-portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(.94); transition: filter .6s; }
+    .tmx-portrait:hover { border-color: rgba(46,196,182,.4); }
+    .tmx-portrait:hover img { filter: brightness(1.06); }
+    .tmx.visible { opacity: 1; transform: translateY(0); }
+    /* each photo tile holds a few images that slide to reveal the next (JS-driven) */
+    .tmx-photo .ph { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(.94); opacity: 0; will-change: transform; backface-visibility: hidden; transition: filter .6s; z-index: 1; }
+    .tmx-photo .ph.cur { opacity: 1; z-index: 1; }
+    .tmx-photo:hover { border-color: rgba(46,196,182,.4); }
+    .tmx-photo:hover .ph.cur { filter: brightness(1.06); }
+    .tmx-disc { display: flex; flex-direction: column; align-items: flex-start; padding: 16px; background: rgba(255,255,255,.035); }
+    .tmx-disc.teal { background: linear-gradient(135deg, #2EC4B6, #0079C2); border: 0; }
+    .tmx-num { font-family: var(--display); font-size: 10px; font-weight: 700; letter-spacing: .18em; color: var(--teal); }
+    .tmx-disc.teal .tmx-num { color: rgba(5,32,29,.85); }
+    .tmx-name { font-family: var(--display); font-size: clamp(10.6px, 0.9vw, 14.1px); font-weight: 700; line-height: 1.14; letter-spacing: .005em; color: var(--white); margin-top: 9px; }
+    .tmx-disc.teal .tmx-name { color: #05201d; }
+    .tmx-blurb { position: absolute; inset: 0; padding: 16px; display: flex; align-items: flex-end; background: linear-gradient(180deg, rgba(6,6,7,.12) 0%, rgba(6,6,7,.94) 100%); opacity: 0; transition: opacity .35s; pointer-events: none; font-family: var(--body); font-size: clamp(11px, .95vw, 13px); line-height: 1.5; font-weight: 300; color: rgba(255,255,255,.92); }
+    .tmx-disc.teal .tmx-blurb { background: linear-gradient(180deg, rgba(4,32,29,.12) 0%, rgba(4,32,29,.95) 100%); }
+    .tmx-disc:hover .tmx-blurb { opacity: 1; }
+
+    /* subtle teal→blue bloom closing out the base of the page (like the culture / home leaks) */
+    .team-endglow { position: relative; width: 100%; height: clamp(180px, 26vw, 320px); margin-top: clamp(-60px, -5vw, -40px); pointer-events: none; overflow: hidden; }
+    .team-endglow::before { content: ''; position: absolute; left: 50%; transform: translateX(-50%); bottom: -24%; width: 130%; height: 150%; background: radial-gradient(50% 62% at 50% 100%, rgba(0,121,194,.26) 0%, rgba(46,196,182,.12) 44%, transparent 72%); filter: blur(46px); mix-blend-mode: screen; opacity: .9; }
+
+    @media (max-width: 1024px) {
+      .team-mosaic { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 8vw; }
+    }
+    @media (max-width: 760px) { .vheads { grid-template-columns: repeat(2, 1fr); } .vheads .vhead { grid-column: auto !important; grid-row: auto !important; } }
+    @media (max-width: 640px) { .team-mosaic { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 9vw; } .vheads { grid-template-columns: 1fr; max-width: min(290px, 82vw); } .vhead-x.open .vhead-panel { max-height: 68%; overflow-y: auto; -webkit-overflow-scrolling: touch; } }
+
+    /* ─── CULTURE ───
+       Six values pulled from the Creator Engine culture memo, in flat frosted cards that match the
+       rest of the page. A gradient rule wipes down the left edge on hover; the closing pull-quote is
+       the George Bernard Shaw line the studio builds its culture on. */
+    #culture { border-top: 1px solid var(--border); }
+    .culture-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 46px; }
+    .culture-card { position: relative; padding: 30px 28px; border-radius: 6px; background: rgba(255,255,255,.03); border: 1px solid var(--border); backdrop-filter: blur(10px); overflow: hidden; transition: border-color .3s, transform .35s cubic-bezier(.16,1,.3,1), background .3s; }
+    .culture-card::before { content: ''; position: absolute; left: 0; top: 0; width: 2px; height: 0; background: var(--grad); transition: height .45s cubic-bezier(.16,1,.3,1); }
+    .culture-card:hover { border-color: rgba(46,196,182,.4); transform: translateY(-4px); background: rgba(255,255,255,.05); }
+    .culture-card:hover::before { height: 100%; }
+    .culture-n { font-family: var(--display); font-size: 11px; font-weight: 700; letter-spacing: .16em; color: var(--teal); display: block; margin-bottom: 16px; }
+    .culture-card h3 { font-family: var(--display); font-size: 15px; font-weight: 700; letter-spacing: .01em; line-height: 1.15; margin-bottom: 12px; }
+    .culture-card p { font-family: var(--body); font-size: 14px; color: var(--mid); line-height: 1.7; font-weight: 300; }
+    .culture-quote { margin-top: 58px; max-width: 780px; position: relative; padding-left: 28px; }
+    .culture-quote::before { content: ''; position: absolute; left: 0; top: 4px; bottom: 4px; width: 2px; background: var(--grad); }
+    .culture-quote p { font-family: var(--display); font-weight: 300; font-size: clamp(16.8px, 2.3vw, 26px); line-height: 1.4; letter-spacing: .005em; }
+    .culture-quote .qn { font-weight: 700; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .culture-quote cite { display: block; margin-top: 18px; font-family: var(--body); font-style: normal; font-size: 12px; letter-spacing: .06em; color: var(--muted); text-transform: uppercase; }
+
+    /* ─── CULTURE - long-form manifesto (culture.html) ─── */
+    .culture-intro { max-width: 760px; margin-top: 8px; }
+    .culture-intro p { font-family: var(--body); font-size: clamp(13.2px, 1.7vw, 15px); color: var(--mid); line-height: 1.9; font-weight: 300; margin-top: 18px; }
+    .culture-value { max-width: 800px; margin-top: 58px; padding-top: 40px; border-top: 1px solid var(--border); }
+    .culture-value .culture-n { display: block; font-family: var(--display); font-size: 11px; font-weight: 700; letter-spacing: .16em; color: var(--teal); margin-bottom: 14px; }
+    .culture-value h3 { font-family: var(--display); font-size: clamp(18.4px, 2.6vw, 32px); font-weight: 700; letter-spacing: .005em; line-height: 1.06; margin-bottom: 18px; }
+    .culture-value p { font-family: var(--body); font-size: 14.1px; color: var(--mid); line-height: 1.85; font-weight: 300; margin-top: 14px; }
+    .practice-label { display: block; font-family: var(--display); font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--teal); margin-top: 30px; }
+    .practice { list-style: none; margin-top: 14px; display: flex; flex-direction: column; gap: 12px; }
+    .practice li { position: relative; padding-left: 20px; font-family: var(--body); font-size: 13.2px; color: var(--mid); line-height: 1.7; font-weight: 300; }
+    .practice li::before { content: ''; position: absolute; left: 0; top: 12px; width: 10px; height: 1px; background: var(--teal); opacity: .7; }
+    .practice li strong { color: rgba(255,255,255,.88); font-weight: 600; }
+    .culture-closing { max-width: 800px; margin-top: 64px; padding-top: 40px; border-top: 1px solid var(--border); }
+    .culture-closing h3 { font-family: var(--display); font-size: clamp(18.5px, 2.4vw, 28.6px); font-weight: 700; margin-bottom: 16px; }
+    .culture-closing p { font-family: var(--body); font-size: 14.1px; color: var(--mid); line-height: 1.85; font-weight: 300; margin-top: 14px; }
+
+    /* ─── CAREERS ─── */
+    #careers { border-top: 1px solid var(--border); position: relative; overflow: hidden; }
+    #careers > * { position: relative; z-index: 1; }
+    .careers-leak { position: absolute; z-index: 0; left: 50%; transform: translateX(-50%); bottom: -6%; width: 100vw; height: 70%; background: linear-gradient(115deg, rgba(46,196,182,.30) 0%, rgba(0,121,194,.20) 100%); -webkit-mask-image: linear-gradient(to top, #000 0%, #000 6%, transparent 92%); mask-image: linear-gradient(to top, #000 0%, #000 6%, transparent 92%); filter: blur(52px); mix-blend-mode: screen; opacity: 0; pointer-events: none; transition: opacity 3s cubic-bezier(.16,1,.3,1); }
+    #careers.leak-in .careers-leak { opacity: 1; }
+    .careers-roles { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; max-width: 620px; }
+    .careers-email { color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(46,196,182,.35); transition: color .25s, border-color .25s; }
+    .careers-email:hover { color: var(--white); border-color: var(--white); }
+    .careers-actions { display: flex; gap: 12px; margin-top: 38px; flex-wrap: wrap; }
+
+    /* ─── OPEN POSITIONS (reusable role list) ─── copy a .role block to add a role; delete all for empty state */
+    .roles { margin-top: 30px; max-width: 820px; border-top: 1px solid var(--border); }
+    .role { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 2px; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+    .role-title { font-family: var(--display); font-size: clamp(14.3px, 1.8vw, 18.5px); font-weight: 700; letter-spacing: .01em; line-height: 1.15; margin-bottom: 7px; }
+    .role-meta { font-family: var(--body); font-size: 13px; color: var(--muted); letter-spacing: .03em; }
+    .role .role-link { flex-shrink: 0; }
+    .roles-empty { margin-top: 26px; font-family: var(--body); font-size: 13.2px; color: var(--mid); font-weight: 300; }
+    @media (max-width: 600px) { .role { gap: 14px; } .role .role-link { width: 100%; } }
+
+    /* ─── CLOSING CTA ─── */
+    .cta-sec { position: relative; overflow: hidden; border-top: 1px solid var(--border); background: var(--black); }
+    .cta-inner { max-width: 1320px; margin: 0 auto; padding: clamp(110px, 16vw, 170px) max(60px, var(--sal)); position: relative; z-index: 3; text-align: center; }
+    .cta-leak { position: absolute; z-index: 1; top: 50%; left: 50%; width: 90%; height: 160%; transform: translate(-50%,-50%); background: radial-gradient(ellipse at center, rgba(46,196,182,.22), rgba(0,121,194,.12) 45%, transparent 72%); filter: blur(80px); mix-blend-mode: screen; opacity: 0; pointer-events: none; transition: opacity 2s cubic-bezier(.16,1,.3,1); }
+    .cta-sec.leak-in .cta-leak { opacity: 1; }
+    .cta-tag { font-family: var(--display); font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--teal); margin-bottom: 20px; }
+    .cta-title { font-family: var(--display); font-weight: 300; font-size: clamp(30.4px, 5.1vw, 73.6px); line-height: .98; letter-spacing: .01em; text-transform: uppercase; margin-bottom: 26px; }
+    .cta-title b { font-weight: 800; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .cta-body { font-family: var(--body); font-size: clamp(13.2px, 3.5vw, 15px); color: var(--mid); line-height: 1.8; font-weight: 300; max-width: 520px; margin: 0 auto 40px; }
+    .cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    /* ─── FOOTER ─── */
+    footer { border-top: 1px solid var(--border); background: var(--black2); }
+    .footer-inner { max-width: 1320px; margin: 0 auto; padding: 80px max(60px, var(--sal)) 0; }
+    .footer-top { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 60px; }
+    .footer-brand .nav-logo { margin-bottom: 20px; }
+    .footer-blurb { font-family: var(--body); font-size: 14px; color: var(--muted); line-height: 1.75; max-width: 320px; font-weight: 300; }
+    .footer-col h4 { font-family: var(--display); font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--teal); margin-bottom: 20px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .footer-col a { font-family: var(--body); font-size: 13.5px; color: var(--mid); text-decoration: none; transition: color .25s; overflow-wrap: anywhere; }
+    .footer-col a:hover { color: var(--white); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; padding: 26px 0 max(30px, calc(var(--sab) + 20px)); border-top: 1px solid var(--border); }
+    .footer-copy { font-family: var(--body); font-size: 12px; color: var(--muted); letter-spacing: .02em; }
+    .footer-made { font-family: var(--display); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 2px; }
+
+    /* "Learn More" placeholders - the per-vertical detail pages don't exist yet, so these are shown
+       as inactive (non-navigating) with a small "Coming soon" tag instead of linking to a 404. */
+    .vlearn-soon { color: var(--muted); border-bottom-color: rgba(255,255,255,.12); cursor: default; pointer-events: none; align-items: baseline; }
+    .vlearn-soon-tag { font-family: var(--body); font-size: 10px; font-weight: 400; letter-spacing: .04em; text-transform: none; color: rgba(255,255,255,.28); }
+
+    /* small uppercase teal label + "featured work" caption used inside the vertical copy columns */
+    .vlabel { display: block; font-family: var(--display); font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
+    .vfeatured { margin-top: 28px; font-family: var(--body); font-size: 13px; color: var(--mid); line-height: 1.7; max-width: 480px; font-weight: 300; }
+    .vfeatured .vlabel { margin-bottom: 8px; }
+    /* short uppercase sub-headline used under a vertical's title (e.g. Show Marketing) */
+    .vlead { font-family: var(--display); font-size: clamp(13.2px, 1.7vw, 16.7px); font-weight: 700; letter-spacing: .01em; text-transform: uppercase; color: var(--white); margin: 2px 0 18px; }
+
+    /* Visible keyboard focus - the custom cursor hides the pointer, so a clear focus ring is
+       essential for keyboard users. Only shows for keyboard (:focus-visible), not mouse clicks. */
+    a:focus-visible, button:focus-visible, .btn:focus-visible, .nav-toggle:focus-visible,
+    .mm-link:focus-visible, .careers-email:focus-visible {
+      outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 2px;
+    }
+
+    /* Respect "reduce motion": stop the ambient/looping animations (marquee, waveform, scroll pulse)
+       and disable smooth scrolling. Scroll-reveals are already neutralised elsewhere. */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .logos-row { animation: none; }
+      .wave span { animation: none; height: 55%; }
+      .hero-scroll-line { animation: none; opacity: .6; }
+    }
+
+    /* ═══════════ RESPONSIVE ═══════════ */
+    /* raise the hamburger breakpoint so the seven-item inline nav only shows when there's room */
+    @media (max-width: 1200px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: block; }
+    }
+    @media (max-width: 1024px) {
+      .vsec-leak { width: 90%; }
+      .vbadge { display: none; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+      .culture-grid { grid-template-columns: 1fr 1fr; }
+      .team-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 860px) {
+      nav { padding-left: max(20px, var(--sal)); padding-right: max(20px, var(--sar)); }
+      .s { padding: 96px max(22px, var(--sal)); }
+      .s-num { display: none; }
+      .hero-inner { padding: calc(90px + var(--sat)) max(22px, var(--sal)) 90px max(22px, var(--sal)); }
+      .hero-tiles { grid-template-columns: repeat(2,1fr); }
+      .hero-tile:nth-child(3), .hero-tile:nth-child(4) { display: none; }
+      /* hero-strip removed in v5 */
+      .founders-grid { grid-template-columns: 1fr; max-width: 420px; }
+      .culture-grid { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+      .careers-actions .btn { flex: 1 1 auto; }
+      /* the side-by-side "70% media / 30% negative space" layout only makes sense next to a
+         text column; once the layout stacks, let the video/image run the full section width */
+      .vsec { min-height: 78vh; padding: 110px 0; }
+      .vsec-bg, .vsec.flip .vsec-bg { width: 100%; left: 0; right: 0; }
+      .vcopy, .vsec.flip .vcopy { max-width: 100%; padding: 0 max(22px, var(--sal)); margin: 0; text-align: left; }
+      .vsec-scrim, .vsec.flip .vsec-scrim { background: linear-gradient(0deg, rgba(6,6,7,.96) 0%, rgba(6,6,7,.86) 45%, rgba(6,6,7,.55) 100%); }
+      .vrule { display: none; }
+      .footer-top { grid-template-columns: 1fr; gap: 34px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .cta-actions .btn { flex: 1 1 auto; }
+    }
+    @media (max-width: 600px) {
+      /* on phones the inline "Work With Us" is dropped from the top bar so the full logo can
+         never be pushed off-screen or cropped. It stays highly reachable: the hero buttons, the
+         hamburger menu (prominent primary button), the closing CTA and the footer all carry it. */
+      .nav-cta { display: none; }
+    }
+    @media (max-width: 480px) {
+      .nav-logo-word { font-size: 12px; letter-spacing: .2em; }
+      .nav-logo img { height: 22px; }
+      .hero-actions { width: 100%; }
+      .hero-actions .btn { flex: 1 1 100%; }
+    }
+    @media (max-width: 360px) {
+      /* narrowest phones - drop the inline wordmark to the mark only as a final safety margin;
+         the full "Creator Engine" wordmark still shows in the menu + footer */
+      .nav-logo-word { display: none; }
+    }
+    /* ─── MOBILE POLISH v9.48 - phone refinements for the v9.x components (marquee, Explore galleries, mosaics) ─── */
+    @media (max-width: 600px) {
+      .logos-row { gap: 30px; }
+      .logos-row img { height: 19px; }
+      .work-grid { gap: 14px; }
+      .team-mosaic { gap: 6px; }
+      .cv-mosaic:not(.zoom) { gap: 7px; }
+      .exp-cta .btn { width: 100%; }
+      .hero-scroll { display: none; }
+    }
+    @media (max-width: 480px) {
+      .s { padding-left: max(18px, var(--sal)); padding-right: max(18px, var(--sar)); }
+      .hero-inner, .cta-inner, .footer-inner { padding-left: max(18px, var(--sal)); padding-right: max(18px, var(--sar)); }
+    }
+  </style>
+</head>
+<body>
+
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a class="nav-logo" href="index.html#hero"><img src="assets/CE_mark.png" alt="Creator Engine mark" /><span class="nav-logo-word">Creator Engine</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#microdramas">Microdramas</a></li>
+      <li><a href="index.html#creator-growth">Creator Growth</a></li>
+      <li><a href="index.html#podcast">Podcast</a></li>
+      <li><a href="index.html#show-marketing">Show Marketing</a></li>
+      <li><a href="index.html#agency">Agency Creative Services</a></li>
+      <li><a href="index.html#team">Team</a></li>
+      <li><a href="culture.html">Culture</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-cta"><a href="contact.html" class="btn btn-primary" data-magnetic><span>Work with Us</span></a></div>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a class="mm-link" href="index.html#microdramas"><span class="mm-i">01</span>Microdramas</a>
+    <a class="mm-link" href="index.html#creator-growth"><span class="mm-i">02</span>Creator Growth</a>
+    <a class="mm-link" href="index.html#podcast"><span class="mm-i">03</span>Podcast</a>
+    <a class="mm-link" href="index.html#show-marketing"><span class="mm-i">04</span>Show Marketing</a>
+    <a class="mm-link" href="index.html#agency"><span class="mm-i">05</span>Agency Creative Services</a>
+    <a class="mm-link" href="index.html#team"><span class="mm-i">06</span>Team</a>
+    <a class="mm-link" href="culture.html"><span class="mm-i">07</span>Culture</a>
+    <div class="mm-cta"><a href="contact.html" class="btn btn-primary btn-lg btn-block"><span>Work with Us</span></a></div>
+    <div class="mm-contact">Get in touch - <a href="mailto:info@creatorengine.studio">info@creatorengine.studio</a></div>
+  </div>
+
+
+  <main>
+  <!-- ═══ OUR TEAM ═══ -->
+  <section id="team-members" class="s">
+    <div class="tm-leak"></div>
+    <div class="tm-topleak" aria-hidden="true"></div>
+    <div class="tm-sideleak left" aria-hidden="true"></div>
+    <div class="tm-sideleak right" aria-hidden="true"></div>
+    <div class="s-tag reveal">Our Team</div>
+    <h2 class="s-title reveal" style="transition-delay:.08s"><span class="thin">The people</span><br />behind the work.</h2>
+    <p class="s-body reveal" style="transition-delay:.16s; margin-top: 4px; max-width: 760px;">
+      Creative producers, editors, designers, music specialists, colorists, sound engineers, post supervisors and coordinators work together across every stage of post-production.
+    </p>
+    <p class="s-body reveal" style="transition-delay:.2s; margin-top: 16px; max-width: 760px;">
+      Each team is built around the needs of the production, with clear creative, technical and operational ownership throughout the work.
+    </p>
+
+    <!-- VERTICAL HEADS (placeholders) -->
+    <span class="vlabel reveal" style="transition-delay:.26s; margin-top: 60px;">Leadership</span>
+    <div class="vheads">
+      <div class="vhead vhead-x reveal" id="vhead-sreenjoy" style="transition-delay:.30s">
+        <div class="vhead-photo">
+          <img src="assets/Team/head-sreenjoy.jpg" alt="Sreenjoy Dey" loading="lazy" />
+          <div class="vhead-panel">
+            <div class="vhead-panel-head">
+              <div class="vhead-idblock">
+                <div class="vhead-line"></div>
+                <div class="vhead-name">Sreenjoy Dey</div>
+                <div class="vhead-role">Creative Head, Non-Fiction</div>
+              </div>
+            </div>
+            <div class="vhead-bio">
+              <p>Sreenjoy Dey has worked across direction, story, production and show running in unscripted television. As a Reality Head, he worked on formats including The Remix, Fear Factor, MTV Ace of Space and Dance Deewane, with production experience in Spain and Argentina. At Creator Engine, he leads the producers and content teams across non-fiction, shaping the creative approach to client work.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="vhead vhead-x reveal" id="vhead-vikas" style="transition-delay:.36s">
+        <div class="vhead-photo">
+          <img src="assets/Team/head-vikas.jpg" alt="Vikas Acharya" loading="lazy" />
+          <div class="vhead-panel">
+            <div class="vhead-panel-head">
+              <div class="vhead-idblock">
+                <div class="vhead-line"></div>
+                <div class="vhead-name">Vikas Acharya</div>
+                <div class="vhead-role">Creative Director, Brands</div>
+              </div>
+            </div>
+            <div class="vhead-bio">
+              <p>Vikas began his career as a VFX artist over 17 years ago at a leading boutique post-production studio before becoming a Creative Lead. He has since worked across 500+ national TV commercials and motion design packages for major shows on Netflix India, Prime Video and Hotstar, alongside brands including Cadbury, Samsung, Google and Amazon. He now brings that experience to Creator Engine as Creative Director for Brands.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="vhead vhead-x reveal" id="vhead-rupesh" style="transition-delay:.42s">
+        <div class="vhead-photo">
+          <img src="assets/Team/head-rupesh.jpg" alt="Rupesh Shinde" loading="lazy" />
+          <div class="vhead-panel">
+            <div class="vhead-panel-head">
+              <div class="vhead-idblock">
+                <div class="vhead-line"></div>
+                <div class="vhead-name">Rupesh Shinde</div>
+                <div class="vhead-role">Head of Creative Operations</div>
+              </div>
+            </div>
+            <div class="vhead-bio">
+              <p>Rupesh went from running live events to running post-production. A decade of keeping dozens of moving parts on schedule became valuable training for leading Creative Operations at Creator Engine. He oversees the workflows behind the company&rsquo;s content verticals for clients around the world, with a focus on scaling operations and processes as the company grows.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DISCIPLINE MOSAIC — culture-style: numbered teal/dark discipline boxes interleaved with the team roster -->
+    <span class="vlabel reveal" style="transition-delay:.16s; margin-top: 74px;">Life at Creator Engine</span>
+    <div class="team-mosaic">
+      <div class="tmx tmx-photo" data-dir="down" data-tint="bw">
+        <img class="ph cur" src="assets/Team/pool/DSC07136.jpg" alt="The Creator Engine team" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/DSC07136.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="tmx tmx-photo" data-dir="down" data-tint="bw">
+        <img class="ph cur" src="assets/Team/pool/DSC07132.jpg" alt="The Creator Engine team" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/DSC07132.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="tmx tmx-photo tmx-lead" data-dir="up" data-tint="lead">
+        <img class="ph cur" src="assets/Team/pool/lead-newel.jpg" alt="Creator Engine team lead" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/lead-newel.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="tmx tmx-photo" data-dir="down" data-tint="bw">
+        <img class="ph cur" src="assets/Team/pool/DSC07416.jpg" alt="The Creator Engine team" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/DSC07416.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="tmx tmx-photo" data-dir="right" data-tint="bw">
+        <img class="ph cur" src="assets/Team/pool/DSC07491.jpg" alt="The Creator Engine team" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/DSC07491.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="tmx tmx-photo tmx-lead" data-dir="left" data-tint="lead">
+        <img class="ph cur" src="assets/Team/pool/lead-gauri.jpg" alt="Creator Engine team lead" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/lead-gauri.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="tmx tmx-photo" data-dir="left" data-tint="bw">
+        <img class="ph cur" src="assets/Team/pool/DSC07289.jpg" alt="The Creator Engine team" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/DSC07289.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="tmx tmx-photo" data-dir="left" data-tint="teal">
+        <img class="ph cur" src="assets/Team/pool/DSC07950-teal.jpg" alt="The Creator Engine team" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/DSC07950-teal.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="tmx tmx-photo" data-dir="right" data-tint="teal">
+        <img class="ph cur" src="assets/Team/pool/DSC07435-teal.jpg" alt="The Creator Engine team" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/DSC07435-teal.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="tmx tmx-photo" data-dir="down" data-tint="bw">
+        <img class="ph cur" src="assets/Team/pool/DSC07628.jpg" alt="The Creator Engine team" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/DSC07628.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="tmx tmx-photo" data-dir="up" data-tint="teal">
+        <img class="ph cur" src="assets/Team/pool/DSC07506-teal.jpg" alt="The Creator Engine team" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/DSC07506-teal.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="tmx tmx-photo" data-dir="down" data-tint="teal">
+        <img class="ph cur" src="assets/Team/pool/DSC07198-teal.jpg" alt="The Creator Engine team" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/DSC07198-teal.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="tmx tmx-photo tmx-lead" data-dir="up" data-tint="lead">
+        <img class="ph cur" src="assets/Team/pool/lead-aarnav.jpg" alt="Creator Engine team lead" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/lead-aarnav.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="tmx tmx-photo" data-dir="down" data-tint="bw">
+        <img class="ph cur" src="assets/Team/pool/DSC07615.jpg" alt="The Creator Engine team" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/DSC07615.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="tmx tmx-photo" data-dir="down" data-tint="bw">
+        <img class="ph cur" src="assets/Team/pool/DSC07134.jpg" alt="The Creator Engine team" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/DSC07134.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="tmx tmx-photo" data-dir="left" data-tint="bw">
+        <img class="ph cur" src="assets/Team/pool/DSC07254.jpg" alt="The Creator Engine team" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/DSC07254.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="tmx tmx-photo" data-dir="right" data-tint="bw">
+        <img class="ph cur" src="assets/Team/pool/DSC07470.jpg" alt="The Creator Engine team" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/DSC07470.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="tmx tmx-photo" data-dir="right" data-tint="bw">
+        <img class="ph cur" src="assets/Team/pool/DSC07843.jpg" alt="The Creator Engine team" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/DSC07843.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="tmx tmx-photo" data-dir="down" data-tint="bw">
+        <img class="ph cur" src="assets/Team/pool/DSC07403.jpg" alt="The Creator Engine team" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/DSC07403.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="tmx tmx-photo" data-dir="right" data-tint="bw">
+        <img class="ph cur" src="assets/Team/pool/DSC07288.jpg" alt="The Creator Engine team" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/DSC07288.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="tmx tmx-photo" data-dir="right" data-tint="bw">
+        <img class="ph cur" src="assets/Team/pool/DSC07230.jpg" alt="The Creator Engine team" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/DSC07230.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="tmx tmx-photo" data-dir="left" data-tint="bw">
+        <img class="ph cur" src="assets/Team/pool/DSC07170.jpg" alt="The Creator Engine team" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/DSC07170.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="tmx tmx-photo" data-dir="left" data-tint="bw">
+        <img class="ph cur" src="assets/Team/pool/DSC07512.jpg" alt="The Creator Engine team" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/DSC07512.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="tmx tmx-photo" data-dir="down" data-tint="teal">
+        <img class="ph cur" src="assets/Team/pool/DSC07150-teal.jpg" alt="The Creator Engine team" loading="lazy" />
+        <img class="ph" src="assets/Team/pool/DSC07150-teal.jpg" alt="" aria-hidden="true" />
+      </div>
+    </div>
+  </section>
+
+
+  <div class="team-endglow" aria-hidden="true"></div>
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="nav-logo" href="index.html#hero"><img src="assets/CE_mark.png" alt="Creator Engine mark" /><span class="nav-logo-word">Creator Engine</span></a>
+          <p class="footer-blurb">Dedicated post-production teams for creators, studio execs, agencies and entertainment companies.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Work</h4>
+          <ul>
+            <li><a href="index.html#microdramas">Microdramas</a></li>
+            <li><a href="index.html#creator-growth">Creator Growth</a></li>
+            <li><a href="index.html#podcast">Podcast</a></li>
+            <li><a href="index.html#show-marketing">Show Marketing</a></li>
+            <li><a href="index.html#agency">Agency Creative Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Team</h4>
+          <ul>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="careers.html">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://www.linkedin.com/company/creatorengine/" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:info@creatorengine.studio" style="white-space:nowrap; font-size:12.5px;">info@creatorengine.studio</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© Creator Engine <span id="ceYear">2026</span></span>
+        <span class="footer-made">Post-Production at Scale</span>
+      </div>
+    </div>
+  </footer>
+
+<script>
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    /* Footer copyright year - auto-updates. new Date().getFullYear() rolls over at New Year's
+       midnight (i.e. becomes 2027 the instant 2026-12-31 turns to 2027), so the year is always current. */
+    (function(){ var y = document.getElementById('ceYear'); if (y) y.textContent = new Date().getFullYear(); })();
+
+    /* ─── HERO CURSOR-REVEAL (per-letter) ─── desktop only
+       Each letter of the label / headline / paragraphs is wrapped in <span class="ltr">. As the
+       pointer moves, the letter directly under it turns fully off (opacity 0), with a slight radial
+       fade on the letters just around it - so individual letters blink off/on, no mask shape. */
+    if (fine) {
+      const heroSec = document.getElementById('hero');
+      const heroFade = document.getElementById('heroFade');
+      if (heroSec && heroFade) {
+        // Label + headline fade per LETTER (span.ltr). "Scale." letters get span.scale-ltr so each keeps
+        // the gradient yet fades individually. Paragraphs fade per WORD, grouped into 4-word compartments.
+        function wrapLetters(node, grad){
+          Array.from(node.childNodes).forEach(child => {
+            if (child.nodeType === 3) {
+              const t = child.nodeValue; if (!t) return;
+              const frag = document.createDocumentFragment();
+              for (const ch of t) {
+                if (/\s/.test(ch)) frag.appendChild(document.createTextNode(ch));
+                else { const s = document.createElement('span'); s.className = 'ltr' + (grad ? ' scale-ltr' : ''); s.textContent = ch; frag.appendChild(s); }
+              }
+              node.replaceChild(frag, child);
+            } else if (child.nodeType === 1) {
+              wrapLetters(child, grad || (child.classList && child.classList.contains('scale')));
+            }
+          });
+        }
+        function wrapWords(node){
+          Array.from(node.childNodes).forEach(child => {
+            if (child.nodeType === 3) {
+              const t = child.nodeValue; if (!t) return;
+              const frag = document.createDocumentFragment();
+              t.split(/(\s+)/).forEach(tok => {
+                if (tok === '') return;
+                if (/^\s+$/.test(tok)) frag.appendChild(document.createTextNode(tok));
+                else { const s = document.createElement('span'); s.className = 'word'; s.textContent = tok; frag.appendChild(s); }
+              });
+              node.replaceChild(frag, child);
+            } else if (child.nodeType === 1) { wrapWords(child); }
+          });
+        }
+        const label = heroFade.querySelector('.hero-label');
+        const h1 = heroFade.querySelector('.hero-h1');
+        const subs = Array.from(heroFade.querySelectorAll('.hero-sub'));
+        if (label) wrapLetters(label, false);
+        if (h1) wrapLetters(h1, false);
+        subs.forEach(wrapWords);
+        // strip the gradient from any split "Scale." parent so its letters can actually fade
+        heroFade.querySelectorAll('.scale').forEach(s => s.classList.add('scale-split'));
+
+        let letters = [], chunks = [];
+        function build(){
+          const sx = window.scrollX, sy = window.scrollY;
+          letters = Array.from(heroFade.querySelectorAll('.ltr')).map(el => {
+            const r = el.getBoundingClientRect();
+            return { el, cx: r.left + r.width/2 + sx, cy: r.top + r.height/2 + sy, o: 1 };
+          });
+          chunks = [];
+          subs.forEach(p => {
+            const words = Array.from(p.querySelectorAll('.word'));
+            for (let i = 0; i < words.length; i += 4) {
+              const els = words.slice(i, i + 4);
+              const rects = els.map(el => { const r = el.getBoundingClientRect(); return { l: r.left + sx, t: r.top + sy, rt: r.right + sx, b: r.bottom + sy }; });
+              chunks.push({ els, rects, o: 1 });
+            }
+          });
+        }
+        build();
+        setTimeout(build, 400);
+        window.addEventListener('resize', build);
+
+        const OFF = 120, FADE = 300;      // headline letters: big, soft radial fade
+        const C_OFF = 40, C_FADE = 220;   // paragraph chunks: soft, wide radius so several blocks fade
+        const distToRect = (x, y, r) => {
+          const dx = Math.max(r.l - x, 0, x - r.rt);
+          const dy = Math.max(r.t - y, 0, y - r.b);
+          return Math.hypot(dx, dy);
+        };
+        let mx = -1e5, my = -1e5, active = false, raf = null;
+        function frame(){
+          raf = null;
+          // headline / label - per-letter radial fade
+          for (const L of letters){
+            let o;
+            if (!active) o = 1;
+            else { const d = Math.hypot(L.cx - mx, L.cy - my); o = d <= OFF ? 0 : d >= FADE ? 1 : (d - OFF) / (FADE - OFF); }
+            if (o !== L.o){ L.el.style.opacity = o; L.o = o; }
+          }
+          // paragraphs - per 4-word compartment, but a SOFT fade by distance to the nearest word in the
+          // block (whole block shares one opacity), with a wide radius so neighbouring blocks ease too
+          for (const C of chunks){
+            let o = 1;
+            if (active){
+              let d = Infinity;
+              for (const r of C.rects){ const dr = distToRect(mx, my, r); if (dr < d) d = dr; }
+              o = d <= C_OFF ? 0 : d >= C_FADE ? 1 : (d - C_OFF) / (C_FADE - C_OFF);
+            }
+            if (o !== C.o){ C.els.forEach(el => el.style.opacity = o); C.o = o; }
+          }
+        }
+        heroSec.addEventListener('mousemove', e => { mx = e.pageX; my = e.pageY; active = true; if (!raf) raf = requestAnimationFrame(frame); });
+        heroSec.addEventListener('mouseleave', () => { active = false; if (!raf) raf = requestAnimationFrame(frame); });
+      }
+    }
+
+    /* Custom cursor JS removed (v9.15) - default (blue-tinted) pointer, no follower. */
+
+    /* ─── BUTTONS ───
+       Deliberately NO magnetic / parallax behaviour: buttons must not chase or lean toward the
+       cursor. The only hover affordance is a subtle glow (CSS :hover box-shadow); a click gives a
+       small press-in (CSS :active scale). Nothing moves passively. The data-magnetic attribute is
+       kept only so the custom cursor ring still enlarges over these targets - it no longer moves
+       the button itself. */
+
+    /* ─── NAV SCROLLED ─── */
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+
+    /* ─── MOBILE MENU TOGGLE ───
+       Opens the frosted overlay, locks body scroll, flips the burger to an X, and closes
+       on any link tap or Escape. aria-expanded is kept in sync for assistive tech. */
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function setMenu(open){
+      document.body.classList.toggle('menu-open', open);
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+    navToggle.addEventListener('click', () => setMenu(!document.body.classList.contains('menu-open')));
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+    /* if the viewport grows back to desktop while the menu is open, close it cleanly */
+    window.matchMedia('(min-width: 1025px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
+
+    /* ─── SCROLL REVEAL ─── */
+    /* team roster tiles get their own staggered observer (below), so they're excluded here */
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObs.unobserve(entry.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal:not(.tm)').forEach(el => revealObs.observe(el));
+
+    /* ─── TEAM ROSTER - FOUNDERS-STYLE SLIDE-UP, SLOWER & MORE DELAYED ───
+       Each member card slides up + fades in exactly like the founders (CSS above), but over a longer
+       2.2s and with a bigger per-column stagger so a row eases in softly, one after another, rather
+       than together. The stagger delays when .visible is added (not a CSS transition-delay) so hover
+       stays instant; column count tracks the 4/3/2 responsive grid. */
+    (function(){
+      const tiles = Array.from(document.querySelectorAll('#team-members .tmx'));
+      if (!tiles.length) return;
+      const colsFor = w => w <= 640 ? 2 : (w <= 1024 ? 4 : 6);
+      const teamObs = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const cols = colsFor(window.innerWidth);
+          const col = tiles.indexOf(entry.target) % cols;
+          const wait = reduceMotion ? 0 : col * 220;
+          setTimeout(() => entry.target.classList.add('visible'), wait);
+          teamObs.unobserve(entry.target);
+        });
+      }, { threshold: 0.15 });
+      tiles.forEach(t => teamObs.observe(t));
+    })();
+
+    /* ─── TEAM PHOTO CYCLER ─── on every change a tile FLIPS tint (B/W <-> green): a teal-showing tile and a
+       bw-showing tile transition at the same time (one slides in a green image, the other a B/W image), so
+       consecutive images in any tile alternate tint AND exactly 3 of 12 tiles stay teal (25%) at all times.
+       Per-tint "used" sets keep every visible image unique (nothing is shown by two tiles at once). */
+    (function(){
+      const cards = Array.from(document.querySelectorAll('#team-members .tmx-photo'));
+      if (!cards.length || reduceMotion) return;
+      const poolTeal = ['assets/Team/pool/8-teal.jpg','assets/Team/pool/Adolf-Rohan-teal.jpg','assets/Team/pool/DSC07126-teal.jpg','assets/Team/pool/DSC07132-teal.jpg','assets/Team/pool/DSC07134-teal.jpg','assets/Team/pool/DSC07136-teal.jpg','assets/Team/pool/DSC07150-teal.jpg','assets/Team/pool/DSC07170-teal.jpg','assets/Team/pool/DSC07190-teal.jpg','assets/Team/pool/DSC07230-teal.jpg','assets/Team/pool/DSC07245-teal.jpg','assets/Team/pool/DSC07254-teal.jpg','assets/Team/pool/DSC07285-teal.jpg','assets/Team/pool/DSC07288-teal.jpg','assets/Team/pool/DSC07339-teal.jpg','assets/Team/pool/DSC07356-teal.jpg','assets/Team/pool/DSC07385-teal.jpg','assets/Team/pool/DSC07403-teal.jpg','assets/Team/pool/DSC07416-teal.jpg','assets/Team/pool/DSC07423-teal.jpg','assets/Team/pool/DSC07424-teal.jpg','assets/Team/pool/DSC07432-teal.jpg','assets/Team/pool/DSC07435-teal.jpg','assets/Team/pool/DSC07456-teal.jpg','assets/Team/pool/DSC07470-teal.jpg','assets/Team/pool/DSC07491-teal.jpg','assets/Team/pool/DSC07506-teal.jpg','assets/Team/pool/DSC07512-teal.jpg','assets/Team/pool/DSC07549-teal.jpg','assets/Team/pool/DSC07575-teal.jpg','assets/Team/pool/DSC07596-teal.jpg','assets/Team/pool/DSC07601-teal.jpg','assets/Team/pool/DSC07605-teal.jpg','assets/Team/pool/DSC07607-teal.jpg','assets/Team/pool/DSC07611-teal.jpg','assets/Team/pool/DSC07615-teal.jpg','assets/Team/pool/DSC07628-teal.jpg','assets/Team/pool/DSC07805-teal.jpg','assets/Team/pool/DSC07834-teal.jpg','assets/Team/pool/DSC07843-teal.jpg','assets/Team/pool/DSC07904-teal.jpg','assets/Team/pool/DSC07945-teal.jpg','assets/Team/pool/DSC07950-teal.jpg','assets/Team/pool/DSC07957-teal.jpg','assets/Team/pool/Gemini_Generated_Image_l73a1cl73a1cl73a-teal.jpg','assets/Team/pool/Gemini_Generated_Image_tnmbbbtnmbbbtnmb-teal.jpg','assets/Team/pool/IMG_6382-teal.jpg','assets/Team/pool/IMG_6405-teal.jpg','assets/Team/pool/IMG_6406-copy-teal.jpg','assets/Team/pool/IMG_6415-teal.jpg','assets/Team/pool/IMG_6438-New-teal.jpg','assets/Team/pool/IMG_6466-New-teal.jpg','assets/Team/pool/IMG_6478-teal.jpg','assets/Team/pool/Joy-Heer-Shivam-teal.jpg','assets/Team/pool/Vivek-Nabil-teal.jpg','assets/Team/pool/nami-teal.jpg'];
+      const poolBw = ['assets/Team/pool/8.jpg','assets/Team/pool/Adolf-Rohan.jpg','assets/Team/pool/DSC07126.jpg','assets/Team/pool/DSC07132.jpg','assets/Team/pool/DSC07134.jpg','assets/Team/pool/DSC07136.jpg','assets/Team/pool/DSC07150.jpg','assets/Team/pool/DSC07170.jpg','assets/Team/pool/DSC07190.jpg','assets/Team/pool/DSC07230.jpg','assets/Team/pool/DSC07245.jpg','assets/Team/pool/DSC07254.jpg','assets/Team/pool/DSC07285.jpg','assets/Team/pool/DSC07288.jpg','assets/Team/pool/DSC07339.jpg','assets/Team/pool/DSC07356.jpg','assets/Team/pool/DSC07385.jpg','assets/Team/pool/DSC07403.jpg','assets/Team/pool/DSC07416.jpg','assets/Team/pool/DSC07423.jpg','assets/Team/pool/DSC07424.jpg','assets/Team/pool/DSC07432.jpg','assets/Team/pool/DSC07435.jpg','assets/Team/pool/DSC07456.jpg','assets/Team/pool/DSC07470.jpg','assets/Team/pool/DSC07491.jpg','assets/Team/pool/DSC07506.jpg','assets/Team/pool/DSC07512.jpg','assets/Team/pool/DSC07549.jpg','assets/Team/pool/DSC07575.jpg','assets/Team/pool/DSC07596.jpg','assets/Team/pool/DSC07601.jpg','assets/Team/pool/DSC07605.jpg','assets/Team/pool/DSC07607.jpg','assets/Team/pool/DSC07611.jpg','assets/Team/pool/DSC07615.jpg','assets/Team/pool/DSC07628.jpg','assets/Team/pool/DSC07805.jpg','assets/Team/pool/DSC07834.jpg','assets/Team/pool/DSC07843.jpg','assets/Team/pool/DSC07904.jpg','assets/Team/pool/DSC07945.jpg','assets/Team/pool/DSC07950.jpg','assets/Team/pool/DSC07957.jpg','assets/Team/pool/Gemini_Generated_Image_l73a1cl73a1cl73a.jpg','assets/Team/pool/Gemini_Generated_Image_tnmbbbtnmbbbtnmb.jpg','assets/Team/pool/IMG_6382.jpg','assets/Team/pool/IMG_6405.jpg','assets/Team/pool/IMG_6406-copy.jpg','assets/Team/pool/IMG_6415.jpg','assets/Team/pool/IMG_6438-New.jpg','assets/Team/pool/IMG_6466-New.jpg','assets/Team/pool/IMG_6478.jpg','assets/Team/pool/Joy-Heer-Shivam.jpg','assets/Team/pool/Vivek-Nabil.jpg','assets/Team/pool/nami.jpg'];
+      const poolLeads = ['assets/Team/pool/lead-aarnav.jpg','assets/Team/pool/lead-asad.jpg','assets/Team/pool/lead-gauri.jpg','assets/Team/pool/lead-newel.jpg','assets/Team/pool/lead-nilaj.jpg','assets/Team/pool/lead-pranav.jpg','assets/Team/pool/lead-sunil.jpg','assets/Team/pool/lead-yashmishra.jpg','assets/Team/pool/lead-yashsinha.jpg','assets/Team/pool/lead-shibasish.jpg'];
+      [...poolTeal, ...poolBw].forEach(src => { const im = new Image(); im.src = src; });   // preload
+      const baseOf = src => src.replace('-teal','').replace(/^.*\/pool\//,'');
+      const used = new Set();   // base ids on screen now (across BOTH tints, so a photo is never shown twice at once)
+      const inFrom = { up:'translateY(101%)', down:'translateY(-101%)', left:'translateX(101%)', right:'translateX(-101%)' };
+      const outTo  = { up:'translateY(-101%)', down:'translateY(101%)', left:'translateX(-101%)', right:'translateX(101%)' };
+      const shuffle = a => { for (let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; };
+      cards.forEach(card => {
+        const layers = Array.from(card.querySelectorAll('.ph'));
+        card._cur = layers.find(l => l.classList.contains('cur')) || layers[0];
+        card._alt = layers.find(l => l !== card._cur);
+        card.dataset.now = card.dataset.tint;                      // current tint of this tile
+      });
+      /* FRESH RANDOM, UNIQUE fill on every page load - shows as many distinct shots as possible;
+         team-lead tiles still draw a solo lead portrait. `used` keeps every visible photo unique. */
+      (function randomizeInitial(){
+        const bag = { bw: shuffle(poolBw.slice()), teal: shuffle(poolTeal.slice()), lead: shuffle(poolLeads.slice()) };
+        const at  = { bw:0, teal:0, lead:0 };
+        cards.forEach(card => {
+          const tint = card.dataset.tint, arr = bag[tint]; if (!arr) return;
+          let src = null;
+          while (at[tint] < arr.length) { const c = arr[at[tint]++]; if (!used.has(baseOf(c))) { src = c; break; } }
+          if (!src) src = card._cur.getAttribute('src');
+          used.add(baseOf(src));
+          card._cur.setAttribute('src', src);
+          card._alt.setAttribute('src', src);
+          card.style.setProperty('--bg', 'url("'+src+'")');
+        });
+      })();
+      const rand = a => a[Math.floor(Math.random() * a.length)];
+      function slide(card, newSrc, newTint){
+        const oldTint = card.dataset.now, cur = card._cur, nxt = card._alt, dir = card.dataset.dir, oldSrc = cur.getAttribute('src');
+        used.add(baseOf(newSrc));                                   // claim before the slide
+        card.style.setProperty('--bg', 'url("'+newSrc+'")');   // blurred ambient fill follows the sharp image
+        nxt.setAttribute('src', newSrc);
+        nxt.style.transition = 'none'; nxt.style.transform = inFrom[dir]; nxt.style.zIndex = '2'; nxt.classList.add('cur');
+        void nxt.offsetWidth;
+        nxt.style.transition = 'transform 1.05s cubic-bezier(.16,1,.3,1)';
+        cur.style.transition = 'transform 1.05s cubic-bezier(.16,1,.3,1)';
+        nxt.style.transform = 'none'; cur.style.transform = outTo[dir];
+        setTimeout(() => {
+          cur.classList.remove('cur'); cur.style.transition = 'none'; cur.style.transform = 'none'; cur.style.zIndex = '';
+          nxt.style.zIndex = ''; used.delete(baseOf(oldSrc));       // release old after
+          card.dataset.now = newTint; card._cur = nxt; card._alt = cur;
+        }, 1150);
+      }
+      let busy = false;
+      function tick(){
+        if (!busy) {
+          const tealT = cards.filter(c => c.dataset.now === 'teal');
+          const bwT   = cards.filter(c => c.dataset.now === 'bw');
+          const freeBw   = poolBw.filter(src => !used.has(baseOf(src)));
+          const freeTeal = poolTeal.filter(src => !used.has(baseOf(src)));
+          if (tealT.length && bwT.length && freeBw.length && freeTeal.length) {
+            const bwPick = rand(freeBw);
+            const tCand  = freeTeal.filter(s => baseOf(s) !== baseOf(bwPick)); // never introduce the same photo in both tints at once
+            if (tCand.length) {
+              busy = true;
+              slide(rand(tealT), bwPick, 'bw');                    // a teal tile flips to B/W
+              slide(rand(bwT),   rand(tCand), 'teal');             // a B/W tile flips to green
+              setTimeout(() => { busy = false; }, 1250);
+            }
+          }
+        }
+        setTimeout(tick, 1800 + Math.random() * 1800);
+      }
+      setTimeout(tick, 1000 + Math.random() * 1000);
+      /* team-lead tiles rotate through the leads pool (independent of the bw/teal flip). */
+      const leadCards = cards.filter(c => c.dataset.now === 'lead');
+      let leadBusy = false;
+      function leadTick(){
+        if (!leadBusy && leadCards.length) {
+          const free = poolLeads.filter(src => !used.has(baseOf(src)));
+          if (free.length) { leadBusy = true; slide(rand(leadCards), rand(free), 'lead'); setTimeout(() => { leadBusy = false; }, 1250); }
+        }
+        setTimeout(leadTick, 2200 + Math.random() * 1800);
+      }
+      setTimeout(leadTick, 1400 + Math.random() * 1000);
+    })();
+
+    /* ─── LIGHT-LEAK ON SECTION ENTRY ───
+       Each vertical (and the closing CTA) carries its own teal→blue bloom. As the section
+       crosses ~32% into view, leak-in triggers the bloom + rule-line reveal - mimicking a
+       film light leak washing onto the next frame as you scroll. Hero fades its own ambient
+       leak once past, so the effect reads as a hand-off between sections. */
+    const heroSection = document.getElementById('hero');
+    const leakObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => { entry.target.classList.toggle('leak-in', entry.isIntersecting); });
+    }, { threshold: 0.32 });
+    document.querySelectorAll('.vsec, .cta-sec, #careers, #team-members').forEach(el => leakObs.observe(el));
+
+    /* The founders background leak is tied specifically to the three founder photos entering
+       the frame (not the section heading), so it blooms in the moment the images are visible. */
+    const foundersGrid = document.querySelector('.founders-grid');
+    const teamSection = document.getElementById('team');
+    if (foundersGrid && teamSection) {
+      const founderLeakObs = new IntersectionObserver(entries => {
+        entries.forEach(entry => teamSection.classList.toggle('leak-in', entry.isIntersecting));
+      }, { threshold: 0.25 });
+      founderLeakObs.observe(foundersGrid);
+    }
+
+    /* ─── PODCAST WAVEFORM ─── */
+    const wave = document.getElementById('wave');
+    if (wave) { for (let i=0;i<28;i++){ const s=document.createElement('span'); s.style.animationDelay=(i*0.06)+'s'; s.style.opacity=0.35+Math.random()*0.65; wave.appendChild(s); } }
+
+    /* ─── HERO TILE HOVER - scale only, independent per tile ───
+       No cursor-follow drift: each tile's image simply eases up to a slightly larger scale
+       while the pointer is over that specific tile, and eases back to rest the moment the
+       pointer leaves. Only the hovered image moves. */
+    if (fine && !reduceMotion) {
+      document.querySelectorAll('.hero-tile').forEach(tile => {
+        const img = tile.querySelector('img');
+        let hover = false, scaleCur = 1;
+        tile.addEventListener('mouseenter', () => { hover = true; });
+        tile.addEventListener('mouseleave', () => { hover = false; });
+        (function tileLoop(){
+          scaleCur += ((hover ? 1.06 : 1) - scaleCur) * 0.09;
+          img.style.transform = `scale(${scaleCur})`;
+          requestAnimationFrame(tileLoop);
+        })();
+      });
+    }
+
+    /* ─── LAYERED SCROLL PARALLAX (background vs. copy, with a strong visible delay) ───
+       Every vertical is built from independent layers: the background photo/video and the copy
+       column in front of it. Both react to scroll, but each eases toward its target at a very
+       different rate and distance (lerp), so the copy clearly lags and drifts opposite the
+       background - a deliberate, momentum-driven separation rather than one static block. */
+    const bgLayers = Array.from(document.querySelectorAll('.vsec-bg video, .vsec-bg img')).map(el => ({
+      el, host: el.closest('.vsec'), depth: parseFloat(el.dataset.depth || 0.4) * 1.5, ease: 0.12, cur: 0, kind: 'bg'
+    }));
+    const copyLayers = Array.from(document.querySelectorAll('.vcopy')).map(el => ({
+      el, host: el.closest('.vsec'), depth: 0.34, ease: 0.032, cur: 0, invert: true, kind: 'copy'
+    }));
+    const allLayers = bgLayers.concat(copyLayers);
+
+    function targetFor(layer){
+      const vh = window.innerHeight;
+      const r = layer.host.getBoundingClientRect();
+      const centre = r.top + r.height/2 - vh/2;
+      let shift = -(centre / vh) * layer.depth * 130;
+      if (layer.invert) shift *= -1;
+      return shift;
+    }
+
+    if (!reduceMotion) {
+      (function parallaxLoop(){
+        const vh = window.innerHeight;
+        allLayers.forEach(layer => {
+          if (layer.kind === 'bg') return; // background videos stay static - shown full-width & never cropped
+          const r = layer.host.getBoundingClientRect();
+          if (r.bottom < -300 || r.top > vh + 300) return; // skip off-screen sections
+          layer.cur += (targetFor(layer) - layer.cur) * layer.ease;
+          layer.el.style.transform = `translateY(${layer.cur}px)`;
+        });
+        requestAnimationFrame(parallaxLoop);
+      })();
+    }
+
+    /* ─── PLAY BACKGROUND VIDEOS ONLY WHEN THEIR SECTION IS ON SCREEN ───
+       Rather than force-playing all five videos on load (heavy on mobile data and battery),
+       each starts as its section approaches the viewport and pauses once scrolled away. */
+    const videoObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const v = entry.target;
+        if (entry.isIntersecting) v.play().catch(() => {});
+        else v.pause();
+      });
+    }, { rootMargin: '50% 0px 50% 0px' });
+    document.querySelectorAll('.vsec-bg video').forEach(v => videoObs.observe(v));
+
+    /* ─── PAGE LOAD FADE ─── */
+    document.body.style.opacity = '0';
+    window.addEventListener('DOMContentLoaded', () => { document.body.style.transition = 'opacity .6s'; document.body.style.opacity = '1'; });
+  </script>
+  <script>
+    /* Vertical heads: Know more -> slide the frosted panel up over the (blurred) photo. Opening one closes the rest. */
+    (function(){
+      /* Desktop (hover): hovering the aston band reveals the bio. Touch (no hover): TAP the band to toggle. Only cards with a bio expand. */
+      var cards = Array.prototype.slice.call(document.querySelectorAll('.vhead-x')).filter(function(c){ return c.querySelector('.vhead-bio'); });
+      if(!cards.length) return;
+      var canHover = window.matchMedia && window.matchMedia('(hover: hover)').matches;
+      if(canHover){
+        cards.forEach(function(card){
+          var band = card.querySelector('.vhead-panel');
+          band.addEventListener('mouseenter', function(){ card.classList.add('open'); });
+          card.addEventListener('mouseleave', function(){ card.classList.remove('open'); });
+        });
+      } else {
+        cards.forEach(function(card){
+          card.querySelector('.vhead-panel').addEventListener('click', function(e){ e.stopPropagation(); var willOpen=!card.classList.contains('open'); cards.forEach(function(c){ c.classList.toggle('open', c===card ? willOpen : false); }); });
+        });
+        document.addEventListener('click', function(e){ if(!cards.some(function(c){ return c.contains(e.target); })) cards.forEach(function(c){ c.classList.remove('open'); }); });
+      }
+    })();
+  </script>
+</body>
+</html>
