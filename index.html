@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- viewport-fit=cover lets the page paint into the notch / dynamic-island region,
+       while env(safe-area-inset-*) below keeps every actual element clear of it -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#060607" />
+  <title>Creator Engine - Post Production at Scale</title>
+  <meta name="description" content="Broadcast-grade post production across five verticals: Microdramas, Creator Growth, Podcast, Show Marketing, and Agency Creative Services. Built for scale." />
+  <link rel="icon" type="image/png" href="assets/CE_mark.png" />
+  <link rel="apple-touch-icon" href="assets/CE_mark.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Creator Engine",
+    "url": "https://www.creatorengine.studio",
+    "logo": "https://www.creatorengine.studio/logo.svg",
+    "description": "Broadcast-grade post production across five verticals: Microdramas, Creator Growth, Podcast, Show Marketing, and Agency Creative Services.",
+    "email": "info@creatorengine.studio",
+    "sameAs": ["https://www.linkedin.com/company/creatorengine/"]
+  }
+  </script>
+  <!-- VERSION 9.133 — 1 OCTOBER 2026 | VERTICAL VIDEOS FILL EDGE-TO-EDGE: changed the services/vertical background videos+images from object-fit:contain to object-fit:cover on desktop (.vsec-bg video,.vsec-bg img) so they fill the whole section on every screen aspect ratio (user: on a 1920x1080 monitor the old 'contain' left empty bars / didn't reach the edges; 'cover' = the full-bleed look they get on the MacBook + already used on mobile). Trade-off: edges of the video crop to fill (standard full-bleed bg). Verified: video box == section box 1920x1080. Prior note: MARQUEE BREATHING ROOM: added .hero-shell padding-bottom:14px (box-sizing:border-box) so the logo strip sits ~14px above the viewport bottom instead of flush against the screen edge (verified headless 800-1080px: 14px gap, still fully visible). Prior note: CREATOR LOGOS LOCALIZED: the 8 round creator/brand logos (Mark Wiens, Strange Parts, Slapped Ham Mysteries, Mark Abroad, Retired Working For You, Sprouht, Slapped Ham, Dhar Mann) were HOTLINKED to the old creatorengine.studio/brands/*.png and broke when the backend dev rebuilt that site; repointed all 8 to local CE Assets/Logos/creators/{brands1,brands3,brands4,brands5,brands6,brands7,brands14,DharV2}.png (deploy: assets/Logos/creators/). index.html now has ZERO external image hotlinks for the marquee. Prior note: MARQUEE NEVER CROPS: wrapped #hero + .logo-strip in a .hero-shell (min-height:100svh; display:flex; column) with #hero flex:1 1 auto / min-height:0 and .logo-strip flex:0 0 auto, so the strip is ALWAYS pinned flush inside the first viewport at every height (verified headless 700-1080px: 0px overflow) - replaces the old #hero min-height:calc(100svh-84px) that under-reserved the strip and cropped the labels. Also: logos -8% (base 27->25, fox 38->35, cbc 34->31, chosen-adventures 35->32, roundtable 56->52, keshet 42->39, les-frenchies 82->76, bungalow 40->37, hsad 24->22, mydrama/The Chosen/lg 35->32, surgere 15->14, .mq-brand 66->60, slot 82->76); .logos-row align-items flex-start->center so wordmarks are vertically centred (equal top/bottom padding, was bottom-heavy); labels pulled a touch closer (.mq-cap margin-top -6->-7); nav bar slimmed (height 72->64, scrolled 62->56) + hero-inner top/btm padding 78/44->66/38. NOTE: the 8 round creator logos are still hotlinked to the old creatorengine.studio/brands/*.png (broken on the rebuilt site) - localizing them is the separate pending fix. Prior note: FOOTER COPY: footer blurb 'for creators, studio execs, agencies and entertainment companies' -> 'for creators, studios, agencies and entertainment companies' on all 10 pages. Prior note: MARQUEE TWEAKS: re-copied the user's refreshed 'LG CNS NEW.png' over web/lgcns.png; bumped marquee bungalow 36->40px and chosen-adventures 32->35px (+10% each). Prior note: MARQUEE FIT + LG CNS: (1) replaced web/lgcns.png with the user's 'LG CNS NEW.png' (colored 299x74 logo w/ design; grayscaled by the .logos-row filter, design preserved). (2) Tightened the homepage logo marquee so it sits comfortably inside the first viewport: .logo-strip padding 6px->3px, .mq-ico slot 84->82 (hugs the 82px les-frenchies), and .mq-cap pulled UP under the round brand icons (margin-top 3.5px->-6px, font 12->11px) so labels hug their logos instead of floating; mobile .mq-cap margin -14px/10px. Strip height ~116px->~100px. No logo sizes changed. Prior note: NAV FIX: homepage top-nav + mobile-menu 'Team' now link to the FOUNDERS section (#team) instead of team.html - matching every other page (which already pointed to index.html#team). So 'Team' = founders block; the 'Meet the Team' link under the founder photos still -> team.html (the full roster). Reverses the earlier v9.100 decision per user. Prior note: Footer Contact: added the career email (career@creatorengine.studio) beneath info@creatorengine.studio on every page (matches the doc footer; career@ was previously footer-absent). Prior note: COPY SYNC to the latest Website Copy doc (HOMEPAGE FINAL + Explore/Team/Culture tabs). index: hero trimmed to doc (removed 'You have the production. We run the post.' hook + 'One accountable structure...' sentence; Fox Entertainment -> FOX Entertainment Studios); microdramas/creator-growth/show-marketing/agency homepage section bodies reworded; founders intro reworded; founder sub-lines 'Formerly ...' -> 'Former ...' (Gavin now 'Post Production Head, APAC - Netflix · SVP - SIM Digital'); Vijay bio 'across'->'spanning'. Explore pages: all 5 intro bodies reworded to doc (microdramas now 'released on My Drama'). team: Our Team intro + Sreenjoy + Vikas bios reworded. culture: intro p2 reworded + p3 added. All hyphens, no em-dashes. Prior note: marquee: removed Netflix + Hotstar wordmarks, added MyDrama (Logos/web/mydrama.png, white silhouette from CE Assets/Logos/MyDrama.png). removed em-dashes site-wide (visible copy; comments untouched); section-label sizes bumped (.s-tag 10->12px, .vlabel 9->11px) so eyebrows read clearer. Prior note: index: added 'Formerly …' past-position sub-line (.founder-past, muted grey, former titles in --mid) under each co-founder's current role — Gavin (SVP Post SIM Digital · Post APAC Netflix), Samya (Nonfiction Post Lead Netflix · Hotstar), Vijay (Director of Post Production, Netflix India). Prior note: Founder photos Gavin+Sam → V02 (founder-gavin/sam.jpg from *_v02.png, grayscale; same filenames). Prior note: DEPLOY path fix (Netlify): the self-contained build referenced PARENT paths that don't exist once uploaded — CE logo/favicon '../CE%20Assets/CE_mark.png' → 'assets/CE_mark.png', and the 5 vertical-section videos '../VERTICALS%20VIDEOS/*_V02.mp4' → 'assets/videos/{microdramas,creator-growth,podcast,show-marketing,agency}.mp4' (files already present in the build). Live HTML files keep ../ paths (correct for the local folder). Prior note: Homepage copy updated to the FINAL version (Website Copy doc → HOMEPAGE FINAL tab): hero sub 'More releases mean…' -> 'You have the production. We run the post.', 'We deliver'->'We handle', 'clients like'->'clients including', 'work we've already delivered'->'we've delivered'; Microdramas 'We deliver full post-production for the … across' -> 'Creator Engine handles full post-production across … spanning', 'One fully managed team'->'One team'; Creator Growth Oxford comma + 'We regularly work with creators to develop ideas into distinctive, repeatable formats' -> 'Beyond individual episodes, we work with creators to develop repeatable formats'; Podcast 'We shape conversation-led series through' -> 'Conversation-led series shaped through' + Hizzouse line reworded; Show Marketing comma tidy. Prior note: Fixed the buggy founder bio slide: .founder-x.open .founder-bio max-height was 88% (a percentage of an auto-height parent → doesn't resolve, so it SNAPPED open and couldn't animate closed, leaving the band stuck up while the text faded). Changed to 65vh (resolvable unit, same as the vertical heads) so it slides up/down smoothly. Prior note: Homepage scrolling marquee: brand icons (.mq-brand) now render as CIRCLES — fixed 66px square (48px mobile) + border-radius:50% + object-fit:cover (was height-only, width:auto squares). Client wordmark logos unchanged. Prior note: Global type scale reduced for a calmer, Instagram-like UI: large display type down ~12-20% (hero/section titles, giant numbers), body ~16px->14px, subheads trimmed; small UI labels (<15px: nav/tags/buttons) unchanged for legibility. Site-wide (all pages + media queries). Prior note: Mobile homepage splash images swapped to the V3 versions in each splash folder's /Mobile subfolder (<picture> source srcsets updated to *_v3.png, base + collage for all 4 tiles). Desktop unchanged. (Nav 'Team' -> team.html on mobile menu was already done in 9.100.) Prior note: Top-nav (and mobile-menu) 'Team' link now points to team.html instead of the homepage #team founders anchor. The 'Meet the Team' link under the founders still -> team.html (unchanged). index.html only. Prior note: MOBILE homepage splash: the 4 hero/splash tiles now use the images from each splash folder's /Mobile subfolder (the 'horizontal' base + collage) via <picture><source media='(max-width:860px)'> — desktop still uses the v2 vertical artwork. On mobile the tiles STACK VERTICALLY (hero-tiles -> grid-template-columns:1fr; grid-auto-rows:1fr) and all 4 show (removed the nth-child 3/4 display:none). Also fixed the deploy splash paths (../CE%20Assets -> assets/) so they resolve in the build. Prior note: Founder cards reshaped to match the vertical-head blocks: aspect-ratio 3/4 -> 4/5 and border-radius 16px -> 6px (uniform, squarer corners; fixes the inconsistent-looking curvature). Gavin's founder photo darkened (grayscale + Contrast 1.32 + Brightness .72) so his light wall reads dark like Sam/Vijay. Founder images refreshed. Prior note: Founder photos (Gavin, Samya, Vijay) swapped from the old hotlinked creatorengine.studio named-cards to the NEW local photoshoot portraits (Heads and founders/Gavin.jpeg, Sam.jpeg, Vijay.jpeg -> grayscale 3:4 founder-gavin/sam/vijay.jpg in CE Assets/Team + deploy). Prior note: MOBILE tweaks (index/home): (1) vertical-section bg videos now `object-fit:cover` <=860 so they FILL the section width+height (were a thin contained strip; now like desktop). (2) Mobile menu link font reduced ~10% (clamp 24/6.6vw/38 -> 22/5.9vw/34). (3) Founder boxes narrower + centred on mobile (max-width min(290px,82vw), was 420) for a proper edge margin. (4) Expanded founder bar capped (max-height 68% + scroll) so the headshot's face stays visible. Prior note: MOBILE pass (index): (1) founder bios now TAP-to-expand on touch (hover:none) while desktop keeps hover; tapping the band toggles, one-open-at-a-time, tap-outside closes. (2) Founder cards slightly less tall when stacked on phones (aspect-ratio 3/4 -> 4/5 in the mobile block). Prior note: Founder aston-band motion now EXACTLY matches the vertical heads: the founder photo was blurring/darkening in .6s (snappy) while everything else eased over 2.4-2.8s. Changed `.founder img` transition .6s -> `transform 2.4s cubic-bezier(.16,1,.3,1), filter 2.4s ease` (identical to `.vhead-x .vhead-photo img`), so the photo eases in sync with the band slide. Band slide / copy fade already matched. Prior note: Fixed the band staying 'stuck' open: the collapse (mouseleave) was bound to the aston band itself, which balloons to cover most of the card when open, so the leave boundary was unreliable. Moved the close handler onto the CARD (.vhead-x / .founder-x) — a fixed-size box that never resizes — so the band now slides back down the instant the cursor leaves the card. Open still triggers on band mouseenter. Prior note: Profile bio copy now fades in SOONER — reduced the copy's transition-delay from 1s to .3s on team (.vhead-bio p) + index founders (.founder-bio p), so the text starts rising/fading in shortly after the band begins sliding (less pause). Prior note: Profile treatment now HOVER-driven: the 'Know more' button removed; the aston band slides up when the cursor moves over it (mouseenter) and collapses on mouseleave — team vertical heads (Vikas, Rupesh) + all 3 index founders. Band slide slowed + smoothed further (max-height 2.8s / margin+bg+img 2.4s, ease cubic-bezier(.22,1,.36,1)); copy fade delayed to 1s. Vertical-head band darkness matched to the founders (rgba(8,8,10,.5), blur 20px). Prior note: index.html — Founders converted to the SAME slide-up profile treatment as the team vertical heads (canceled speech bubbles fully removed). Each founder card: darkened frosted band (rgba(8,8,10,.5)->.7) with founders-style teal line + display-800 name + teal uppercase role + a 'Know more' pill; click slides the band up (2x slower, 1.8-2s), blurs the photo, and reveals the new long bio (fades+rises like site copy); Close/Esc/click-out collapses, one-open-at-a-time. Added full bios for Gavin, Samya, Vijay. Prior note: Sam's founder photo reverted to her ORIGINAL-site picture (hotlinked https://www.creatorengine.studio/team/v3/3.png, the B&W named founder card) instead of the new-photoshoot founder-samya.jpg — now matches Gavin (team/v2/1.png) & Vijay (team/v3/2.png), all three the same old-site named cards. Prior note: Marquee brand logos bumped a further +50% (.mq-brand height 44->66px; 32->48px mobile). Client logos unchanged (18px). Prior note: Marquee sizing: brand/show logos (.mq-brand) now 2x larger (height 22->44px; 32px mobile); client logos reduced ~20% (22->18px; 16px mobile). Prior note: Marquee expanded with the brand/show logos from the live creatorengine.studio site (Mark Wiens, The Chosen, Strange Parts, Sprouht, Dhar Mann, Nat Geo, Vizio, Keshet, Les Frenchies, etc.) hotlinked from /brands/, MIXED with the 8 client logos, all rendered GRAYSCALE (filter changed brightness(0)invert(1) -> grayscale(100%); client logos are pure-white so stay visible). 24-logo set x2 for the seamless loop. Prior note: Founder speech bubbles polished: ~18% larger (font 13->15.5px, padding + max-width up), pop in with a slight BOUNCE (fbPop keyframe, back-ease overshoot), and the text now scrolls up + fades in (.fb-inner, fbInner keyframe, .14s after the bubble) like the site's reveal motion. Reduced-motion disables the animations. Prior note: 'Work with Us' + 'Let's Talk' CTA buttons now link to the new contact.html (contact form that emails info@creatorengine.studio on submit) instead of a raw mailto. Prior note: INTERACTIVE TEST: Vijay's founder photo is now click-to-reveal — clicking his image (or the '+' affordance) pops a white speech bubble "About me: I like dogs. I don't like people." with a downward tail; click again / outside / Esc closes. Scoped to #founder-vijay only (test before rolling to all founders + vertical heads). Prior note: Homepage verticals dialed back per feedback (too colourful): .vsec-bg opacity .92->.69 and the video is now MUTED colour (grayscale 35% + saturate .82, brightness .6; hover grayscale 18%/sat 1.0) so the per-vertical copy clearly leads again. Prior note: Homepage verticals brought to LIFE: the .vsec background videos are no longer black-&-white — removed grayscale/desaturate (now grayscale(0) saturate 1.08, hover 1.18), raised .vsec-bg opacity .42->.92, brightness .66 (hover .82); strengthened the directional copy-side scrim so the copy stays fully legible over the colour video. Prior note: MOBILE QA FIXES (rendered all pages at 390px via headless Chromium): (1) hero SCROLL cue was overlapping the disciplines line on phones -> hidden <=600. (2) team + Explore pages had ~20px horizontal overflow because the side-glow leaks sat at left/right -5% (outside the viewport) -> pulled to 0 so they hug the edges with no overflow (glow still bleeds inward via blur). Prior note: SITE-WIDE MOBILE PASS: added a phone-refinement media block — tighter marquee (smaller gap + 19px logos <=600), Explore work-gallery + team/culture mosaic gutters, full-width Explore CTA, and 18px page gutters <=480 — refining the existing responsive layout for the newest v9.x components. Prior note: Marquee now truly ENDLESS: the row was gapping/'ending' because one copy of the 8 logos was narrower than the viewport, so translateX(-50%) revealed blank space before the loop. Fixed by repeating the 8-logo set 6x (3 per seamless half); slowed the loop 34s->60s to keep the pace calm. Prior note: Marquee Netflix + Hotstar now use the OFFICIAL brand art the user added to CE Assets/Logos/ (Logonetflix.png -> red wordmark; Disney+_Hotstar_2024.svg -> rasterised via cairosvg), each converted to a white-on-transparent silhouette and written to Logos/web/netflix.png + hotstar.png (replacing my earlier typographic placeholders). Same marquee img srcs, files swapped in place; copied to deploy. Prior note: Marquee cleaned to LOCAL-ONLY logos that reliably render — removed the externally-hotlinked creatorengine.studio/brands/*.png show wordmarks (The Chosen, Chosen Adventures, Mark Wiens, Mark Abroad, Les Frenchies, Retired Working For You, National Geographic), which were the missing/broken icons. Marquee now = FOX, Netflix, Hotstar, CBC, HSAD, LG, Surgere, LG CNS (netflix.png + hotstar.png are clean white typographic wordmarks generated locally — swap for official brand art if available). Founders: Sam's portrait card radius 4px -> 16px to match Gavin/Vijay's curved corners. Prior note: Sam's (Samya's) founder portrait is now kept BLACK & WHITE throughout — added `.founder-bw` to her founders-grid tile so it no longer turns colour on hover (grayscale 100% at rest AND on hover; keeps the subtle scale + brightness-lift). index.html only. Prior note: site version sync to v9.4 — the five homepage "Explore [vertical]" links now resolve to real work pages (microdramas / creator-growth / podcast / show-marketing built out; agency = coming-soon showreel placeholder). No index.html content change this release. Prior note: Samya's founder portrait re-cropped to a head-and-shoulders 3:4 with her eyeline matched to Gavin/Vijay (assets/Team/founder-samya.jpg replaced). Prior note: Consistency pass across all pages: Culture link now in the TOP NAV + mobile menu on every page (was only on index — subpages showed it only in the footer); footer Contact everywhere = info@ on one line, career@ removed (kept only on the careers page's CV line). Also removed the 6 empty text logos from the marquee (kept only real logo icons). Prior note: Homepage: (1) Culture added to top nav + mobile menu beside Team. (2) Brand marquee now uses local white logos from CE Assets/Logos/web (FOX, LG, Surgere, LG CNS, HSAD, CBC); Holywater/MyDrama/Hizzouse/Shaftesbury/Some Assembly/Drinksbox stay as text (no file). (3) Hero shortened (#hero min-height calc(100svh-84px)) + h1/paddings scaled down so the marquee is visible in the first viewport. (4) Removed the 'Work includes' vtags from Creator Growth & Show Marketing (kept the Explore links). (5) Eyebrow 'Built for Recurring Productions' -> display font (Archivo Expanded, .2em, 11px). (6) Samya founder image -> local photoshoot photo. (7) Footer Contact: removed career@; info@ email forced to one line. Prior note: Swapped ALL 5 homepage vertical videos to the V02 masters — Microdramas → MICRODRAMA_V02, Creator Growth → CREATOR GROWTH_V02, Podcast → PODCAST_V02, Show Marketing → SHOW MARKETING_V02, Agency Creative Services → AGENCY CREATIVE SERVICES_V02 (retired the References/*.mp4 placeholders for Microdramas + Agency). Prior note: Footer Careers link repointed from team.html#careers to the standalone careers.html (Team page no longer contains the Careers/Culture sections). Prior note: Reverted the v9.15 blue cursor tint — removed the custom SVG arrow cursor so the plain default OS pointer (white) is used site-wide. Prior note: Removed the custom teal dot/ring cursor site-wide (all pages) and restored the default mouse pointer, tinted the CE-logo blue (#0090C0) via an inline SVG arrow cursor on html; interactive elements keep the OS hand. Prior note: Full-site integration release: whole site unified to v9.10 to fold in
+       the finished Culture page (culture.html, the interactive expand-in-place mosaic). No content change to
+       index.html this release — Culture stays reachable via the footer "Team → Culture" link. History below is
+       from v9.1: Site-wide version bump. index change that release: swapped the four
+       splash hero tiles to the new v2 artwork — base ("<name> base_v2.png") + collage ("<name> vertical_v2.png")
+       in CE Assets/Splash Page images/<folder>/, replacing the old base image / -collage pairs. tile-base
+       and tile-collage behaviour (dim greyscale default → colour collage fade on hover) unchanged.
+       Carries forward everything from v4 (flat frosted glass with no
+       embossed/3D edges, fixed nav, feathered B&W video verticals, momentum bg/copy parallax, per-tile
+       hero hover with no cursor drift, light-leak section hand-offs, staggered reveals, trimmed
+       three-founder Team). New in 4.5: full mobile hardening — viewport-fit=cover + safe-area insets so
+       the logo, "Work With Us" and all copy stay clear of the dynamic island / notch and screen edges;
+       a frosted-glass hamburger menu for phones (the five verticals were previously unreachable on
+       mobile); a closing "Work With Us" CTA block and a full footer; fluid type and tap-target polish
+       across every element.
+       18 Jul (rev b) homepage tweaks: (1) the frosted-glass nav is now present from first paint
+       instead of fading in on scroll; (2) the four hero tiles now show real vertical imagery
+       (Microdramas, Creator Growth, Podcast, Show Marketing); (3) the teal/blue light leak has been
+       removed from the hero/splash — it now lives only on the vertical sections, so the leftmost
+       hero image stays fully visible.
+       18 Jul (rev c): reverted the hero tiles from vertical imagery back to the "characters"
+       concept, but with a fresh set of portraits (each with an onerror fallback so a tile can
+       never break). Added a teal→blue light leak rising from the bottom of the Founders section
+       — same bloom as the verticals — to give that previously all-black area depth.
+       18 Jul (rev d): hero tiles switched to face-aware crops (fit=facearea) so all four share a
+       consistent eyeline, subject scale and composition; the founders light leak rebuilt as a
+       full-width band rising from the entire base of the section (no centre bloom, no side crops).
+       VERSION 4.6 (18 Jul): (1) the founders light leak now breaks OUT to the full viewport width
+       (it was still being clipped to the section's max-width box, leaving side gutters). (2) Buttons
+       no longer have any magnetic/parallax drift toward the cursor — hover shows only a subtle glow,
+       and a click gives a small press-in (:active); no passive movement.
+       VERSION 5 (18 Jul): (1) removed the duplicate vertical list — the in-hero strip is gone, so the
+       verticals live only in the top nav and the running logo ticker now sits directly below the four
+       hero image slices. (2) Added two new sections after the Founders, built from the real Creator
+       Engine site copy: CULTURE (the six "Creative Ownership" values + the Shaw quote) and CAREERS
+       (Join Our Team — specialisms, career@creatorengine.studio, LinkedIn open-positions link). Both
+       added to the mobile menu (07/08) and footer.
+       VERSION 5.1 (18 Jul): (1) added a full TEAM roster section (#team-members) after the Founders,
+       using the original site's 24 non-founder team card images (each carries the person's photo +
+       name + role, shown uncropped via object-fit:contain). (2) Added "Culture" to the desktop top
+       nav alongside Our Team; the inline nav now collapses to the hamburger below 1200px (was 1024)
+       and uses a tighter gap so the seven links never overflow.
+       VERSION 5.2 (18 Jul): the team roster cards now reveal with a staggered slide-up — as each row
+       scrolls into view its members cascade up one after another (same reveal motion as the rest of
+       the page), driven by a dedicated observer so hover stays instant.
+       VERSION 5.3 (18 Jul): softened that team motion — the cards no longer slide up (the 64px
+       travel read as jarring). They now fade in slowly on the same easing + pace as the light leaks
+       (opacity over 2s), with only a gentle per-column stagger so a row settles in smoothly.
+       VERSION 5.4 (18 Jul): matched the team motion to the founders — the cards slide up + fade on
+       the same easing again, but slower (2.2s vs the founders' 1.15s) and more delayed (per-column
+       stagger 220ms) so it reads soft and smooth. Hover only scales the image now (like the
+       founders) so the reveal slide and hover never conflict.
+       VERSION 5.5 (18 Jul): version rename only — identical to v5.4, no functional changes.
+       VERSION 5.6 (20 Jul): quick-win polish pass — (1) the five dead "Learn More" links no longer
+       point at non-existent pages; they're now inactive placeholders tagged "Coming soon". (2) Added
+       a favicon (CE mark) + Organization JSON-LD structured data. (3) Added visible keyboard focus
+       rings (:focus-visible) since the custom cursor hides the pointer. (4) prefers-reduced-motion now
+       also stops the logo marquee, podcast waveform and scroll-pulse, and disables smooth scroll.
+       VERSION 5.7 (24 Jul): full copy overhaul from client-supplied deck. New hero label/headline/sub
+       (Built for Recurring Productions · Post-Production at Scale · dedicated teams…) and buttons
+       (See the work / Let's talk). Client band updated to the real client list. Added three sections
+       before the verticals: When Production Scales, How We Work (with a disciplines pipeline), Areas
+       of Work intro. All five verticals rewritten (new For-line, body, Work Includes, Featured work;
+       CTAs relabelled "Explore <vertical>", still Coming-soon until pages exist). Founders reordered
+       (Gavin, Samya, Vijay) with full titles + bios + a credits line + "Meet the Team" link. Closing
+       CTA copy updated → "Let's Talk". Footer rebuilt into Work / Company / Connect / Contact. Nav
+       collapses Our Team+Culture into a single "Company" link; CTA → "Work with Us".
+       VERSION 5.8 (24 Jul): removed the floating play-button badges (.vbadge) from all five verticals;
+       converted the five "Explore <vertical>" CTAs from inactive "Coming soon" placeholders into real
+       hyperlinks (→ microdramas.html / creator-growth.html / podcast.html / show-marketing.html /
+       agency.html — those detail pages still need to be built). Featured-work lists remain plain text.
+       VERSION 5.9 (24 Jul): made the hero masthead a little bolder — .hero-h1 weight 300 → 400 (the
+       "Scale." accent stays 800).
+       VERSION 6.0 (24 Jul): reverted the v5.9 masthead change (.hero-h1 back to 300). Instead made the
+       top menu bar bolder — .nav-links weight 500 → 700.
+       VERSION 6.1 (25 Jul): copy refresh for the Company-area sections (everything else unchanged).
+       Our Team eyebrow "The Team"→"Our Team" + new two-paragraph body (team grid kept). Culture eyebrow
+       "Our Culture"→"Culture", new intro + six values reworded (Shaw quote kept). Careers retitled
+       "Build your craft…" with shorter copy and a single "View Open Positions" button (role tags +
+       Send-Showreel button removed). Footer: added "Contact" under Company; Contact emails reordered
+       (info@ first).
+       VERSION 6.2 (25 Jul): full homepage copy pass from the client deck. New hero sub (FOX vertical
+       drama / The Chosen companion / YouTube creators). Client band expanded to the full 19-name list
+       (images where available, text otherwise; new names as text). Merged the old three intro sections
+       into ONE "When Production Scales — One accountable team, customized around the work" (with real
+       cadence stats + updated disciplines pipeline: Post Producing, no Post Supervision); removed the
+       separate How We Work and Areas of Work sections. All five verticals rewritten with the delivered-
+       work copy (Microdramas FOX/HOLYWATER/MyDrama; Creator Growth 12/mo + new Work-Includes; Podcast
+       Shaftesbury/CBC + Hizzouse; Show Marketing + "360° creative support for shows" sub-head; Agency
+       brands/agency, no white-label framing on LG). Founders: Samya bio Disney+ Hotstar → Hotstar.
+       Closing CTA gained a "Work With Us" eyebrow + new body. Nav "Company" → "Team". Footer: blurb
+       updated, "Company" column → "Team" (Contact link removed).
+       VERSION 6.3 (29 Jul): re-save / version bump only — identical to v6.2, no content changes.
+       VERSION 6.4 (29 Jul): split the Company sections into their own pages. Our Team, Culture and
+       Careers are REMOVED from the homepage (now team.html, culture.html, careers.html). "Meet the
+       Team" links to team.html; the footer Team column links to the three pages. Homepage now ends
+       Founders -> Closing CTA. Founders headline scaled down so "Built by the people who have led"
+       holds one line; the credits line enlarged for prominence.
+       VERSION 6.5 (10 Aug): the CREATOR GROWTH vertical now plays its final master
+       "../VERTICALS VIDEOS/CREATOR GROWTH.mp4" (H.264, muted/loop). The other four verticals keep
+       their placeholder reference clips. Same treatment (grayscale, feathered mask, momentum parallax,
+       plays only when on screen). VERTICALS VIDEOS/ is the client's drop folder for final per-vertical
+       masters — as more arrive, map each vertical's <source> to its file.
+       VERSION 6.6 (10 Aug): copy refresh from client deck. Hero now carries the opening pitch (3 paras
+       + disciplines strip); the separate "When Production Scales" section is removed. Verticals reworded
+       (Microdramas, Creator Growth, Show Marketing). Vertical layout redesigned: background video is now
+       FULL-WIDTH and UNCROPPED (object-fit:contain, no parallax zoom) and the copy is centred + wider.
+       Footer: Instagram removed; copyright is "© Creator Engine <span id=ceYear>" auto-set via JS to the
+       current year (rolls to 2027 at New Year). Creator Growth video (CREATOR GROWTH.mp4) unchanged.
+       VERSION 6.7 (10 Aug): vertical copy moved back to the SIDE (alternating left/right via .flip),
+       inset from the edge, left-aligned — reverting v6.6's centred copy. Scrim is directional again
+       (darkest on the copy side) so the full-width video no longer overpowers the text. Video stays
+       full-width & uncropped.
+       VERSION 6.8 (10 Aug): brought the vertical copy ~12% further in from the edge (padding-inset
+       side now calc(var(--sa*) + 64px + 12vw)) so it sits more inboard over the video.
+       VERSION 6.9 (10 Aug): fixed v6.8 (that padding change had narrowed the text). Restored v6.7's
+       exact copy box and instead shifted the WHOLE block ~10% inward via margin (base margin-left:10vw,
+       flip margin-right:10vw) — width unchanged. Dimmed vertical videos ~35% (.vsec-bg opacity .92 → .6)
+       so they no longer overpower the copy.
+       VERSION 7.0 (10 Aug): widened the vertical copy so paragraphs breathe (.vcopy max-width 600→760,
+       .vcopy .s-body 540→680; block position/margin unchanged). Dimmed the vertical video BG a further
+       ~30% (.vsec-bg opacity .6 → .42). Numbered 7.0 (not 6.10) so it sorts after 6.9.
+       VERSION 7.1 (10 Aug): per annotated screenshot, spread the vertical paragraphs much wider —
+       .vcopy max-width now clamp(560px, 56vw, 1080px) with .vcopy .s-body max-width 100% (fills the
+       column), and the side inset reduced 10vw → 5vw so the copy reaches out toward the edge.
+       VERSION 7.2 (10 Aug): shifted the vertical copy column further toward its outer edge — side
+       inset reduced 5vw → 2.5vw (flip copy moves right into the right-hand gap; base copy mirrors).
+       VERSION 7.3 (14 Aug): TEST — replaced the four placeholder hero portraits with the two real
+       Splash Page collage images (CE Assets/Splash Page images/mewes-collage-440x10802x.png + _1.png),
+       alternated A·B·A·B across the four tiles.
+       VERSION 7.4 (14 Aug): (1) hero scrim made horizontally EVEN (vertical-only gradient) so all four
+       splash images read at equal visibility — the leftmost is no longer darkened by the old
+       left-heavy scrim. (2) Cursor-reveal on the hero text: the label/H1/paragraphs are wrapped in
+       #heroFade with a radial mask that follows the pointer (JS sets --mx/--my), so letters under the
+       cursor fade out (soft ~34→150px ring) to reveal the image behind. Desktop/fine-pointer only.
+       VERSION 7.5 (14 Aug): (1) dimmed the splash images ~20% more (hero-tile brightness .62 → .5),
+       kept equal across all four. (2) Reworked the cursor-reveal to be crisp & blocky — replaced the
+       soft radial gradient with a hard-edged SQUARE hole (two linear-gradient bands, ~156px, binary
+       on/off, no grey falloff) so letter blocks snap off/on under the cursor. (Future: on hover the
+       image brightens + swaps to the other image — noted, not yet built.)
+       VERSION 7.6 (14 Aug): reworked the cursor-reveal to be true PER-LETTER — every character is
+       wrapped in span.ltr and its opacity is driven by distance to the cursor (fully off ≤20px, back
+       to full by 50px), so individual letters blink off/on with a slight radial fade — no geometric
+       mask/block in the frame. (Gradient "Scale." toggles as one unit to keep its fill intact.)
+       VERSION 7.7 (14 Aug): (1) doubled the per-letter reveal radius (OFF 20→40, FADE 50→100) so it's
+       more evident. (2) Reset the hero eyebrow "Built for Recurring Productions" to a normal sentence
+       — body font, default kerning (letter-spacing normal), sentence case (no uppercase), lead dash
+       removed.
+       VERSION 7.8 (14 Aug): (1) hero eyebrow now BOLD (weight 700). (2) Headline reveal radius
+       increased (OFF 40→60, FADE 100→150) and "Scale." now fades PER-LETTER (each letter is a
+       .scale-ltr gradient span) instead of the whole word. (3) Paragraph reveal is now
+       COMPARTMENTALISED — words grouped into 4-word blocks that snap off/on when the cursor is over
+       any word in the block (hard toggle), replacing the soft radial fade.
+       VERSION 7.9 (14 Aug): (1) FIXED "Scale." not fading — its parent .scale span kept a
+       background-clip:text gradient that re-painted the glyphs over the faded per-letter spans; JS now
+       adds .scale-split to the parent to strip that gradient, so the per-letter .scale-ltr spans fade
+       properly. (2) Doubled the headline reveal radius (OFF 60→120, FADE 150→300). (3) Paragraph
+       reveal is now SOFT again (distance-based per 4-word block, not a hard box hit) with a wide
+       radius (C_OFF 40, C_FADE 220) so several blocks ease off together.
+       VERSION 8.0 (14 Aug): hero eyebrow "Built for Recurring Productions" — undid the bold (weight
+       700 → 400) and set it to ALL CAPS (text-transform: uppercase). Kept body font, default kerning.
+       Numbered 8.0 (not 7.10) so it sorts after 7.9.
+       VERSION 8.1 (14 Aug): Podcast and Show Marketing verticals now play their final masters
+       (../VERTICALS VIDEOS/PODCAST.mp4 and SHOW MARKETING.mp4, H.264). Microdramas + Agency still use
+       placeholder References clips; Creator Growth unchanged. Same treatment.
+       VERSION 8.2 (14 Aug): (1) vertical copy narrower + more left (max-width clamp 56vw→46vw, cap
+       1080→780; left inset padding 80→64, margin 2.5vw→2vw) so it's not so centred. (2) Hero
+       disciplines split evenly into two lines (4 + 4) — break after "Motion Graphics" — so "Delivery"
+       is no longer orphaned on its own line.
+       VERSION 8.3 (14 Aug): rebuilt team.html into the consolidated Team page — Our Team (roster) +
+       Culture teaser (→ culture.html via "Explore Our Culture") + Careers with a reusable OPEN
+       POSITIONS role list (.roles/.role; title + meta line + external JD link; empty-state message).
+       Added the .roles component CSS to the shared stylesheet; footer "Careers" now → team.html#careers.
+       culture.html stays as the full culture page; careers.html left in place but unlinked.
+       VERSION 8.4 (14 Aug): rebuilt culture.html into the full long-form Culture manifesto — intro,
+       six values (each with body paragraphs + a "What it looks like in practice" list), a closing
+       "The Culture We Are Building" section and the George Bernard Shaw quote. Added long-form culture
+       CSS (.culture-intro/.culture-value/.practice/.culture-closing) to the shared stylesheet.
+       VERSION 8.5 (14 Aug): removed the "Featured work" / "Selected work" lines (.vfeatured) from all
+       five verticals — those were internal notes, not visible copy. (.vfeatured CSS left unused.)
+       VERSION 8.6 (14 Aug): the Our Team section (#team-members on team.html) now carries the same
+       edge-to-edge teal→blue light-leak (.tm-leak) as the founders/careers sections, fading in on
+       entry (leakObs now also observes #team-members).
+       VERSION 8.7 (17 Aug): the four splash tiles now use the real folder images (Gavin Rossdale ·
+       Jason Mewes · Mark Wiens · The Chosen). Each tile pairs a dim greyscale BASE image with a
+       full-colour COLLAGE that fades in on hover (.tile-base / .tile-collage; hover scale applies to
+       both). Tags relabelled to the four names.
+       VERSION 8.8 (17 Aug): pushed the splash tile grid down below the fixed nav (.hero-tiles
+       top: calc(64px + safe-area)) so the images aren't covered by the top bar; slowed/softened the
+       collage fade-in (opacity transition .55s → 1.3s).
+       VERSION 8.9 (17 Aug): the cursor-reveal now applies ONLY to the headline (.hero-h1). Removed the
+       per-word/compartment fade from the paragraphs and the per-letter fade from the eyebrow — those
+       render normally now. (wrapWords/chunks logic removed; .word CSS left unused.) -->
+  <!-- Prior snapshots preserved as index-v4.5 … v8.8 (18-jul … 17-aug).html -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:  #060607;
+      --black2: #0b0b0d;
+      --white:  #ffffff;
+      --teal:   #2EC4B6;
+      --blue:   #0079C2;
+      --grad:   linear-gradient(120deg, #2EC4B6 0%, #0079C2 100%);
+      --gray:   #141416;
+      --border: rgba(255,255,255,0.07);
+      --muted:  rgba(255,255,255,0.36);
+      --mid:    rgba(255,255,255,0.62);
+      --display: 'Archivo Expanded', sans-serif;
+      --body: 'Inter', sans-serif;
+      /* safe-area insets, resolved to 0 on devices/browsers without them */
+      --sat: env(safe-area-inset-top, 0px);
+      --sar: env(safe-area-inset-right, 0px);
+      --sab: env(safe-area-inset-bottom, 0px);
+      --sal: env(safe-area-inset-left, 0px);
+      /* horizontal page padding that always clears a landscape notch */
+      --pad: 60px;
+    }
+
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    /* Default OS pointer (white arrow) - no custom cursor (v9.16). */
+
+    body {
+      background: var(--black); color: var(--white);
+      font-family: var(--body); font-size: 14.1px;
+      overflow-x: hidden; -webkit-font-smoothing: antialiased;
+    }
+
+    /* Custom cursor removed (v9.15) - using the default pointer, tinted the CE-logo blue via the html cursor rule above. */
+
+    /* ─── REVEAL ─── */
+    /* momentum-driven entrance: larger travel distance + a slower, springier ease so each
+       line reads as sliding up into place rather than a static fade */
+    .reveal { opacity: 0; transform: translateY(64px); transition: opacity 1.15s cubic-bezier(.16,1,.3,1), transform 1.15s cubic-bezier(.16,1,.3,1); }
+    .reveal.right { transform: translateX(56px); }
+    .reveal.visible { opacity: 1; transform: translate(0,0); }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    }
+
+    /* ─── NAV ─── */
+    /* padding-top carries the top safe-area inset so the logo + CTA never sit under the
+       dynamic island; height grows by the same inset so the bar's own background covers it.
+       nav keeps position:fixed at all times (do not override that). */
+    /* flat frosted glass is present from the first paint - the blur + saturation on whatever
+       scrolls behind the bar is what reads as "glass", visible immediately over the hero, not
+       only after the user scrolls. No embossed/3D edge treatment (no inner highlights/shadows). */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+      display: flex; align-items: center; justify-content: space-between;
+      padding-left: max(48px, var(--sal)); padding-right: max(48px, var(--sar));
+      padding-top: var(--sat);
+      height: calc(64px + var(--sat));
+      background: rgba(255,255,255,.04);
+      backdrop-filter: blur(34px) saturate(220%);
+      -webkit-backdrop-filter: blur(34px) saturate(220%);
+      border-bottom: 1px solid rgba(255,255,255,.10);
+      transition: background .5s, border-color .5s, height .4s, box-shadow .5s;
+    }
+    /* once scrolling, the bar simply tightens: a touch denser, a soft drop shadow, less height */
+    nav.scrolled {
+      background: rgba(255,255,255,.06);
+      border-bottom-color: rgba(255,255,255,.12);
+      box-shadow: 0 8px 30px -12px rgba(0,0,0,.5);
+      height: calc(56px + var(--sat));
+    }
+    .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; flex-shrink: 0; }
+    .nav-logo img { height: 26px; width: auto; display: block; }
+    /* wordmark set in the brand's tracked-out geometric caps, matching the styleframe lockup */
+    .nav-logo-word { font-family: var(--display); font-size: 13.2px; font-weight: 500; letter-spacing: .34em; text-transform: uppercase; color: var(--white); white-space: nowrap; }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--mid); font-family: var(--display); font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; text-decoration: none; position: relative; transition: color .25s; padding: 6px 0; }
+    .nav-links a::after { content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background: var(--grad); transform: scaleX(0); transform-origin: left; transition: transform .3s cubic-bezier(.16,1,.3,1); }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-right { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+    .nav-cta a { font-family: var(--display); font-size: 10px; font-weight: 600; letter-spacing: .14em; }
+
+    /* hamburger toggle - hidden on desktop, shown when the inline links collapse */
+    .nav-toggle {
+      display: none; width: 44px; height: 44px; border: none; background: transparent;
+      cursor: pointer; position: relative; flex-shrink: 0; padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .nav-toggle span { position: absolute; left: 10px; right: 10px; height: 1.5px; background: var(--white); border-radius: 2px; transition: transform .4s cubic-bezier(.16,1,.3,1), opacity .3s; }
+    .nav-toggle span:nth-child(1) { top: 16px; }
+    .nav-toggle span:nth-child(2) { top: 22px; }
+    .nav-toggle span:nth-child(3) { top: 28px; }
+    body.menu-open .nav-toggle span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    body.menu-open .nav-toggle span:nth-child(2) { opacity: 0; }
+    body.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    /* ─── MOBILE MENU OVERLAY ─── */
+    .mobile-menu {
+      position: fixed; inset: 0; z-index: 800; display: flex; flex-direction: column;
+      justify-content: center; overflow-y: auto;
+      padding: calc(var(--sat) + 90px) max(30px, var(--sal)) calc(var(--sab) + 32px) max(30px, var(--sal));
+      background: rgba(6,6,7,.72);
+      backdrop-filter: blur(40px) saturate(200%); -webkit-backdrop-filter: blur(40px) saturate(200%);
+      opacity: 0; visibility: hidden; transition: opacity .5s cubic-bezier(.16,1,.3,1), visibility .5s;
+    }
+    /* with eight items the list can be taller than a short phone - start from the top and let it
+       scroll rather than centre-clip on devices like the iPhone SE */
+    @media (max-height: 760px) { .mobile-menu { justify-content: flex-start; } }
+    body.menu-open .mobile-menu { opacity: 1; visibility: visible; }
+    .mobile-menu a.mm-link {
+      font-family: var(--display); font-size: clamp(18.5px, 5vw, 28.6px); font-weight: 700;
+      text-transform: uppercase; letter-spacing: .01em; color: var(--white); text-decoration: none;
+      padding: 8px 0; line-height: 1.08; display: flex; align-items: baseline; gap: 14px;
+      opacity: 0; transform: translateY(24px); transition: opacity .5s cubic-bezier(.16,1,.3,1), transform .5s cubic-bezier(.16,1,.3,1), color .25s;
+    }
+    body.menu-open .mobile-menu a.mm-link { opacity: 1; transform: translateY(0); }
+    .mobile-menu a.mm-link .mm-i { font-family: var(--display); font-size: 12px; font-weight: 600; color: var(--teal); letter-spacing: .1em; }
+    .mobile-menu a.mm-link:active { color: var(--teal); }
+    .mm-cta { margin-top: 34px; opacity: 0; transform: translateY(24px); transition: opacity .5s cubic-bezier(.16,1,.3,1) .1s, transform .5s cubic-bezier(.16,1,.3,1) .1s; }
+    body.menu-open .mm-cta { opacity: 1; transform: translateY(0); }
+    .mm-contact { margin-top: 28px; font-family: var(--body); font-size: 13px; color: var(--muted); }
+    .mm-contact a { color: var(--teal); text-decoration: none; }
+
+    /* ─── BUTTONS + MAGNETIC ─── */
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 13px 30px; min-height: 44px; font-family: var(--display); font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: transform .2s cubic-bezier(.16,1,.3,1), box-shadow .3s, background .3s, color .3s, border-color .3s; position: relative; overflow: hidden; will-change: transform; -webkit-tap-highlight-color: transparent; }
+    .btn span { position: relative; z-index: 2; display: inline-flex; align-items: center; gap: 9px; }
+    .btn-primary { color: var(--white); border: none; background: var(--grad); background-size: 160% 160%; }
+    .btn-primary::before { content: ''; position: absolute; inset: 0; background: linear-gradient(120deg,#38d8c8,#0a8ad6); opacity: 0; transition: opacity .35s; z-index: 1; }
+    .btn-primary:hover::before { opacity: 1; }
+    .btn-primary:hover { box-shadow: 0 12px 40px -12px rgba(46,196,182,.6); }
+    .btn-ghost { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,.22); }
+    .btn-ghost::before { content: ''; position: absolute; inset: 0; background: var(--grad); transform: translateY(101%); transition: transform .4s cubic-bezier(.16,1,.3,1); z-index: 1; }
+    .btn-ghost:hover::before { transform: translateY(0); }
+    .btn-ghost:hover { border-color: transparent; }
+    .btn-lg { padding: 16px 40px; font-size: 12px; }
+    .btn-block { display: flex; width: 100%; }
+    /* click press-in - the ONLY motion a button makes, and only while actively pressed.
+       No magnetic / parallax drift toward the cursor (that JS has been removed). */
+    .btn:active { transform: scale(.97); }
+    @media (prefers-reduced-motion: reduce) { .btn:active { transform: none; } }
+
+    /* ─── HERO ─── */
+    .hero-shell { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; padding-bottom: 14px; box-sizing: border-box; }
+    #hero { position: relative; flex: 1 1 auto; min-height: 0; display: flex; align-items: center; overflow: hidden; background: var(--black); }
+    /* start the tile grid just below the fixed nav so the images aren't covered by the top bar */
+    .hero-tiles { position: absolute; top: calc(64px + var(--sat)); right: 0; bottom: 0; left: 0; display: grid; grid-template-columns: repeat(4, 1fr); z-index: 0; }
+    .hero-tile { position: relative; overflow: hidden; border-right: 1px solid rgba(255,255,255,.05); }
+    .hero-tile:last-child { border-right: none; }
+    /* object-position holds the (face-cropped) subject's eyeline at a consistent height across
+       all four tiles; combined with fit=facearea on the source this keeps the composition balanced */
+    /* both base + collage share the fill/positioning */
+    .hero-tile img { position: absolute; inset: -8% -8% -8% -8%; width: 116%; height: 116%; object-fit: cover; object-position: 50% 40%; transition: filter .6s, transform .6s cubic-bezier(.16,1,.3,1); will-change: transform; }
+    /* base: dim, greyscale, visible at rest */
+    .hero-tile .tile-base { filter: grayscale(100%) contrast(1.05) brightness(.5); }
+    /* collage: full colour, hidden until the cursor is over the tile, then fades in over the base */
+    .hero-tile .tile-collage { opacity: 0; filter: grayscale(0%) contrast(1.02) brightness(1); transition: opacity 1.3s cubic-bezier(.16,1,.3,1), transform .6s cubic-bezier(.16,1,.3,1); }
+    .hero-tile:hover .tile-collage { opacity: 1; }
+    .hero-tile::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,6,7,.35) 0%, rgba(6,6,7,.15) 40%, rgba(6,6,7,.55) 100%); transition: opacity .5s; z-index: 2; pointer-events: none; }
+    .hero-tile .tile-tag { position: absolute; left: 0; right: 0; bottom: 26px; text-align: center; font-family: var(--display); font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.0); z-index: 3; transition: color .4s, transform .4s cubic-bezier(.16,1,.3,1); transform: translateY(8px); }
+    .hero-tile:hover .tile-tag { color: var(--teal); transform: translateY(0); }
+    /* Even scrim - only a vertical gradient (darker top for nav, darker bottom for the scroll cue),
+       but HORIZONTALLY uniform so all four splash images read at equal visibility (no side is darker). */
+    .hero-scrim { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(6,6,7,.58) 0%, rgba(6,6,7,.46) 42%, rgba(6,6,7,.64) 100%); pointer-events: none; }
+
+    /* NOTE: the teal/blue light-leak bloom is intentionally NOT used on the hero/splash - it
+       washed over the leftmost image and hurt its visibility. The light leak now lives only on
+       the vertical sections (.vsec-leak), where it's part of the section hand-off effect. */
+
+    /* hero content clears the nav (top) and the bottom strip; top padding also clears the notch */
+    .hero-inner { position: relative; z-index: 3; max-width: 1320px; width: 100%; margin: 0 auto; padding: calc(66px + var(--sat)) max(60px, var(--sal)) 38px max(60px, var(--sal)); pointer-events: none; }
+    .hero-inner a, .hero-inner button { pointer-events: auto; }
+    /* normal sentence - body font, default kerning, sentence case (no tracked-out caps, no lead dash) */
+    .hero-label { display: block; font-family: var(--display); font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--teal); margin-bottom: 16px; }
+    .hero-label::before { display: none; }
+    .hero-h1 { font-family: var(--display); font-weight: 300; font-size: clamp(28.8px, 4.3vw, 65.6px); line-height: .98; letter-spacing: .01em; text-transform: uppercase; margin-bottom: 20px; }
+    .hero-h1 .l2, .hero-h1 .l3 { display: block; }
+    .hero-h1 .scale { font-weight: 800; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .grad-text { background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-sub { font-family: var(--body); font-size: clamp(13.2px, 3.5vw, 14.1px); color: var(--mid); max-width: 540px; line-height: 1.75; font-weight: 300; margin-bottom: 0; }
+    .hero-sub strong { color: rgba(255,255,255,.9); font-weight: 500; }
+    .hero-sub:first-of-type { margin-top: 0; }
+    .hero-disciplines { font-family: var(--display); font-size: clamp(9px, 2.4vw, 11px); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); max-width: 560px; line-height: 2.0; margin-top: 20px; }
+
+    /* Cursor reveal is per-LETTER (handled in JS): every letter is wrapped in a span.ltr and its
+       opacity is toggled by how close the cursor is - the letter under the pointer goes fully off,
+       with a slight fade on the letters immediately around it. No geometric mask/shape in the frame. */
+    .hero-maskable .ltr, .hero-maskable .word { transition: opacity .09s linear; will-change: opacity; }
+    /* per-letter gradient for the "Scale." word so each letter can fade individually while keeping the teal→blue fill */
+    .hero-h1 .scale-ltr { font-weight: 800; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    /* once JS has split "Scale." into per-letter gradient spans, strip the gradient from the PARENT
+       span - otherwise its background-clip:text keeps re-painting those glyphs and the letters can
+       never fade out under the cursor. (Non-JS / touch keeps the parent gradient, no split.) */
+    .hero-h1 .scale.scale-split { background: none; -webkit-background-clip: border-box; background-clip: border-box; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 36px; }
+
+    /* (v5) The in-hero vertical strip was removed - the verticals live in the top nav, and the
+       running logo ticker now sits directly below the four hero image slices instead. */
+
+    .hero-scroll { position: absolute; bottom: calc(74px + var(--sab)); left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; font-family: var(--display); font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); z-index: 3; }
+    .hero-scroll-line { width: 1px; height: 38px; background: linear-gradient(180deg, var(--teal), transparent); animation: scrollpulse 2s ease-in-out infinite; }
+    @keyframes scrollpulse { 0%,100% { opacity: .3; } 50% { opacity: 1; } }
+
+    /* ─── LOGO STRIP ─── */
+    .logo-strip { flex: 0 0 auto; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 3px 0; overflow: hidden; background: rgba(255,255,255,.012); position: relative; z-index: 2; }
+    .logos-row { display: flex; align-items: center; animation: marquee 60s linear infinite; width: max-content; }
+    .logos-row > * { margin-right: 54px; }
+    .logos-row img { height: 25px; width: auto; filter: grayscale(100%); opacity: .4; flex-shrink: 0; transition: opacity .25s; object-fit: contain; }
+    /* per-logo size balancing (base wordmark height is 27px) */
+    .logos-row img[src$="surgere.png"] { height: 14px; }
+    .logos-row img[src$="fox.png"] { height: 35px; }
+    .logos-row img[src$="cbc.png"] { height: 31px; }
+    .logos-row img[src$="chosen-adventures.png"] { height: 32px; }
+    .logos-row img[src$="roundtable.png"] { height: 52px; }
+    .logos-row img[src$="keshet.png"] { height: 39px; }
+    .logos-row img[src$="les-frenchies.png"] { height: 76px; }
+    .logos-row img[src$="bungalow.png"] { height: 37px; }
+    .logos-row img[src$="hsad.png"] { height: 22px; }
+    .logos-row img[src$="mydrama.png"] { height: 32px; }
+    .logos-row img[src$="The%20Chosen.png"] { height: 32px; }
+    .logos-row img[src$="lg.png"] { height: 32px; }
+    .logos-row img.mq-brand { height: 60px; width: 60px; border-radius: 50%; object-fit: cover; opacity: .5; }   /* brand icons rendered as circles */
+    .mq-ico { height: 76px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .mq-item { display: inline-flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+    .mq-cap { margin-top: -7px; font-family: var(--body); font-weight: 700; font-size: 11px; letter-spacing: .01em; color: rgba(255,255,255,.5); white-space: nowrap; }
+    .logos-row img:hover { opacity: .7; }
+    .logo-text { font-family: var(--display); font-size: 12px; font-weight: 700; letter-spacing: .1em; color: rgba(255,255,255,.3); white-space: nowrap; flex-shrink: 0; }
+    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+    /* ─── SECTION SHELL ─── */
+    .s { max-width: 1320px; margin: 0 auto; padding: 150px max(60px, var(--sal)); position: relative; }
+    .s-tag { display: inline-flex; align-items: center; gap: 12px; font-family: var(--display); font-size: 12px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--teal); margin-bottom: 22px; }
+    .s-tag::before { content: ''; width: 30px; height: 1px; background: var(--teal); flex-shrink: 0; }
+    .s-title { font-family: var(--display); font-weight: 700; font-size: clamp(25.6px, 3.5vw, 52.8px); line-height: 1; letter-spacing: .005em; text-transform: uppercase; margin-bottom: 26px; }
+    .s-title .thin { font-weight: 300; }
+    .s-body { font-family: var(--body); font-size: 14.1px; color: var(--mid); line-height: 1.85; max-width: 540px; font-weight: 300; }
+    .s-body strong { color: rgba(255,255,255,.85); font-weight: 500; }
+    .s-num { font-family: var(--display); font-size: clamp(72px, 11.2vw, 144px); font-weight: 800; line-height: 1; color: rgba(255,255,255,.028); letter-spacing: -.02em; pointer-events: none; user-select: none; position: absolute; top: 90px; right: 60px; }
+
+    /* ═══════════════════════════════════════════════
+       VERTICAL SECTIONS - full-bleed cinematic template
+       (matches Styleframe "Page 02 - Microdramas")
+       ═══════════════════════════════════════════════ */
+    .vsec {
+      position: relative; overflow: hidden;
+      min-height: 100vh; display: flex; align-items: center;
+      border-top: 1px solid var(--border);
+      background: var(--black);
+    }
+    /* (v9.133) The background video FILLS the whole section edge-to-edge on every screen
+       (object-fit: cover) - full-bleed like the MacBook/mobile view; edges crop to fill. The copy sits centred over it. */
+    .vsec-bg {
+      position: absolute; inset: 0; width: 100%; z-index: 0; background: var(--black); overflow: hidden;
+      opacity: .69; /* (v9.54) video shows in MUTED colour at reduced opacity so the per-vertical copy clearly leads (user: too colourful before) */
+    }
+    .vsec.flip .vsec-bg { left: 0; right: 0; }
+    .vsec-bg video, .vsec-bg img {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+      filter: grayscale(35%) contrast(1.05) brightness(.6) saturate(.82);
+      will-change: transform; transition: filter 1.1s ease, transform .6s cubic-bezier(.16,1,.3,1);
+    }
+    .vsec:hover .vsec-bg video, .vsec:hover .vsec-bg img { filter: grayscale(18%) contrast(1.04) brightness(.74) saturate(1.0); }
+    .vsec-ceiling { position: absolute; left: 0; right: 0; top: 0; height: 26%; z-index: 1; background: linear-gradient(180deg, var(--black) 0%, transparent 100%); pointer-events: none; }
+
+    /* directional scrim: darkest on the copy side so the side-set copy stays legible and the
+       full-width video never overpowers it; lighter toward the far side so the video still reads */
+    .vsec-scrim {
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(100deg, rgba(6,6,7,.97) 0%, rgba(6,6,7,.93) 34%, rgba(6,6,7,.66) 60%, rgba(6,6,7,.34) 84%, rgba(6,6,7,.18) 100%);
+    }
+    .vsec.flip .vsec-scrim {
+      background: linear-gradient(260deg, rgba(6,6,7,.97) 0%, rgba(6,6,7,.93) 34%, rgba(6,6,7,.66) 60%, rgba(6,6,7,.34) 84%, rgba(6,6,7,.18) 100%);
+    }
+    .vsec-floor { position: absolute; left: 0; right: 0; bottom: 0; height: 34%; z-index: 1; background: linear-gradient(0deg, var(--black) 0%, transparent 100%); pointer-events: none; }
+
+    /* light-leak: teal→blue bloom that sweeps in from the trailing edge as the section enters view */
+    .vsec-leak {
+      position: absolute; z-index: 2; top: -25%; left: -12%; width: 68%; height: 150%;
+      background: radial-gradient(ellipse at top left, rgba(46,196,182,.5), rgba(0,121,194,.22) 42%, transparent 72%);
+      filter: blur(65px); mix-blend-mode: screen; opacity: 0; pointer-events: none;
+      transform: translate(-50px,-40px) scale(.88);
+      transition: opacity 2.4s cubic-bezier(.16,1,.3,1) .3s, transform 2.4s cubic-bezier(.16,1,.3,1) .3s;
+    }
+    .vsec.flip .vsec-leak {
+      left: auto; right: -12%;
+      background: radial-gradient(ellipse at top right, rgba(46,196,182,.5), rgba(0,121,194,.22) 42%, transparent 72%);
+      transform: translate(50px,-40px) scale(.88);
+    }
+    .vsec.leak-in .vsec-leak { opacity: 1; transform: translate(0,0) scale(1); }
+
+    /* the side accent rule is retired in the centred layout */
+    .vrule { display: none; }
+
+    /* (v6.7) copy sits toward the side again (alternating with .flip), but pulled in from the edge
+       so it reads clearly against the full-width video rather than hugging the margin */
+    .vcopy { position: relative; z-index: 3; max-width: clamp(480px, 46vw, 780px); text-align: left; padding: 0 40px 0 max(64px, calc(var(--sal) + 40px)); margin-left: 2vw; }
+    .vsec.flip .vcopy { margin-left: auto; margin-right: 2vw; text-align: left; padding: 0 max(64px, calc(var(--sar) + 40px)) 0 40px; }
+    .vcopy .s-body { max-width: 100%; }
+    .vcopy .vtags { justify-content: flex-start; }
+
+    .vfor { display: inline-flex; align-items: center; gap: 8px; font-family: var(--body); font-size: 12px; color: var(--muted); letter-spacing: .04em; margin-top: 4px; margin-bottom: 22px; }
+    .vfor b { color: var(--teal); font-weight: 500; }
+    .vtags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+    .vtag { font-family: var(--body); font-size: 11px; font-weight: 400; padding: 7px 14px; border: 1px solid rgba(255,255,255,.18); border-radius: 30px; color: var(--muted); letter-spacing: .03em; transition: border-color .25s, color .25s, transform .25s; backdrop-filter: blur(6px); }
+    .vtag:hover { border-color: var(--teal); color: var(--teal); transform: translateY(-2px); }
+
+    /* "Learn More" - placeholder link for each vertical, to be pointed at a dedicated
+       page with bespoke shot video once that's produced */
+    .vlearn { display: inline-flex; align-items: center; gap: 8px; margin-top: 32px; min-height: 44px; font-family: var(--display); font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--teal); text-decoration: none; padding-bottom: 5px; border-bottom: 1px solid rgba(46,196,182,.35); transition: color .25s, border-color .25s, gap .25s; }
+    .vlearn:hover { color: var(--white); border-color: var(--white); gap: 13px; }
+    .vlearn-arrow { display: inline-block; transition: transform .3s cubic-bezier(.16,1,.3,1); }
+    .vlearn:hover .vlearn-arrow { transform: translateX(4px); }
+
+    .vstats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,.14); margin-top: 40px; border-radius: 4px; overflow: hidden; max-width: 420px; backdrop-filter: blur(10px); }
+    .vstat { background: rgba(6,6,7,.55); padding: 22px 22px; }
+    .vstat-n { font-family: var(--display); font-size: 25.2px; font-weight: 700; line-height: 1; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .vstat-l { font-family: var(--body); font-size: 12px; color: var(--muted); margin-top: 7px; line-height: 1.4; }
+
+    /* floating clip/reel badge - echoes the play-button + slate detail from the styleframe */
+    .vbadge {
+      position: absolute; z-index: 3; display: flex; align-items: center; gap: 12px; padding: 14px 20px 14px 14px;
+      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.14); border-radius: 40px;
+      backdrop-filter: blur(26px) saturate(220%); -webkit-backdrop-filter: blur(26px) saturate(220%);
+      right: 70px; bottom: 64px;
+    }
+    .vsec.flip .vbadge { right: auto; left: 70px; }
+    .vbadge-play { width: 34px; height: 34px; border-radius: 50%; background: rgba(46,196,182,.18); border: 1px solid rgba(46,196,182,.7); display: flex; align-items: center; justify-content: center; font-size: 12px; color: var(--teal); flex-shrink: 0; transition: transform .3s, background .3s; }
+    .vbadge:hover .vbadge-play { transform: scale(1.12); background: rgba(46,196,182,.34); }
+    .vbadge-txt .k { font-family: var(--display); font-size: 9px; letter-spacing: .16em; text-transform: uppercase; color: var(--teal); margin-bottom: 3px; }
+    .vbadge-txt .t { font-family: var(--display); font-size: 13px; font-weight: 700; white-space: nowrap; }
+
+    /* podcast waveform accent */
+    .wave { display: flex; align-items: flex-end; gap: 4px; height: 40px; margin-top: 6px; }
+    .wave span { width: 4px; background: var(--grad); border-radius: 2px; animation: wavepulse 1.4s ease-in-out infinite; }
+    @keyframes wavepulse { 0%,100% { height: 22%; } 50% { height: 100%; } }
+
+    /* ─── TEAM / FOUNDERS ─── */
+    /* NOTE: no overflow:hidden here - it previously clipped the leak to the section's max-width
+       (1320px) box, which left black gutters on either side on wide screens. The leak now breaks
+       out to the full viewport width instead (see .team-leak). */
+    #team { position: relative; border-top: 1px solid var(--border); }
+    /* keep all founder content above the ambient bloom */
+    #team > *:not(.team-leak) { position: relative; z-index: 1; }
+    /* light leak rising from the ENTIRE base of the section, edge to edge. #team is max-width
+       capped and centred, so the leak breaks OUT to the full viewport width via
+       left:50% + translateX(-50%) + width:100vw - guaranteeing it reaches both screen edges with
+       no side crop (body has overflow-x:hidden, so the 100vw never adds a scrollbar). A top-fading
+       mask makes it rise from the bottom edge and dissolve upward; screen blend + blur give the
+       organic light-leak diffusion. Fades in on entry, mirroring the vertical treatment. */
+    .team-leak {
+      position: absolute; z-index: 0;
+      left: 50%; transform: translateX(-50%);
+      bottom: -6%; width: 100vw; height: 72%;
+      background: linear-gradient(115deg, rgba(46,196,182,.34) 0%, rgba(0,121,194,.24) 100%);
+      -webkit-mask-image: linear-gradient(to top, #000 0%, #000 6%, transparent 92%);
+      mask-image: linear-gradient(to top, #000 0%, #000 6%, transparent 92%);
+      filter: blur(48px); mix-blend-mode: screen; opacity: 0; pointer-events: none;
+      transition: opacity 3s cubic-bezier(.16,1,.3,1);
+    }
+    #team.leak-in .team-leak { opacity: 1; }
+    .founders-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-top: 40px; }
+    .founder { position: relative; aspect-ratio: 4/5; border-radius: 6px; overflow: hidden; background: var(--gray); }  /* match vertical-head blocks (4:5, subtle 6px corners) */
+    .founder img { width: 100%; height: 100%; object-fit: cover; object-position: top; filter: grayscale(100%) brightness(.78); transition: transform 2.4s cubic-bezier(.16,1,.3,1), filter 2.4s ease; display: block; }
+    .founder:hover img { transform: scale(1.05); filter: grayscale(0%) brightness(1); }
+    /* Sam's portrait stays black & white throughout (no colour on hover); keeps the subtle scale + brightness lift. */
+    .founder.founder-bw img,
+    .founder.founder-bw:hover img { filter: grayscale(100%) brightness(.78); }
+    .founder.founder-bw:hover img { filter: grayscale(100%) brightness(.9); }
+    .founder-info {
+      position: absolute; left: 0; right: 0; bottom: 0; padding: 20px 22px;
+      background: rgba(8,8,10,.5);
+      backdrop-filter: blur(20px) saturate(150%); -webkit-backdrop-filter: blur(20px) saturate(150%);
+      border-top: 1px solid rgba(255,255,255,.12);
+      transition: background 2.4s ease;
+    }
+    .founder-line { width: 32px; height: 1px; background: var(--teal); margin-bottom: 10px; }
+    .founder-name { font-family: var(--display); font-size: 15px; font-weight: 800; line-height: 1.1; margin-bottom: 5px; }
+    .founder-role { font-family: var(--body); font-size: 11px; color: var(--teal); font-weight: 500; letter-spacing: .06em; text-transform: uppercase; line-height: 1.35; }
+    .founder-past { font-family: var(--body); font-size: 10px; color: var(--muted); font-weight: 400; letter-spacing: .02em; line-height: 1.4; margin-top: 5px; }
+    .founder-past b { color: var(--mid); font-weight: 500; }
+    .founder-bio { max-height: 0; overflow: hidden; margin-top: 0; transition: max-height 2.8s cubic-bezier(.22,1,.36,1), margin-top 2.4s cubic-bezier(.22,1,.36,1); }
+    /* Founders - Know more slide-up (replaces the canceled speech bubbles). Mirrors the team vertical-head treatment. */
+    .founder-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
+    .founder-more { flex-shrink: 0; font-family: var(--display); font-size: 9.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--teal); background: rgba(46,196,182,.12); border: 1px solid rgba(46,196,182,.45); border-radius: 100px; padding: 7px 13px; cursor: pointer; white-space: nowrap; transition: background .25s, color .25s; }
+    .founder-more:hover { background: var(--teal); color: #05201d; }
+    .founder-bio p { font-family: var(--body); font-size: 12px; color: rgba(255,255,255,.9); line-height: 1.6; font-weight: 300; opacity: 0; transform: translateY(28px); transition: opacity 1.15s cubic-bezier(.16,1,.3,1), transform 1.15s cubic-bezier(.16,1,.3,1); transition-delay: .3s; }
+    .founder-x.open .founder-info { background: rgba(8,8,10,.7); }
+    .founder-x.open .founder-bio { max-height: 65vh; margin-top: 12px; }   /* vh (not %) so it slides smoothly + collapses reliably - matches the vertical heads */
+    .founder-x.open .founder-bio p { opacity: 1; transform: translateY(0); }
+    .founder-x.open img { filter: grayscale(100%) brightness(.42) blur(5px) !important; }
+    @media (prefers-reduced-motion: reduce) { .founder-bio p { transition-duration: .01ms; } }
+    .founders-note { font-family: var(--body); font-size: clamp(12.3px, 1.3vw, 14.1px); color: var(--mid); line-height: 1.85; font-weight: 300; max-width: 760px; margin-top: 42px; }
+    .founders-note strong { color: rgba(255,255,255,.7); font-weight: 500; }
+
+    /* ─── TEAM MEMBERS (full roster) ───
+       The wider team from the original site. Each person is one of the studio's own card images
+       (photo + name + role baked into the graphic), shown in full via object-fit:contain so the
+       name/role are never cropped. Grayscale at rest, full colour + a slight lift on hover, matching
+       the founders treatment above.
+       Reveal matches the founders - a slide-up + fade on the same easing - but slower and more
+       delayed for a softer settle. The slide lives on .tm itself; hover only scales the image (as it
+       does for the founders), so the reveal transform and the hover transform never fight. */
+    /* Our Team (#team-members, on team.html) - same edge-to-edge blue light-leak as the founders/
+       careers sections; no overflow:hidden so the 100vw bloom reaches both screen edges. */
+    #team-members { border-top: 1px solid var(--border); position: relative; }
+    #team-members > *:not(.tm-leak) { position: relative; z-index: 1; }
+    .tm-leak {
+      position: absolute; z-index: 0;
+      left: 50%; transform: translateX(-50%);
+      bottom: -6%; width: 100vw; height: 72%;
+      background: linear-gradient(115deg, rgba(46,196,182,.34) 0%, rgba(0,121,194,.24) 100%);
+      -webkit-mask-image: linear-gradient(to top, #000 0%, #000 6%, transparent 92%);
+      mask-image: linear-gradient(to top, #000 0%, #000 6%, transparent 92%);
+      filter: blur(48px); mix-blend-mode: screen; opacity: 0; pointer-events: none;
+      transition: opacity 3s cubic-bezier(.16,1,.3,1);
+    }
+    #team-members.leak-in .tm-leak { opacity: 1; }
+    .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 46px; }
+    .tm { position: relative; aspect-ratio: 3/4; border-radius: 5px; overflow: hidden; background: var(--gray); border: 1px solid var(--border); opacity: 0; transform: translateY(64px); transition: opacity 2.2s cubic-bezier(.16,1,.3,1), transform 2.2s cubic-bezier(.16,1,.3,1), border-color .3s; }
+    .tm.visible { opacity: 1; transform: translateY(0); }
+    .tm img { width: 100%; height: 100%; object-fit: contain; display: block; filter: grayscale(100%) brightness(.94); transition: transform .6s cubic-bezier(.16,1,.3,1), filter .6s; }
+    .tm:hover { border-color: rgba(46,196,182,.4); }
+    .tm:hover img { transform: scale(1.05); filter: grayscale(0%) brightness(1); }
+    @media (prefers-reduced-motion: reduce) { .tm { opacity: 1; transform: none; transition: border-color .3s; } }
+
+    /* ─── CULTURE ───
+       Six values pulled from the Creator Engine culture memo, in flat frosted cards that match the
+       rest of the page. A gradient rule wipes down the left edge on hover; the closing pull-quote is
+       the George Bernard Shaw line the studio builds its culture on. */
+    #culture { border-top: 1px solid var(--border); }
+    .culture-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 46px; }
+    .culture-card { position: relative; padding: 30px 28px; border-radius: 6px; background: rgba(255,255,255,.03); border: 1px solid var(--border); backdrop-filter: blur(10px); overflow: hidden; transition: border-color .3s, transform .35s cubic-bezier(.16,1,.3,1), background .3s; }
+    .culture-card::before { content: ''; position: absolute; left: 0; top: 0; width: 2px; height: 0; background: var(--grad); transition: height .45s cubic-bezier(.16,1,.3,1); }
+    .culture-card:hover { border-color: rgba(46,196,182,.4); transform: translateY(-4px); background: rgba(255,255,255,.05); }
+    .culture-card:hover::before { height: 100%; }
+    .culture-n { font-family: var(--display); font-size: 11px; font-weight: 700; letter-spacing: .16em; color: var(--teal); display: block; margin-bottom: 16px; }
+    .culture-card h3 { font-family: var(--display); font-size: 15px; font-weight: 700; letter-spacing: .01em; line-height: 1.15; margin-bottom: 12px; }
+    .culture-card p { font-family: var(--body); font-size: 14px; color: var(--mid); line-height: 1.7; font-weight: 300; }
+    .culture-quote { margin-top: 58px; max-width: 780px; position: relative; padding-left: 28px; }
+    .culture-quote::before { content: ''; position: absolute; left: 0; top: 4px; bottom: 4px; width: 2px; background: var(--grad); }
+    .culture-quote p { font-family: var(--display); font-weight: 300; font-size: clamp(16.8px, 2.3vw, 26px); line-height: 1.4; letter-spacing: .005em; }
+    .culture-quote .qn { font-weight: 700; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .culture-quote cite { display: block; margin-top: 18px; font-family: var(--body); font-style: normal; font-size: 12px; letter-spacing: .06em; color: var(--muted); text-transform: uppercase; }
+
+    /* ─── CULTURE - long-form manifesto (culture.html) ─── */
+    .culture-intro { max-width: 760px; margin-top: 8px; }
+    .culture-intro p { font-family: var(--body); font-size: clamp(13.2px, 1.7vw, 15px); color: var(--mid); line-height: 1.9; font-weight: 300; margin-top: 18px; }
+    .culture-value { max-width: 800px; margin-top: 58px; padding-top: 40px; border-top: 1px solid var(--border); }
+    .culture-value .culture-n { display: block; font-family: var(--display); font-size: 11px; font-weight: 700; letter-spacing: .16em; color: var(--teal); margin-bottom: 14px; }
+    .culture-value h3 { font-family: var(--display); font-size: clamp(18.4px, 2.6vw, 32px); font-weight: 700; letter-spacing: .005em; line-height: 1.06; margin-bottom: 18px; }
+    .culture-value p { font-family: var(--body); font-size: 14.1px; color: var(--mid); line-height: 1.85; font-weight: 300; margin-top: 14px; }
+    .practice-label { display: block; font-family: var(--display); font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--teal); margin-top: 30px; }
+    .practice { list-style: none; margin-top: 14px; display: flex; flex-direction: column; gap: 12px; }
+    .practice li { position: relative; padding-left: 20px; font-family: var(--body); font-size: 13.2px; color: var(--mid); line-height: 1.7; font-weight: 300; }
+    .practice li::before { content: ''; position: absolute; left: 0; top: 12px; width: 10px; height: 1px; background: var(--teal); opacity: .7; }
+    .practice li strong { color: rgba(255,255,255,.88); font-weight: 600; }
+    .culture-closing { max-width: 800px; margin-top: 64px; padding-top: 40px; border-top: 1px solid var(--border); }
+    .culture-closing h3 { font-family: var(--display); font-size: clamp(18.5px, 2.4vw, 28.6px); font-weight: 700; margin-bottom: 16px; }
+    .culture-closing p { font-family: var(--body); font-size: 14.1px; color: var(--mid); line-height: 1.85; font-weight: 300; margin-top: 14px; }
+
+    /* ─── CAREERS ─── */
+    #careers { border-top: 1px solid var(--border); position: relative; overflow: hidden; }
+    #careers > * { position: relative; z-index: 1; }
+    .careers-leak { position: absolute; z-index: 0; left: 50%; transform: translateX(-50%); bottom: -6%; width: 100vw; height: 70%; background: linear-gradient(115deg, rgba(46,196,182,.30) 0%, rgba(0,121,194,.20) 100%); -webkit-mask-image: linear-gradient(to top, #000 0%, #000 6%, transparent 92%); mask-image: linear-gradient(to top, #000 0%, #000 6%, transparent 92%); filter: blur(52px); mix-blend-mode: screen; opacity: 0; pointer-events: none; transition: opacity 3s cubic-bezier(.16,1,.3,1); }
+    #careers.leak-in .careers-leak { opacity: 1; }
+    .careers-roles { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; max-width: 620px; }
+    .careers-email { color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(46,196,182,.35); transition: color .25s, border-color .25s; }
+    .careers-email:hover { color: var(--white); border-color: var(--white); }
+    .careers-actions { display: flex; gap: 12px; margin-top: 38px; flex-wrap: wrap; }
+
+    /* ─── OPEN POSITIONS (reusable role list) ─── copy a .role block to add a role; delete all for empty state */
+    .roles { margin-top: 30px; max-width: 820px; border-top: 1px solid var(--border); }
+    .role { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 2px; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+    .role-title { font-family: var(--display); font-size: clamp(14.3px, 1.8vw, 18.5px); font-weight: 700; letter-spacing: .01em; line-height: 1.15; margin-bottom: 7px; }
+    .role-meta { font-family: var(--body); font-size: 13px; color: var(--muted); letter-spacing: .03em; }
+    .role .role-link { flex-shrink: 0; }
+    .roles-empty { margin-top: 26px; font-family: var(--body); font-size: 13.2px; color: var(--mid); font-weight: 300; }
+    @media (max-width: 600px) { .role { gap: 14px; } .role .role-link { width: 100%; } }
+
+    /* ─── CLOSING CTA ─── */
+    .cta-sec { position: relative; overflow: hidden; border-top: 1px solid var(--border); background: var(--black); }
+    .cta-inner { max-width: 1320px; margin: 0 auto; padding: clamp(110px, 16vw, 170px) max(60px, var(--sal)); position: relative; z-index: 3; text-align: center; }
+    .cta-leak { position: absolute; z-index: 1; top: 50%; left: 50%; width: 90%; height: 160%; transform: translate(-50%,-50%); background: radial-gradient(ellipse at center, rgba(46,196,182,.22), rgba(0,121,194,.12) 45%, transparent 72%); filter: blur(80px); mix-blend-mode: screen; opacity: 0; pointer-events: none; transition: opacity 2s cubic-bezier(.16,1,.3,1); }
+    .cta-sec.leak-in .cta-leak { opacity: 1; }
+    .cta-tag { font-family: var(--display); font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--teal); margin-bottom: 20px; }
+    .cta-title { font-family: var(--display); font-weight: 300; font-size: clamp(30.4px, 5.1vw, 73.6px); line-height: .98; letter-spacing: .01em; text-transform: uppercase; margin-bottom: 26px; }
+    .cta-title b { font-weight: 800; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .cta-body { font-family: var(--body); font-size: clamp(13.2px, 3.5vw, 15px); color: var(--mid); line-height: 1.8; font-weight: 300; max-width: 520px; margin: 0 auto 40px; }
+    .cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    /* ─── FOOTER ─── */
+    footer { border-top: 1px solid var(--border); background: var(--black2); }
+    .footer-inner { max-width: 1320px; margin: 0 auto; padding: 80px max(60px, var(--sal)) 0; }
+    .footer-top { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 60px; }
+    .footer-brand .nav-logo { margin-bottom: 20px; }
+    .footer-blurb { font-family: var(--body); font-size: 14px; color: var(--muted); line-height: 1.75; max-width: 320px; font-weight: 300; }
+    .footer-col h4 { font-family: var(--display); font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--teal); margin-bottom: 20px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .footer-col a { font-family: var(--body); font-size: 13.5px; color: var(--mid); text-decoration: none; transition: color .25s; overflow-wrap: anywhere; }
+    .footer-col a:hover { color: var(--white); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; padding: 26px 0 max(30px, calc(var(--sab) + 20px)); border-top: 1px solid var(--border); }
+    .footer-copy { font-family: var(--body); font-size: 12px; color: var(--muted); letter-spacing: .02em; }
+    .footer-made { font-family: var(--display); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 2px; }
+
+    /* "Learn More" placeholders - the per-vertical detail pages don't exist yet, so these are shown
+       as inactive (non-navigating) with a small "Coming soon" tag instead of linking to a 404. */
+    .vlearn-soon { color: var(--muted); border-bottom-color: rgba(255,255,255,.12); cursor: default; pointer-events: none; align-items: baseline; }
+    .vlearn-soon-tag { font-family: var(--body); font-size: 10px; font-weight: 400; letter-spacing: .04em; text-transform: none; color: rgba(255,255,255,.28); }
+
+    /* small uppercase teal label + "featured work" caption used inside the vertical copy columns */
+    .vlabel { display: block; font-family: var(--display); font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
+    .vfeatured { margin-top: 28px; font-family: var(--body); font-size: 13px; color: var(--mid); line-height: 1.7; max-width: 480px; font-weight: 300; }
+    .vfeatured .vlabel { margin-bottom: 8px; }
+    /* short uppercase sub-headline used under a vertical's title (e.g. Show Marketing) */
+    .vlead { font-family: var(--display); font-size: clamp(13.2px, 1.7vw, 16.7px); font-weight: 700; letter-spacing: .01em; text-transform: uppercase; color: var(--white); margin: 2px 0 18px; }
+
+    /* Visible keyboard focus - the custom cursor hides the pointer, so a clear focus ring is
+       essential for keyboard users. Only shows for keyboard (:focus-visible), not mouse clicks. */
+    a:focus-visible, button:focus-visible, .btn:focus-visible, .nav-toggle:focus-visible,
+    .mm-link:focus-visible, .careers-email:focus-visible {
+      outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 2px;
+    }
+
+    /* Respect "reduce motion": stop the ambient/looping animations (marquee, waveform, scroll pulse)
+       and disable smooth scrolling. Scroll-reveals are already neutralised elsewhere. */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .logos-row { animation: none; }
+      .wave span { animation: none; height: 55%; }
+      .hero-scroll-line { animation: none; opacity: .6; }
+    }
+
+    /* ═══════════ RESPONSIVE ═══════════ */
+    /* raise the hamburger breakpoint so the seven-item inline nav only shows when there's room */
+    @media (max-width: 1200px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: block; }
+    }
+    @media (max-width: 1024px) {
+      .vsec-leak { width: 90%; }
+      .vbadge { display: none; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+      .culture-grid { grid-template-columns: 1fr 1fr; }
+      .team-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 860px) {
+      nav { padding-left: max(20px, var(--sal)); padding-right: max(20px, var(--sar)); }
+      .s { padding: 96px max(22px, var(--sal)); }
+      .s-num { display: none; }
+      .hero-inner { padding: calc(80px + var(--sat)) max(22px, var(--sal)) 44px max(22px, var(--sal)); }
+      .hero-tiles { grid-template-columns: 1fr; grid-auto-rows: 1fr; }
+      .hero-tile:nth-child(3), .hero-tile:nth-child(4) { display: block; }   /* mobile: stack all 4 splash images vertically */
+      /* hero-strip removed in v5 */
+      .founders-grid { grid-template-columns: 1fr; max-width: min(290px, 82vw); margin-left: auto; margin-right: auto; }
+      .founder { aspect-ratio: 4 / 5; }  /* mobile: slightly less tall + edge margin */
+      .founder-x.open .founder-info { max-height: 68%; overflow-y: auto; -webkit-overflow-scrolling: touch; }  /* keep the headshot's face visible when expanded */
+      .culture-grid { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+      .careers-actions .btn { flex: 1 1 auto; }
+      /* the side-by-side "70% media / 30% negative space" layout only makes sense next to a
+         text column; once the layout stacks, let the video/image run the full section width */
+      .vsec { min-height: 78vh; padding: 110px 0; }
+      .vsec-bg, .vsec.flip .vsec-bg { width: 100%; left: 0; right: 0; }
+      .vsec-bg video, .vsec-bg img { object-fit: cover; }  /* mobile: video fills the section width+height (like desktop) instead of a thin contained strip */
+      .vcopy, .vsec.flip .vcopy { max-width: 100%; padding: 0 max(22px, var(--sal)); margin: 0; text-align: left; }
+      .vsec-scrim, .vsec.flip .vsec-scrim { background: linear-gradient(0deg, rgba(6,6,7,.96) 0%, rgba(6,6,7,.86) 45%, rgba(6,6,7,.55) 100%); }
+      .vrule { display: none; }
+      .footer-top { grid-template-columns: 1fr; gap: 34px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .cta-actions .btn { flex: 1 1 auto; }
+    }
+    @media (max-width: 600px) {
+      /* on phones the inline "Work With Us" is dropped from the top bar so the full logo can
+         never be pushed off-screen or cropped. It stays highly reachable: the hero buttons, the
+         hamburger menu (prominent primary button), the closing CTA and the footer all carry it. */
+      .nav-cta { display: none; }
+    }
+    @media (max-width: 480px) {
+      .nav-logo-word { font-size: 12px; letter-spacing: .2em; }
+      .nav-logo img { height: 22px; }
+      .hero-actions { width: 100%; }
+      .hero-actions .btn { flex: 1 1 100%; }
+    }
+    @media (max-width: 360px) {
+      /* narrowest phones - drop the inline wordmark to the mark only as a final safety margin;
+         the full "Creator Engine" wordmark still shows in the menu + footer */
+      .nav-logo-word { display: none; }
+    }
+    /* ─── MOBILE POLISH v9.48 - phone refinements for the v9.x components (marquee, Explore galleries, mosaics) ─── */
+    @media (max-width: 600px) {
+      .logos-row > * { margin-right: 30px; }
+      .logos-row img { height: 24px; }
+      .logos-row img.mq-brand { height: 48px; width: 48px; }
+      .mq-cap { margin-top: -14px; font-size: 10px; }
+      .work-grid { gap: 14px; }
+      .team-mosaic { gap: 6px; }
+      .cv-mosaic:not(.zoom) { gap: 7px; }
+      .exp-cta .btn { width: 100%; }
+      .hero-scroll { display: none; }
+    }
+    @media (max-width: 480px) {
+      .s { padding-left: max(18px, var(--sal)); padding-right: max(18px, var(--sar)); }
+      .hero-inner, .cta-inner, .footer-inner { padding-left: max(18px, var(--sal)); padding-right: max(18px, var(--sar)); }
+    }
+  </style>
+</head>
+<body>
+
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a class="nav-logo" href="#hero"><img src="assets/CE_mark.png" alt="Creator Engine mark" /><span class="nav-logo-word">Creator Engine</span></a>
+    <ul class="nav-links">
+      <li><a href="#microdramas">Microdramas</a></li>
+      <li><a href="#creator-growth">Creator Growth</a></li>
+      <li><a href="#podcast">Podcast</a></li>
+      <li><a href="#show-marketing">Show Marketing</a></li>
+      <li><a href="#agency">Agency Creative Services</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="culture.html">Culture</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-cta"><a href="contact.html" class="btn btn-primary" data-magnetic><span>Work with Us</span></a></div>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a class="mm-link" href="#microdramas"><span class="mm-i">01</span>Microdramas</a>
+    <a class="mm-link" href="#creator-growth"><span class="mm-i">02</span>Creator Growth</a>
+    <a class="mm-link" href="#podcast"><span class="mm-i">03</span>Podcast</a>
+    <a class="mm-link" href="#show-marketing"><span class="mm-i">04</span>Show Marketing</a>
+    <a class="mm-link" href="#agency"><span class="mm-i">05</span>Agency Creative Services</a>
+    <a class="mm-link" href="#team"><span class="mm-i">06</span>Team</a>
+    <a class="mm-link" href="culture.html"><span class="mm-i">07</span>Culture</a>
+    <div class="mm-cta"><a href="contact.html" class="btn btn-primary btn-lg btn-block"><span>Work with Us</span></a></div>
+    <div class="mm-contact">Get in touch - <a href="mailto:info@creatorengine.studio">info@creatorengine.studio</a></div>
+  </div>
+
+  <!-- HERO + MARQUEE share one viewport so the strip never crops -->
+  <div class="hero-shell">
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-tiles" id="heroTiles">
+      <!-- (v8.7) Each tile pairs a BASE image (default) with a COLLAGE that fades in on hover.
+           Order: Gavin Rossdale · Jason Mewes · Mark Wiens · The Chosen. -->
+      <div class="hero-tile">
+        <picture><source media="(max-width: 860px)" srcset="assets/Splash%20Page%20images/gavin%20rossdale/Mobile/gavin_horizontal%20base_v3.png" /><img class="tile-base" src="assets/Splash%20Page%20images/gavin%20rossdale/gavin%20base_v2.png" alt="Gavin Rossdale" /></picture>
+        <picture><source media="(max-width: 860px)" srcset="assets/Splash%20Page%20images/gavin%20rossdale/Mobile/gavin%20horizontal_v3.png" /><img class="tile-collage" src="assets/Splash%20Page%20images/gavin%20rossdale/gavin%20vertical_v2.png" alt="" aria-hidden="true" /></picture>
+        <span class="tile-tag">Gavin Rossdale</span>
+      </div>
+      <div class="hero-tile">
+        <picture><source media="(max-width: 860px)" srcset="assets/Splash%20Page%20images/jason%20mewes/Mobile/jason_horizontal%20base_v3.png" /><img class="tile-base" src="assets/Splash%20Page%20images/jason%20mewes/jason%20base_v2.png" alt="Jason Mewes" /></picture>
+        <picture><source media="(max-width: 860px)" srcset="assets/Splash%20Page%20images/jason%20mewes/Mobile/jason%20horizontal_v3.png" /><img class="tile-collage" src="assets/Splash%20Page%20images/jason%20mewes/jason%20vertical_v2.png" alt="" aria-hidden="true" /></picture>
+        <span class="tile-tag">Jason Mewes</span>
+      </div>
+      <div class="hero-tile">
+        <picture><source media="(max-width: 860px)" srcset="assets/Splash%20Page%20images/mark%20wiens/Mobile/mark_base%20horizontal_v3.png" /><img class="tile-base" src="assets/Splash%20Page%20images/mark%20wiens/mark%20base_v2.png" alt="Mark Wiens" /></picture>
+        <picture><source media="(max-width: 860px)" srcset="assets/Splash%20Page%20images/mark%20wiens/Mobile/mark%20horizontal_v3.png" /><img class="tile-collage" src="assets/Splash%20Page%20images/mark%20wiens/mark%20vertical_v2.png" alt="" aria-hidden="true" /></picture>
+        <span class="tile-tag">Mark Wiens</span>
+      </div>
+      <div class="hero-tile">
+        <picture><source media="(max-width: 860px)" srcset="assets/Splash%20Page%20images/the%20chosen/Mobile/chosen_horizontal%20base_v3.png" /><img class="tile-base" src="assets/Splash%20Page%20images/the%20chosen/chosen%20base_v2.png" alt="The Chosen" /></picture>
+        <picture><source media="(max-width: 860px)" srcset="assets/Splash%20Page%20images/the%20chosen/Mobile/chosen%20horizontal_v3.png" /><img class="tile-collage" src="assets/Splash%20Page%20images/the%20chosen/chosen%20vertical_v2.png" alt="" aria-hidden="true" /></picture>
+        <span class="tile-tag">The Chosen</span>
+      </div>
+    </div>
+    <div class="hero-scrim"></div>
+
+    <div class="hero-inner">
+      <div class="hero-parallax" id="heroText">
+        <div class="hero-maskable" id="heroFade">
+          <div class="hero-label reveal">Built for Recurring Productions</div>
+          <h1 class="hero-h1 reveal" style="transition-delay:.08s">
+            <span class="l1">Post-</span>
+            <span class="l2">Production</span>
+            <span class="l3">at <span class="scale">Scale.</span></span>
+          </h1>
+          <p class="hero-sub reveal" style="transition-delay:.2s; margin-top:14px;">
+            We handle <strong>dozens of releases a week</strong> for clients including FOX Entertainment Studios, Mark Wiens, The Chosen, 5 Things and Jay &amp; Silent Bob's Hizzouse.
+          </p>
+          <p class="hero-sub reveal" style="transition-delay:.24s; margin-top:14px;">
+            Everything on this site is work we've delivered.
+          </p>
+        </div>
+        <div class="hero-actions reveal" style="transition-delay:.3s">
+          <a href="#microdramas" class="btn btn-primary btn-lg" data-magnetic><span>See the work</span></a>
+          <a href="contact.html" class="btn btn-ghost btn-lg" data-magnetic><span>Let's talk</span></a>
+        </div>
+        <div class="hero-disciplines reveal" style="transition-delay:.36s">Editing · Post Producing · Music · Motion Graphics<br />Color · Sound · VFX · Delivery</div>
+      </div>
+    </div>
+
+    <div class="hero-scroll"><div class="hero-scroll-line"></div><span>Scroll</span></div>
+  </section>
+
+  <!-- LOGO STRIP -->
+  <div class="logo-strip reveal">
+    <div style="overflow:hidden;">
+      <div class="logos-row">
+        <span class="mq-ico"><img src="assets/Logos/web/fox.png" alt="FOX Entertainment" /></span>
+        <span class="mq-item"><span class="mq-ico"><img src="assets/Logos/creators/brands1.png" alt="Mark Wiens" class="mq-brand" loading="lazy" /></span><span class="mq-cap">Mark Wiens</span></span>
+        <span class="mq-ico"><img src="assets/Logos/web/mydrama.png" alt="MyDrama" /></span>
+        <span class="mq-ico"><img src="assets/Logos/web/The%20Chosen.png" alt="The Chosen" /></span>
+        <span class="mq-item"><span class="mq-ico"><img src="assets/Logos/creators/brands3.png" alt="Strange Parts" class="mq-brand" loading="lazy" /></span><span class="mq-cap">Strange Parts</span></span>
+        <span class="mq-ico"><img src="assets/Logos/web/vizio.png" alt="Vizio WatchFree+" /></span>
+        <span class="mq-ico"><img src="assets/Logos/web/cbc.png" alt="CBC" /></span>
+        <span class="mq-item"><span class="mq-ico"><img src="assets/Logos/creators/brands4.png" alt="Slapped Ham Mysteries" class="mq-brand" loading="lazy" /></span><span class="mq-cap">Slapped Ham Mysteries</span></span>
+        <span class="mq-ico"><img src="assets/Logos/web/keshet.png" alt="Keshet International" /></span>
+        <span class="mq-ico"><img src="assets/Logos/web/hsad.png" alt="HSAD" /></span>
+        <span class="mq-item"><span class="mq-ico"><img src="assets/Logos/creators/brands5.png" alt="Mark Abroad" class="mq-brand" loading="lazy" /></span><span class="mq-cap">Mark Abroad</span></span>
+        <span class="mq-ico"><img src="assets/Logos/web/Nat%20Geo%20Full%20Logo.png" alt="National Geographic" /></span>
+        <span class="mq-ico"><img src="assets/Logos/web/surgere.png" alt="Surgère" /></span>
+        <span class="mq-item"><span class="mq-ico"><img src="assets/Logos/creators/brands7.png" alt="Sprouht" class="mq-brand" loading="lazy" /></span><span class="mq-cap">Sprouht</span></span>
+        <span class="mq-ico"><img src="assets/Logos/web/les-frenchies.png" alt="Les Frenchies" /></span>
+        <span class="mq-ico"><img src="assets/Logos/web/chosen-adventures.png" alt="The Chosen Adventures" /></span>
+        <span class="mq-item"><span class="mq-ico"><img src="assets/Logos/creators/DharV2.png" alt="Dhar Mann Studios" class="mq-brand" loading="lazy" /></span><span class="mq-cap">Dhar Mann Studios</span></span>
+        <span class="mq-ico"><img src="assets/Logos/web/roundtable.png" alt="Roundtable Entertainment" /></span>
+        <span class="mq-ico"><img src="assets/Logos/web/lg.png" alt="LG" /></span>
+        <span class="mq-item"><span class="mq-ico"><img src="assets/Logos/creators/brands6.png" alt="Retired Working For You" class="mq-brand" loading="lazy" /></span><span class="mq-cap">Retired Working For You</span></span>
+        <span class="mq-ico"><img src="assets/Logos/web/bungalow.png" alt="Bungalow" /></span>
+        <span class="mq-ico"><img src="assets/Logos/web/lgcns.png" alt="LG CNS" /></span>
+        <span class="mq-item"><span class="mq-ico"><img src="assets/Logos/creators/brands14.png" alt="Slapped Ham" class="mq-brand" loading="lazy" /></span><span class="mq-cap">Slapped Ham</span></span>
+        <span class="mq-ico"><img src="assets/Logos/web/fox.png" alt="FOX Entertainment" /></span>
+        <span class="mq-item"><span class="mq-ico"><img src="assets/Logos/creators/brands1.png" alt="Mark Wiens" class="mq-brand" loading="lazy" /></span><span class="mq-cap">Mark Wiens</span></span>
+        <span class="mq-ico"><img src="assets/Logos/web/mydrama.png" alt="MyDrama" /></span>
+        <span class="mq-ico"><img src="assets/Logos/web/The%20Chosen.png" alt="The Chosen" /></span>
+        <span class="mq-item"><span class="mq-ico"><img src="assets/Logos/creators/brands3.png" alt="Strange Parts" class="mq-brand" loading="lazy" /></span><span class="mq-cap">Strange Parts</span></span>
+        <span class="mq-ico"><img src="assets/Logos/web/vizio.png" alt="Vizio WatchFree+" /></span>
+        <span class="mq-ico"><img src="assets/Logos/web/cbc.png" alt="CBC" /></span>
+        <span class="mq-item"><span class="mq-ico"><img src="assets/Logos/creators/brands4.png" alt="Slapped Ham Mysteries" class="mq-brand" loading="lazy" /></span><span class="mq-cap">Slapped Ham Mysteries</span></span>
+        <span class="mq-ico"><img src="assets/Logos/web/keshet.png" alt="Keshet International" /></span>
+        <span class="mq-ico"><img src="assets/Logos/web/hsad.png" alt="HSAD" /></span>
+        <span class="mq-item"><span class="mq-ico"><img src="assets/Logos/creators/brands5.png" alt="Mark Abroad" class="mq-brand" loading="lazy" /></span><span class="mq-cap">Mark Abroad</span></span>
+        <span class="mq-ico"><img src="assets/Logos/web/Nat%20Geo%20Full%20Logo.png" alt="National Geographic" /></span>
+        <span class="mq-ico"><img src="assets/Logos/web/surgere.png" alt="Surgère" /></span>
+        <span class="mq-item"><span class="mq-ico"><img src="assets/Logos/creators/brands7.png" alt="Sprouht" class="mq-brand" loading="lazy" /></span><span class="mq-cap">Sprouht</span></span>
+        <span class="mq-ico"><img src="assets/Logos/web/les-frenchies.png" alt="Les Frenchies" /></span>
+        <span class="mq-ico"><img src="assets/Logos/web/chosen-adventures.png" alt="The Chosen Adventures" /></span>
+        <span class="mq-item"><span class="mq-ico"><img src="assets/Logos/creators/DharV2.png" alt="Dhar Mann Studios" class="mq-brand" loading="lazy" /></span><span class="mq-cap">Dhar Mann Studios</span></span>
+        <span class="mq-ico"><img src="assets/Logos/web/roundtable.png" alt="Roundtable Entertainment" /></span>
+        <span class="mq-ico"><img src="assets/Logos/web/lg.png" alt="LG" /></span>
+        <span class="mq-item"><span class="mq-ico"><img src="assets/Logos/creators/brands6.png" alt="Retired Working For You" class="mq-brand" loading="lazy" /></span><span class="mq-cap">Retired Working For You</span></span>
+        <span class="mq-ico"><img src="assets/Logos/web/bungalow.png" alt="Bungalow" /></span>
+        <span class="mq-ico"><img src="assets/Logos/web/lgcns.png" alt="LG CNS" /></span>
+        <span class="mq-item"><span class="mq-ico"><img src="assets/Logos/creators/brands14.png" alt="Slapped Ham" class="mq-brand" loading="lazy" /></span><span class="mq-cap">Slapped Ham</span></span>
+      </div>
+    </div>
+  </div>
+  </div><!-- /hero-shell -->
+
+  <!-- ═══ VERTICAL 01 — MICRODRAMAS ═══ -->
+  <section id="microdramas" class="vsec">
+    <div class="vsec-bg">
+      <video data-depth="0.35" autoplay muted loop playsinline preload="none" poster="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1800&q=80">
+        <source src="assets/videos/microdramas.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="vsec-scrim"></div>
+    <div class="vsec-ceiling"></div>
+    <div class="vsec-floor"></div>
+    <div class="vsec-leak"></div>
+    <div class="vrule"></div>
+    <div class="vcopy">
+      <h2 class="s-title reveal" style="transition-delay:.08s">Microdramas</h2>
+      <div class="vfor reveal" style="transition-delay:.12s">For <b>studios and platforms scaling vertical drama</b></div>
+      <p class="s-body reveal" style="transition-delay:.18s">
+        Creator Engine delivers full post-production for microdrama slates, including titles for <strong>FOX Entertainment Studios</strong> spanning romance, thriller, fantasy, sci-fi and contemporary drama.
+      </p>
+      <p class="s-body reveal" style="transition-delay:.22s; margin-top:16px;">
+        Our in-house team brings specialist depth and consistency across titles, helping maintain creative and technical standards with fewer feedback rounds and less required day-to-day post-production oversight for studio teams.
+      </p>
+      <a href="microdramas.html" class="vlearn reveal" style="transition-delay:.34s"><span>Explore Microdramas</span><span class="vlearn-arrow">→</span></a>
+    </div>
+  </section>
+
+  <!-- ═══ VERTICAL 02 — CREATOR GROWTH ═══ -->
+  <section id="creator-growth" class="vsec flip">
+    <div class="vsec-bg">
+      <video data-depth="0.35" autoplay muted loop playsinline preload="none" poster="https://images.unsplash.com/photo-1598550880863-4e8aa3d0edb4?auto=format&fit=crop&w=1800&q=80">
+        <source src="assets/videos/creator-growth.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="vsec-scrim"></div>
+    <div class="vsec-ceiling"></div>
+    <div class="vsec-floor"></div>
+    <div class="vsec-leak"></div>
+    <div class="vrule"></div>
+    <div class="vcopy">
+      <h2 class="s-title reveal" style="transition-delay:.08s">Creator Growth</h2>
+      <div class="vfor reveal" style="transition-delay:.12s">For <b>established creators and creator-led studios</b></div>
+      <p class="s-body reveal" style="transition-delay:.18s">
+        We run the editing and post-production operation behind creator-led businesses, carrying the format, voice and creative direction into every release.
+      </p>
+      <p class="s-body reveal" style="transition-delay:.22s; margin-top:16px;">
+        That model currently supports <strong>multiple weekly releases</strong> across channels such as food &amp; travel creator <strong>Mark Wiens</strong>, Paris travel experts <strong>Les Frenchies</strong>, and celebrity interview show <strong>5 Things with Jay Mewes</strong>. These dedicated teams respond to performance, strengthen the work and contribute ideas going far beyond the edit.
+      </p>
+      <p class="s-body reveal" style="transition-delay:.25s; margin-top:16px;">
+        Beyond individual episodes, we work with creators to develop repeatable formats and original content IP.
+      </p>
+      <a href="creator-growth.html" class="vlearn reveal" style="transition-delay:.36s"><span>Explore Creator Growth</span><span class="vlearn-arrow">→</span></a>
+    </div>
+  </section>
+
+  <!-- ═══ VERTICAL 03 — PODCAST ═══ -->
+  <section id="podcast" class="vsec">
+    <div class="vsec-bg">
+      <video data-depth="0.35" autoplay muted loop playsinline preload="none" poster="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=1800&q=80">
+        <source src="assets/videos/podcast.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="vsec-scrim"></div>
+    <div class="vsec-ceiling"></div>
+    <div class="vsec-floor"></div>
+    <div class="vsec-leak"></div>
+    <div class="vrule"></div>
+    <div class="vcopy">
+      <h2 class="s-title reveal" style="transition-delay:.08s">Podcast</h2>
+      <div class="vfor reveal" style="transition-delay:.12s">For <b>studios, production teams and creators</b></div>
+      <p class="s-body reveal" style="transition-delay:.18s">
+        Conversation-led series shaped through multi-camera editing, sound, graphics and finishing, with the editorial judgment needed to build a distinctive, repeatable format.
+      </p>
+      <p class="s-body reveal" style="transition-delay:.22s; margin-top:16px;">
+        We built the editorial and visual format for the <strong>Murdoch Mysteries Podcast</strong> with Shaftesbury for CBC. For <strong>Hizzouse</strong>, with Kevin Smith and Jay Mewes, we worked alongside the team as a post and creative partner on the show's style, design, shorts and launch strategy.
+      </p>
+      <div class="wave reveal" style="transition-delay:.28s" id="wave"></div>
+      <a href="podcast.html" class="vlearn reveal" style="transition-delay:.36s"><span>Explore Podcast</span><span class="vlearn-arrow">→</span></a>
+    </div>
+  </section>
+
+  <!-- ═══ VERTICAL 04 — SHOW MARKETING ═══ -->
+  <section id="show-marketing" class="vsec flip">
+    <div class="vsec-bg">
+      <video data-depth="0.35" autoplay muted loop playsinline preload="none" poster="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1800&q=80">
+        <source src="assets/videos/show-marketing.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="vsec-scrim"></div>
+    <div class="vsec-ceiling"></div>
+    <div class="vsec-floor"></div>
+    <div class="vsec-leak"></div>
+    <div class="vrule"></div>
+    <div class="vcopy">
+      <h2 class="s-title reveal" style="transition-delay:.08s">Show Marketing</h2>
+      <div class="vfor reveal" style="transition-delay:.12s">For <b>studios, producers, and marketing teams</b></div>
+      <div class="vlead reveal" style="transition-delay:.15s">360° creative support for shows.</div>
+      <p class="s-body reveal" style="transition-delay:.18s">
+        We work in two directions: strengthening the connection with existing audiences and creating new ways for the show to be discovered.
+      </p>
+      <p class="s-body reveal" style="transition-delay:.22s; margin-top:16px;">
+        For <strong>The Chosen</strong>, we partner with their marketing &amp; BTS teams to create companion content that takes fans deeper into the show's universe through behind-the-scenes, fan-first series and social content for its channels.
+      </p>
+      <p class="s-body reveal" style="transition-delay:.25s; margin-top:16px;">
+        For <strong>5 Things</strong>, our digital-first shorts have reached millions of views and introduced the show to new audiences.
+      </p>
+      <a href="show-marketing.html" class="vlearn reveal" style="transition-delay:.36s"><span>Explore Show Marketing</span><span class="vlearn-arrow">→</span></a>
+    </div>
+  </section>
+
+  <!-- ═══ VERTICAL 05 — AGENCY CREATIVE SERVICES ═══ -->
+  <section id="agency" class="vsec">
+    <div class="vsec-bg">
+      <video data-depth="0.35" autoplay muted loop playsinline preload="none" poster="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=1800&q=80">
+        <source src="assets/videos/agency.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="vsec-scrim"></div>
+    <div class="vsec-ceiling"></div>
+    <div class="vsec-floor"></div>
+    <div class="vsec-leak"></div>
+    <div class="vrule"></div>
+    <div class="vcopy">
+      <h2 class="s-title reveal" style="transition-delay:.08s">Agency Creative Services</h2>
+      <div class="vfor reveal" style="transition-delay:.12s">For <b>brands and agency teams</b></div>
+      <p class="s-body reveal" style="transition-delay:.18s">
+        Work with us directly on your brand or bring us in behind your agency team, including white-label delivery where appropriate.
+      </p>
+      <p class="s-body reveal" style="transition-delay:.22s; margin-top:16px;">
+        We bring production discipline, creative consistency, and reliable delivery to brand campaigns and ongoing content, with recent work for <strong>LG</strong>, HSAD and Surg&egrave;re.
+      </p>
+      <a href="agency.html" class="vlearn reveal" style="transition-delay:.34s"><span>Explore Agency Creative Services</span><span class="vlearn-arrow">→</span></a>
+    </div>
+  </section>
+
+  <!-- ═══ TEAM — THE THREE FOUNDERS ═══ -->
+  <section id="team" class="s">
+    <div class="team-leak"></div>
+    <div class="s-tag reveal">The Founders</div>
+    <h2 class="s-title reveal" style="transition-delay:.08s; font-size: clamp(26px, 3.2vw, 46px);"><span class="thin">Built by the people who have led</span><br />post-production at scale.</h2>
+    <p class="s-body reveal" style="transition-delay:.16s; margin-top: 4px;">
+      Our founders have spent their careers in film, television and streaming at major entertainment companies. Creator Engine grew from that experience, creating a highly creative team that could evolve with new formats, platforms and release models while helping great stories get told.
+    </p>
+    <div class="founders-grid">
+      <div class="founder founder-x reveal" id="founder-gavin" style="transition-delay:.24s">
+        <img src="assets/Team/founder-gavin.jpg" alt="Gavin Barclay" loading="lazy" />
+        <div class="founder-info">
+          <div class="founder-head">
+            <div class="founder-idblock">
+              <div class="founder-line"></div>
+              <div class="founder-name">Gavin Barclay</div>
+              <div class="founder-role">Co-Founder &amp; Chief Executive Officer</div>
+              <div class="founder-past">Former <b>Post Production Head, APAC</b> - Netflix &middot; <b>SVP</b> - SIM Digital</div>
+            </div>
+          </div>
+          <div class="founder-bio"><p>Gavin Barclay brings two decades of experience across film, television and digital media. As SVP of SIM Digital&rsquo;s post division, he oversaw more than 100 films and series each year, including Game of Thrones, Mr. Robot and Pacific Rim. At Netflix, he helped establish its first dedicated APAC post-production team, delivering titles such as Squid Game, Kingdom and Sacred Games.</p></div>
+        </div>
+      </div>
+      <div class="founder founder-bw founder-x reveal" id="founder-samya" style="transition-delay:.3s">
+        <img src="assets/Team/founder-sam.jpg" alt="Samya Bhattacharya" loading="lazy" />
+        <div class="founder-info">
+          <div class="founder-head">
+            <div class="founder-idblock">
+              <div class="founder-line"></div>
+              <div class="founder-name">Samya Bhattacharya</div>
+              <div class="founder-role">Co-Founder &amp; Chief Growth Officer</div>
+              <div class="founder-past">Former <b>Nonfiction Post-Production Lead</b> - Netflix &middot; Hotstar</div>
+            </div>
+          </div>
+          <div class="founder-bio"><p>With over 17 years in nonfiction post-production, Samya Bhattacharya began as an editor, working across India&rsquo;s leading reality and unscripted formats before leading nonfiction post-production teams at Hotstar and Netflix. He set up post-production teams for acclaimed titles including the Oscar-winning The Elephant Whisperers and Filmfare Award-winning The Hunt for Veerappan, as well as House of Secrets: Behind Closed Doors.</p></div>
+        </div>
+      </div>
+      <div class="founder founder-x reveal" id="founder-vijay" style="transition-delay:.36s">
+        <img src="assets/Team/founder-vijay.jpg" alt="Vijay Venkataramanan" loading="lazy" />
+        <div class="founder-info">
+          <div class="founder-head">
+            <div class="founder-idblock">
+              <div class="founder-line"></div>
+              <div class="founder-name">Vijay Venkataramanan</div>
+              <div class="founder-role">Co-Founder &amp; Chief Operating Officer</div>
+              <div class="founder-past">Former <b>Director of Post Production</b> - Netflix India</div>
+            </div>
+          </div>
+          <div class="founder-bio"><p>Vijay Venkataramanan began his career at DDB Los Angeles before returning to India as a film editor and post-production supervisor. At Amazon, he enabled post teams across Bangalore, Beijing and Chennai to collaborate on campaigns over the cloud. He later joined Netflix India as Director of Post Production, where he led a team delivering over 60 original titles spanning scripted series, feature films and non-fiction.</p></div>
+        </div>
+      </div>
+    </div>
+    <p class="founders-note reveal">
+      Across previous roles, the founders have worked on productions including <strong>Squid Game, Sacred Games, Delhi Crime, The Elephant Whisperers</strong> (Academy Award winner), <strong>Suits, MasterChef, House of Secrets</strong> and <strong>Behind Closed Doors</strong>.
+    </p>
+    <a href="team.html" class="vlearn reveal" style="transition-delay:.1s; margin-top:26px;"><span>Meet the Team</span><span class="vlearn-arrow">→</span></a>
+  </section>
+
+  <!-- ═══ CLOSING CTA ═══ -->
+  <section id="contact" class="cta-sec">
+    <div class="cta-leak"></div>
+    <div class="cta-inner">
+      <div class="cta-tag reveal">Work With Us</div>
+      <h2 class="cta-title reveal" style="transition-delay:.06s">Let's build your<br /><b>pipeline.</b></h2>
+      <p class="cta-body reveal" style="transition-delay:.12s">
+        We build post-production teams around recurring work: scaling a slate, growing a channel, launching an original series or adding capacity behind an existing production team. Tell us what you're making.
+      </p>
+      <div class="cta-actions reveal" style="transition-delay:.18s">
+        <a href="contact.html" class="btn btn-primary btn-lg" data-magnetic><span>Let's Talk</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="nav-logo" href="#hero"><img src="assets/CE_mark.png" alt="Creator Engine mark" /><span class="nav-logo-word">Creator Engine</span></a>
+          <p class="footer-blurb">Dedicated post-production teams for creators, studios, agencies and entertainment companies.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Work</h4>
+          <ul>
+            <li><a href="#microdramas">Microdramas</a></li>
+            <li><a href="#creator-growth">Creator Growth</a></li>
+            <li><a href="#podcast">Podcast</a></li>
+            <li><a href="#show-marketing">Show Marketing</a></li>
+            <li><a href="#agency">Agency Creative Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Team</h4>
+          <ul>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="careers.html">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://www.linkedin.com/company/creatorengine/" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:info@creatorengine.studio" style="white-space:nowrap; font-size:12.5px;">info@creatorengine.studio</a></li>
+            <li><a href="mailto:career@creatorengine.studio" style="white-space:nowrap; font-size:12.5px;">career@creatorengine.studio</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© Creator Engine <span id="ceYear">2026</span></span>
+        <span class="footer-made">Post-Production at Scale</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    /* Footer copyright year - auto-updates. new Date().getFullYear() rolls over at New Year's
+       midnight (i.e. becomes 2027 the instant 2026-12-31 turns to 2027), so the year is always current. */
+    (function(){ var y = document.getElementById('ceYear'); if (y) y.textContent = new Date().getFullYear(); })();
+
+    /* ─── HERO CURSOR-REVEAL (per-letter, HEADLINE ONLY) ─── desktop only
+       Only "Post-Production at Scale" (.hero-h1) reacts: each letter is wrapped in <span class="ltr">
+       and its opacity is driven by distance to the cursor (fully off ≤120px, back to full by 300px).
+       The eyebrow and the paragraphs below are left untouched. */
+    if (fine) {
+      const heroSec = document.getElementById('hero');
+      const heroFade = document.getElementById('heroFade');
+      const h1 = heroFade && heroFade.querySelector('.hero-h1');
+      if (heroSec && h1) {
+        (function wrapLetters(node, grad){
+          Array.from(node.childNodes).forEach(child => {
+            if (child.nodeType === 3) {
+              const t = child.nodeValue; if (!t) return;
+              const frag = document.createDocumentFragment();
+              for (const ch of t) {
+                if (/\s/.test(ch)) frag.appendChild(document.createTextNode(ch));
+                else { const s = document.createElement('span'); s.className = 'ltr' + (grad ? ' scale-ltr' : ''); s.textContent = ch; frag.appendChild(s); }
+              }
+              node.replaceChild(frag, child);
+            } else if (child.nodeType === 1) {
+              wrapLetters(child, grad || (child.classList && child.classList.contains('scale')));
+            }
+          });
+        })(h1);
+        // strip the gradient from the split "Scale." parent so its letters can actually fade
+        h1.querySelectorAll('.scale').forEach(s => s.classList.add('scale-split'));
+
+        let letters = [];
+        function build(){
+          const sx = window.scrollX, sy = window.scrollY;
+          letters = Array.from(h1.querySelectorAll('.ltr')).map(el => {
+            const r = el.getBoundingClientRect();
+            return { el, cx: r.left + r.width/2 + sx, cy: r.top + r.height/2 + sy, o: 1 };
+          });
+        }
+        build();
+        setTimeout(build, 400);
+        window.addEventListener('resize', build);
+
+        const OFF = 120, FADE = 300;
+        let mx = -1e5, my = -1e5, active = false, raf = null;
+        function frame(){
+          raf = null;
+          for (const L of letters){
+            let o;
+            if (!active) o = 1;
+            else { const d = Math.hypot(L.cx - mx, L.cy - my); o = d <= OFF ? 0 : d >= FADE ? 1 : (d - OFF) / (FADE - OFF); }
+            if (o !== L.o){ L.el.style.opacity = o; L.o = o; }
+          }
+        }
+        heroSec.addEventListener('mousemove', e => { mx = e.pageX; my = e.pageY; active = true; if (!raf) raf = requestAnimationFrame(frame); });
+        heroSec.addEventListener('mouseleave', () => { active = false; if (!raf) raf = requestAnimationFrame(frame); });
+      }
+    }
+
+    /* Custom cursor JS removed (v9.15) - default (blue-tinted) pointer, no follower. */
+
+    /* ─── BUTTONS ───
+       Deliberately NO magnetic / parallax behaviour: buttons must not chase or lean toward the
+       cursor. The only hover affordance is a subtle glow (CSS :hover box-shadow); a click gives a
+       small press-in (CSS :active scale). Nothing moves passively. The data-magnetic attribute is
+       kept only so the custom cursor ring still enlarges over these targets - it no longer moves
+       the button itself. */
+
+    /* ─── NAV SCROLLED ─── */
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+
+    /* ─── MOBILE MENU TOGGLE ───
+       Opens the frosted overlay, locks body scroll, flips the burger to an X, and closes
+       on any link tap or Escape. aria-expanded is kept in sync for assistive tech. */
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function setMenu(open){
+      document.body.classList.toggle('menu-open', open);
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+    navToggle.addEventListener('click', () => setMenu(!document.body.classList.contains('menu-open')));
+    /* ─── FOUNDER SPEECH BUBBLES (click a founder photo to pop their note) ───
+       Rolled out from the v9.59 Vijay-only test to all three founders. Only one bubble is open
+       at a time - opening one closes any other that was already open. */
+    (function(){
+      /* Desktop (hover): hovering the founder band reveals the bio. Touch (no hover): TAP the band to toggle. */
+      var cards = Array.prototype.slice.call(document.querySelectorAll('.founder-x')).filter(function(c){ return c.querySelector('.founder-bio'); });
+      if(!cards.length) return;
+      var canHover = window.matchMedia && window.matchMedia('(hover: hover)').matches;
+      if(canHover){
+        cards.forEach(function(card){
+          var band = card.querySelector('.founder-info');
+          band.addEventListener('mouseenter', function(){ card.classList.add('open'); });
+          card.addEventListener('mouseleave', function(){ card.classList.remove('open'); });
+        });
+      } else {
+        cards.forEach(function(card){
+          card.querySelector('.founder-info').addEventListener('click', function(e){ e.stopPropagation(); var willOpen=!card.classList.contains('open'); cards.forEach(function(c){ c.classList.toggle('open', c===card ? willOpen : false); }); });
+        });
+        document.addEventListener('click', function(e){ if(!cards.some(function(c){ return c.contains(e.target); })) cards.forEach(function(c){ c.classList.remove('open'); }); });
+      }
+    })();
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+    /* if the viewport grows back to desktop while the menu is open, close it cleanly */
+    window.matchMedia('(min-width: 1025px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
+
+    /* ─── SCROLL REVEAL ─── */
+    /* team roster tiles get their own staggered observer (below), so they're excluded here */
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObs.unobserve(entry.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal:not(.tm)').forEach(el => revealObs.observe(el));
+
+    /* ─── TEAM ROSTER - FOUNDERS-STYLE SLIDE-UP, SLOWER & MORE DELAYED ───
+       Each member card slides up + fades in exactly like the founders (CSS above), but over a longer
+       2.2s and with a bigger per-column stagger so a row eases in softly, one after another, rather
+       than together. The stagger delays when .visible is added (not a CSS transition-delay) so hover
+       stays instant; column count tracks the 4/3/2 responsive grid. */
+    (function(){
+      const tiles = Array.from(document.querySelectorAll('#team-members .tm'));
+      if (!tiles.length) return;
+      const colsFor = w => w <= 600 ? 2 : (w <= 1024 ? 3 : 4);
+      const teamObs = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const cols = colsFor(window.innerWidth);
+          const col = tiles.indexOf(entry.target) % cols;
+          const wait = reduceMotion ? 0 : col * 220;
+          setTimeout(() => entry.target.classList.add('visible'), wait);
+          teamObs.unobserve(entry.target);
+        });
+      }, { threshold: 0.15 });
+      tiles.forEach(t => teamObs.observe(t));
+    })();
+
+    /* ─── LIGHT-LEAK ON SECTION ENTRY ───
+       Each vertical (and the closing CTA) carries its own teal→blue bloom. As the section
+       crosses ~32% into view, leak-in triggers the bloom + rule-line reveal - mimicking a
+       film light leak washing onto the next frame as you scroll. Hero fades its own ambient
+       leak once past, so the effect reads as a hand-off between sections. */
+    const heroSection = document.getElementById('hero');
+    const leakObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => { entry.target.classList.toggle('leak-in', entry.isIntersecting); });
+    }, { threshold: 0.32 });
+    document.querySelectorAll('.vsec, .cta-sec, #careers, #team-members').forEach(el => leakObs.observe(el));
+
+    /* The founders background leak is tied specifically to the three founder photos entering
+       the frame (not the section heading), so it blooms in the moment the images are visible. */
+    const foundersGrid = document.querySelector('.founders-grid');
+    const teamSection = document.getElementById('team');
+    if (foundersGrid && teamSection) {
+      const founderLeakObs = new IntersectionObserver(entries => {
+        entries.forEach(entry => teamSection.classList.toggle('leak-in', entry.isIntersecting));
+      }, { threshold: 0.25 });
+      founderLeakObs.observe(foundersGrid);
+    }
+
+    /* ─── PODCAST WAVEFORM ─── */
+    const wave = document.getElementById('wave');
+    if (wave) { for (let i=0;i<28;i++){ const s=document.createElement('span'); s.style.animationDelay=(i*0.06)+'s'; s.style.opacity=0.35+Math.random()*0.65; wave.appendChild(s); } }
+
+    /* ─── HERO TILE HOVER - scale only, independent per tile ───
+       No cursor-follow drift: each tile's image simply eases up to a slightly larger scale
+       while the pointer is over that specific tile, and eases back to rest the moment the
+       pointer leaves. Only the hovered image moves. */
+    if (fine && !reduceMotion) {
+      document.querySelectorAll('.hero-tile').forEach(tile => {
+        const imgs = tile.querySelectorAll('img');   // base + collage move together
+        let hover = false, scaleCur = 1;
+        tile.addEventListener('mouseenter', () => { hover = true; });
+        tile.addEventListener('mouseleave', () => { hover = false; });
+        (function tileLoop(){
+          scaleCur += ((hover ? 1.06 : 1) - scaleCur) * 0.09;
+          const s = `scale(${scaleCur})`;
+          imgs.forEach(im => { im.style.transform = s; });
+          requestAnimationFrame(tileLoop);
+        })();
+      });
+    }
+
+    /* ─── LAYERED SCROLL PARALLAX (background vs. copy, with a strong visible delay) ───
+       Every vertical is built from independent layers: the background photo/video and the copy
+       column in front of it. Both react to scroll, but each eases toward its target at a very
+       different rate and distance (lerp), so the copy clearly lags and drifts opposite the
+       background - a deliberate, momentum-driven separation rather than one static block. */
+    const bgLayers = Array.from(document.querySelectorAll('.vsec-bg video, .vsec-bg img')).map(el => ({
+      el, host: el.closest('.vsec'), depth: parseFloat(el.dataset.depth || 0.4) * 1.5, ease: 0.12, cur: 0, kind: 'bg'
+    }));
+    const copyLayers = Array.from(document.querySelectorAll('.vcopy')).map(el => ({
+      el, host: el.closest('.vsec'), depth: 0.34, ease: 0.032, cur: 0, invert: true, kind: 'copy'
+    }));
+    const allLayers = bgLayers.concat(copyLayers);
+
+    function targetFor(layer){
+      const vh = window.innerHeight;
+      const r = layer.host.getBoundingClientRect();
+      const centre = r.top + r.height/2 - vh/2;
+      let shift = -(centre / vh) * layer.depth * 130;
+      if (layer.invert) shift *= -1;
+      return shift;
+    }
+
+    if (!reduceMotion) {
+      (function parallaxLoop(){
+        const vh = window.innerHeight;
+        allLayers.forEach(layer => {
+          if (layer.kind === 'bg') return; // background videos stay static - shown full-width & never cropped
+          const r = layer.host.getBoundingClientRect();
+          if (r.bottom < -300 || r.top > vh + 300) return; // skip off-screen sections
+          layer.cur += (targetFor(layer) - layer.cur) * layer.ease;
+          layer.el.style.transform = `translateY(${layer.cur}px)`;
+        });
+        requestAnimationFrame(parallaxLoop);
+      })();
+    }
+
+    /* ─── PLAY BACKGROUND VIDEOS ONLY WHEN THEIR SECTION IS ON SCREEN ───
+       Rather than force-playing all five videos on load (heavy on mobile data and battery),
+       each starts as its section approaches the viewport and pauses once scrolled away. */
+    const videoObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const v = entry.target;
+        if (entry.isIntersecting) v.play().catch(() => {});
+        else v.pause();
+      });
+    }, { rootMargin: '50% 0px 50% 0px' });
+    document.querySelectorAll('.vsec-bg video').forEach(v => videoObs.observe(v));
+
+    /* ─── PAGE LOAD FADE ─── */
+    document.body.style.opacity = '0';
+    window.addEventListener('DOMContentLoaded', () => { document.body.style.transition = 'opacity .6s'; document.body.style.opacity = '1'; });
+  </script>
+</body>
+</html>
